@@ -1,0 +1,330 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "5E45BC8E73011DCB"
+	group: "4557159B183F2AE3"
+	icon: {
+		Count: 1
+		id: "ad_astra:tier_1_rocket"
+		tag: {
+			BotariumData: { }
+		}
+	}
+	id: "5E45BC8E73011DCB"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"2698B2F63851032D"
+				"21619DB9C65FDC44"
+			]
+			id: "35A2B9D89801949E"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "3E330063680FF5B9"
+				item: "ad_astra:steel_ingot"
+				type: "item"
+			}]
+			title: "“百炼成钢”"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35A2B9D89801949E"]
+			icon: "create:mechanical_press"
+			id: "57CF58774CEF761E"
+			tasks: [{
+				id: "161D32E3D9B7B26F"
+				item: "ad_astra:steel_plate"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["57CF58774CEF761E"]
+			id: "71E1504B4B4DBA1D"
+			tasks: [{
+				id: "0EA8DF801010AA12"
+				item: "kubejs:steel_casing"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["404C3473F577BBF3"]
+			icon: {
+				Count: 1
+				id: "ad_astra:space_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "583CB29FD6D82E3B"
+			tasks: [
+				{
+					id: "7A07DF451E599C28"
+					item: {
+						Count: 1
+						id: "ad_astra:space_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "46916AEB247BFE17"
+					item: {
+						Count: 1
+						id: "ad_astra:space_suit"
+						tag: {
+							BotariumData: { }
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "24513167AC3C17F4"
+					item: {
+						Count: 1
+						id: "ad_astra:space_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "685D68F8BC3898CA"
+					item: {
+						Count: 1
+						id: "ad_astra:space_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "宇航服"
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "404C3473F577BBF3"
+			tasks: [{
+				id: "48A98D6AFBBFA94E"
+				item: "ad_astra:oxygen_gear"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "0BEB0B97B33BCC49"
+			tasks: [{
+				id: "28527ABB66EFAD2E"
+				item: "ad_astra:steel_tank"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			icon: "ad_astra:engine_frame"
+			id: "31BD76EEE3FAF416"
+			tasks: [
+				{
+					id: "78E10D7FEF2B3D83"
+					item: "ad_astra:engine_frame"
+					type: "item"
+				}
+				{
+					id: "1D69D2DB00964EC2"
+					item: "ad_astra:engine_fan"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["31BD76EEE3FAF416"]
+			id: "2E8842F0B313E108"
+			tasks: [{
+				id: "5800D4E009490DE8"
+				item: "ad_astra:steel_engine"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "785D88A70733F2CE"
+			tasks: [{
+				id: "25933BDF2FD76EFB"
+				item: {
+					Count: 1
+					id: "ad_astra:gas_tank"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["785D88A70733F2CE"]
+			id: "014D375A0B848050"
+			tasks: [{
+				id: "1F074D026544DA4A"
+				item: "ad_astra:oxygen_loader"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["35A2B9D89801949E"]
+			id: "5A19269D0D50E064"
+			tasks: [{
+				id: "7DB994F20F65034D"
+				item: "ad_astra:oil_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A19269D0D50E064"]
+			id: "70D244933C89D351"
+			tasks: [{
+				id: "08338D1B5977D757"
+				item: "ad_astra:fuel_refinery"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["70D244933C89D351"]
+			id: "6E9F3018C5A6A72D"
+			tasks: [{
+				id: "5E11A853BA054DFE"
+				item: "ad_astra:fuel_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "16AF7FD8F5443645"
+			tasks: [{
+				id: "36AEA995404C8F00"
+				item: "ad_astra:launch_pad"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			icon: "ad_astra:rocket_nose_cone"
+			id: "6B26094B03BF4BA2"
+			tasks: [
+				{
+					id: "6C5732014ED34278"
+					item: "ad_astra:rocket_nose_cone"
+					type: "item"
+				}
+				{
+					id: "4E55C2AB34E86B30"
+					item: "ad_astra:rocket_fin"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35A2B9D89801949E"]
+			icon: "kubejs:tier_1_rocket_frame"
+			id: "0B6B24F5F2242DC3"
+			tasks: [
+				{
+					id: "6951ABF0C164734E"
+					item: "kubejs:tier_1_rocket_outerwall"
+					type: "item"
+				}
+				{
+					id: "55308275ED3237FA"
+					item: "kubejs:tier_1_rocket_frame"
+					type: "item"
+				}
+			]
+			title: "火箭框架"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6B26094B03BF4BA2"
+				"2E8842F0B313E108"
+				"0B6B24F5F2242DC3"
+				"0BEB0B97B33BCC49"
+				"45A3F96B510BEDF5"
+			]
+			id: "187BCF2BB3E868B4"
+			subtitle: "记得带燃料和发射台，不然你可回不来"
+			tasks: [{
+				id: "54F0644ED43E50F8"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rocket"
+					tag: {
+						BotariumData: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "45A3F96B510BEDF5"
+			tasks: [{
+				id: "5A1B638C952582E6"
+				item: "kubejs:control_core"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["187BCF2BB3E868B4"]
+			id: "0854D09D85D828CB"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "ad_astra:moon"
+				criterion: ""
+				id: "6E0ABC3D22CFF55E"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+	title: "第一台火箭"
+}

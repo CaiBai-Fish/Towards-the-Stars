@@ -1,0 +1,33 @@
+{
+  "general": {
+    "allowVoidFloatingEnchantment": true
+  },
+  "tools": {
+    "enderitePickaxeAD": 4,
+    "enderiteAxeAD": 8,
+    "enderiteHoeAD": -2,
+    "enderiteShovelAD": 4.5,
+    "enderiteSwordAD": 6,
+    "enderiteBowAD": 2.5,
+    "enderiteBowArrowSpeed": 3.5,
+    "enderiteCrossbowAD": 3.0,
+    "enderiteCrossbowArrowSpeed": 3.65,
+    "durability": 4096
+  },
+  "worldGeneration": {
+    "enderiteOre": {
+      "veinSize": 3,
+      "veinAmount": 3
+    }
+  },
+  "armor": {
+    "bootsProtection": 4,
+    "leggingsProtection": 7,
+    "chestplateProtection": 9,
+    "helmetProtection": 4,
+    "durabilityMultiplier": 8,
+    "enchantability": 17,
+    "toughness": 4.0,
+    "knockbackResistance": 0.1
+  }
+}

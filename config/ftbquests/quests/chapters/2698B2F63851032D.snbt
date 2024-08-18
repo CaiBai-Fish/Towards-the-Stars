@@ -1,0 +1,310 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "2698B2F63851032D"
+	group: "47C31061524D9D17"
+	icon: "createaddition:electric_motor"
+	id: "2698B2F63851032D"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6FFB213B0155D810"]
+			icon: "ad_astra:coal_generator"
+			id: "082706A2330BB0F1"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "虽然不环保，但简单好用"
+			tasks: [{
+				id: "4331AC5AC6800211"
+				item: "ad_astra:coal_generator"
+				type: "item"
+			}]
+			title: "火力发电"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["082706A2330BB0F1"]
+			icon: "createaddition:connector"
+			id: "221ECC2B55846C93"
+			tasks: [
+				{
+					id: "25D222F418FBD630"
+					item: "createaddition:copper_spool"
+					type: "item"
+				}
+				{
+					id: "78B0BD8536252255"
+					item: "createaddition:connector"
+					type: "item"
+				}
+			]
+			title: "电力连接"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["082706A2330BB0F1"]
+			id: "5E4A7C32C420854D"
+			tasks: [{
+				id: "7B62BDDB6E121428"
+				item: "createaddition:capacitor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"221ECC2B55846C93"
+				"5E4A7C32C420854D"
+			]
+			id: "73196783203D03F5"
+			tasks: [{
+				id: "2E45EE467BC335E5"
+				item: "createaddition:tesla_coil"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["73196783203D03F5"]
+			id: "04FBDB42E9A3682C"
+			tasks: [{
+				id: "2BA36C80EE535C5B"
+				item: "kubejs:magnet"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"221ECC2B55846C93"
+				"5E4A7C32C420854D"
+				"04FBDB42E9A3682C"
+			]
+			id: "10A20A7BC92AC705"
+			shape: "hexagon"
+			tasks: [{
+				id: "5FD984FA3B2852CE"
+				item: "createaddition:alternator"
+				type: "item"
+			}]
+			title: "更环保的发电方式"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10A20A7BC92AC705"]
+			id: "4E96A7E174D15AD3"
+			tasks: [{
+				id: "678AE259454F18C1"
+				item: "createaddition:electric_motor"
+				type: "item"
+			}]
+			title: "新型动力"
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10A20A7BC92AC705"]
+			id: "1F32B9E1AD196835"
+			subtitle: "右键烈焰人燃烧室"
+			tasks: [{
+				id: "1CEAA8444714BD1F"
+				item: "createaddition:straw"
+				type: "item"
+			}]
+			title: "“活炉”升级"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1F32B9E1AD196835"]
+			id: "463B9E4A00241212"
+			tasks: [{
+				id: "31A185F144CB3159"
+				item: "createaddition:seed_oil_bucket"
+				type: "item"
+			}]
+			title: "压榨花生油"
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["463B9E4A00241212"]
+			id: "313E745EB2DB1342"
+			tasks: [{
+				id: "6B95835F229396AF"
+				item: "createaddition:biomass"
+				type: "item"
+			}]
+			title: "发酵"
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["313E745EB2DB1342"]
+			id: "5FE08FF2D7F7787E"
+			tasks: [{
+				id: "1582F65FA69C233A"
+				item: "createaddition:bioethanol_bucket"
+				type: "item"
+			}]
+			title: "酒精燃料"
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["313E745EB2DB1342"]
+			id: "7A0F5AF3A0A1E336"
+			tasks: [{
+				id: "1F84EB9F045E23B9"
+				item: "createaddition:festive_spool"
+				type: "item"
+			}]
+			title: "在游戏里过节！"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5FE08FF2D7F7787E"]
+			icon: "create:blaze_burner"
+			id: "51116F89BF9A7A02"
+			title: "永不停息的蓝焰"
+			x: 1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["221ECC2B55846C93"]
+			id: "3717104CF352784A"
+			tasks: [{
+				id: "737E453CE66D2741"
+				item: "createaddition:modular_accumulator"
+				type: "item"
+			}]
+			title: "电力存储"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["221ECC2B55846C93"]
+			id: "21619DB9C65FDC44"
+			subtitle: "全新的合金熔炼方式"
+			tasks: [{
+				id: "4BC6C20B2E665078"
+				item: "ad_astra:etrionic_blast_furnace"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4E96A7E174D15AD3"]
+			hide: true
+			icon: "createaddition:chocolate_cake"
+			id: "3F4B0E12C1A5FC4B"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "1F3B4D7E2FC90EEE"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: { }
+						}
+						id: "create_central_kitchen:cooking_guide"
+					}
+					type: "item"
+				}
+				{
+					id: "78E26FFE161C2564"
+					item: "create_enchantment_industry:enchanting_guide"
+					type: "item"
+				}
+				{
+					id: "0C1C206DCD556205"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "自动化食品及附魔工业"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4E96A7E174D15AD3"]
+			hide: true
+			icon: "railways:track_oak"
+			id: "43B746460C04089D"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "2479D3E39731FB92"
+				item: "railways:track_oak"
+				type: "item"
+			}]
+			title: "长途运输"
+			x: 9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["68A2435B7C70886A"]
+			description: ["用列车长帽右键安山机壳"]
+			id: "00C25C878A2B7227"
+			tasks: [{
+				id: "370128E8AAB4ECCC"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "railways:conductor_caps"
+					}
+				}
+				title: "列车长帽"
+				type: "item"
+			}]
+			title: "可爱的列车长"
+			x: 9.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["43B746460C04089D"]
+			id: "68C61BC586BD34EC"
+			tasks: [{
+				id: "28C3602EEC343688"
+				item: "create:track_station"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["149DDD5429846CD2"]
+			id: "68A2435B7C70886A"
+			tasks: [{
+				id: "4AC45AA17923553E"
+				item: "create:controls"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["68C61BC586BD34EC"]
+			id: "149DDD5429846CD2"
+			tasks: [{
+				id: "5C1682CFBA7A73FB"
+				item: "create:railway_casing"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 3.0d
+		}
+	]
+	title: "电气时代"
+}

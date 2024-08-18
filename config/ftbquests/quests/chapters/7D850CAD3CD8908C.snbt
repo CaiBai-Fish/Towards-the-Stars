@@ -1,0 +1,206 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "7D850CAD3CD8908C"
+	group: ""
+	icon: "minecraft:book"
+	id: "7D850CAD3CD8908C"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["这是一个以机械动力为主的探索型整合包。你可以深入地下，探索远古城市的秘密，或是搭乘火箭，前往未知的深空。当然，这一切都依赖于机械动力的机械。"]
+			icon: "create:wrench"
+			id: "3F34F46C8EB118B1"
+			rewards: [
+				{
+					id: "6E4FA154586B8BF7"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					id: "4C5B104C892969B2"
+					item: "sophisticatedbackpacks:backpack"
+					only_one: true
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 3.0d
+			subtitle: "by CaiBai"
+			tasks: [{
+				id: "560F4624AE341D24"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "关于整合包"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"  整合包修改了部分合成配方，提高一点游戏难度的同时能自动化生产几乎所有的物品"
+				"  简易刀剑的简单枪械让武器变得多样，总有一种适合你"
+			]
+			icon: "create:cogwheel"
+			id: "312CBCC9B712DDB9"
+			rewards: [{
+				count: 8
+				id: "19A04D74015D5466"
+				item: "create:builders_tea"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "5F52B001EB0B8E6A"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "整合包介绍"
+			x: -2.0d
+			y: -3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"添加了新的维度模组。你可以深入远古城市，用监守者的心脏打开深暗之域的大门，也可以收集钢材，打造火箭前往别的星球，抑或是前往诡异的暮色森林"
+				""
+				"修改了原版的遗迹和地牢结构"
+			]
+			icon: "deeperdarker:heart_of_the_deep"
+			id: "30C227281C5C5FFF"
+			rewards: [{
+				count: 16
+				id: "7918B17BE68AB364"
+				item: "farmersdelight:cake_slice"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "1A1FDDA2A16DBDFA"
+				title: "确定"
+				type: "checkmark"
+			}]
+			title: "维度添加"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"  添加连锁采集（快捷键“&a`&r”）、建筑之杖（&aSHIFT&r+&6CTRL&r+&a对空右键&r打开UI）、灵魂出窍（&ashift+`&r），方便快速采集和建造"
+				"自然罗盘和探险者罗盘可以帮你快速定位你要找的群系和结构"
+			]
+			icon: {
+				Count: 1
+				id: "constructionwand:diamond_wand"
+				tag: {
+					Damage: 0
+					wand_options: { }
+				}
+			}
+			id: "46665BCF42311216"
+			rewards: [{
+				count: 32
+				id: "73AA4FD7662E4AE8"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "753DFCD437B6D7AD"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "辅助工具"
+			x: -2.0d
+			y: 3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"更好的战斗(BetterCombat)为刀剑添加了不同的动作，让战斗更沉浸。Tetra则带来了更加丰富的武器改装"
+				"在战斗中你可以按&a左Alt&r键翻滚来规避伤害，按&2h&r来用武器挖掘（斧子也是武器！）"
+			]
+			icon: {
+				Count: 1
+				id: "simplyswords:awakened_lichblade"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6AE1D2210E6B9FE9"
+			rewards: [{
+				id: "7F0AF5300FFBE40F"
+				item: "minecraft:experience_bottle"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "707D31210665985D"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "战斗！"
+			x: 2.0d
+			y: 3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"村庄出生点帮你快速度过前期；修改了村庄的建筑生成，更大、更高、更精致"
+				"新增八种村民职业，部分职业村民需要前往下界和末地"
+			]
+			icon: "minecraft:composter"
+			id: "39D6763634C9EDDE"
+			rewards: [{
+				count: 8
+				id: "5F8BE6B3EA9BCF69"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3EEB0C970C08FBA6"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "村庄大更新"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			description: [
+				"修改原版生物群系，优化地形生成"
+				""
+				"新增多种生物，你可以不同群系遇到各种&m惊吓&r惊喜"
+			]
+			icon: "minecraft:grass_block"
+			id: "05B80C32DEE4E681"
+			rewards: [{
+				count: 16
+				id: "592DBE348C00438E"
+				item: "minecraft:egg"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "54484F8AA58AF384"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "群系和生物修改"
+			x: 2.0d
+			y: -3.46d
+		}
+	]
+	title: "前言"
+}

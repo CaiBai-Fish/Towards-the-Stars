@@ -1,0 +1,552 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "16206C36A7CEE7A8"
+	group: "47C31061524D9D17"
+	icon: "create_things_and_misc:brass_speaker"
+	id: "16206C36A7CEE7A8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["17E171A0188D147C"]
+			icon: "create:electron_tube"
+			id: "6FFB213B0155D810"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "28943705A9F678FA"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					id: "172CFF30CD9A5853"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "向智能化迈进"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6FFB213B0155D810"
+				"7EB94EA036B46B63"
+			]
+			icon: "create:precision_mechanism"
+			id: "09B9CAFEED675973"
+			tasks: [
+				{
+					id: "63BE9B8EA7D49711"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+				{
+					id: "699A42EC0CACB4F6"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "黄铜电路板"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B7EFE0306CCB149"]
+			icon: "create:mechanical_pump"
+			id: "47DB605838B10DAB"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 8L
+					id: "658EDEBAFF4EA0B8"
+					item: "kubejs:copper_mechanism"
+					type: "item"
+				}
+				{
+					id: "63253C00F55DBD3C"
+					item: "create:copper_casing"
+					type: "item"
+				}
+			]
+			title: "流体力学"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47DB605838B10DAB"]
+			icon: "create:mechanical_pump"
+			id: "4A4F79BBB1663A8A"
+			subtitle: "之前的机器是不是可以改成自动化了呢"
+			tasks: [
+				{
+					id: "156AEFE5F6D9E6EF"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+				{
+					id: "30F2D41EBE21CB61"
+					item: "create:fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "1E6A2A353A966114"
+					item: "create:item_drain"
+					type: "item"
+				}
+			]
+			title: "流体运输"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A4F79BBB1663A8A"]
+			icon: "minecraft:dripstone_block"
+			id: "4A7E3C985A931FDA"
+			tasks: [
+				{
+					id: "7E2BE2F392FBD9D0"
+					item: "minecraft:dripstone_block"
+					type: "item"
+				}
+				{
+					id: "552554F364B8DDC6"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A7E3C985A931FDA"]
+			id: "718C1EE2EB0AD722"
+			tasks: [{
+				id: "2CAEA43BE68B4359"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4A4F79BBB1663A8A"]
+			icon: "minecraft:grass_block"
+			id: "222CBED553CB44D9"
+			optional: true
+			tasks: [
+				{
+					id: "5BE6670A10098F2C"
+					item: "minecraft:grass_block"
+					type: "item"
+				}
+				{
+					id: "7019122131255307"
+					item: "create:spout"
+					type: "item"
+				}
+			]
+			title: "无中生“草”"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A4F79BBB1663A8A"]
+			icon: "create:basin"
+			id: "1A9C09A42F1DBD9B"
+			tasks: [
+				{
+					id: "2738A67E587885C7"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "c:potions"
+						}
+					}
+					title: "任意药水"
+					type: "item"
+				}
+				{
+					id: "1B774F3A186A0882"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "自动化炼药！"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["09B9CAFEED675973"]
+			icon: "minecraft:diorite"
+			id: "0FBCA6448662AA19"
+			tasks: [
+				{
+					id: "4C8C765C1EF68481"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					id: "6A3A18095C5DD310"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FBCA6448662AA19"]
+			id: "2B1610CCF6F14EFC"
+			tasks: [{
+				id: "116AC9ADAD2402A1"
+				item: "minecraft:granite"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0FBCA6448662AA19"]
+			id: "0044FFFDABFC6237"
+			tasks: [{
+				id: "11D806ED9BF90461"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			x: 16.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0FBCA6448662AA19"]
+			id: "10AF4EE0A2E7E9CF"
+			tasks: [{
+				id: "20D12A1E6528063F"
+				item: "minecraft:tuff"
+				type: "item"
+			}]
+			x: 16.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0FBCA6448662AA19"]
+			id: "67D3D35A4F94DF3B"
+			tasks: [{
+				id: "7CD41BF445ACBFA5"
+				item: "minecraft:calcite"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["67D3D35A4F94DF3B"]
+			id: "59693A1A119E4C49"
+			tasks: [{
+				id: "69362B161440F8F2"
+				item: "create:veridium"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2B1610CCF6F14EFC"]
+			id: "05A92AA7E7997898"
+			tasks: [{
+				id: "540F993AFA0C4A24"
+				item: "create:crimsite"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0044FFFDABFC6237"]
+			id: "671F354AC98D803E"
+			tasks: [{
+				id: "7FB2BCC04510C3EC"
+				item: "create:asurine"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["10AF4EE0A2E7E9CF"]
+			id: "7C989B3BA5DC9E45"
+			tasks: [{
+				id: "5B419278439E8D2C"
+				item: "create:ochrum"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"59693A1A119E4C49"
+				"671F354AC98D803E"
+				"7C989B3BA5DC9E45"
+				"05A92AA7E7997898"
+				"1397BB2E6F0977E3"
+			]
+			icon: "minecraft:gold_ore"
+			id: "6B178B615CE2E135"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 64L
+					id: "42E5609865E159F2"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "1F1922F921BB5B5C"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "0A110061A21E6AA6"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "673A372EEC140CCD"
+					item: "create:zinc_ingot"
+					type: "item"
+				}
+			]
+			title: "“矿物源于圆石”"
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			icon: "create:brass_funnel"
+			id: "5A295A0D25745B54"
+			tasks: [
+				{
+					id: "0F790213BBC36603"
+					item: "create:brass_funnel"
+					type: "item"
+				}
+				{
+					id: "797B03114037C8C8"
+					item: "create:brass_tunnel"
+					type: "item"
+				}
+				{
+					id: "795BE9059231175C"
+					item: "create:smart_chute"
+					type: "item"
+				}
+			]
+			title: "黄铜物流"
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["09B9CAFEED675973"]
+			icon: "create:mechanical_crafter"
+			id: "3C1CE1F5C6EF6BE4"
+			tasks: [{
+				count: 63L
+				id: "3B0F01CBC90C05BA"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "有序合成"
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3C1CE1F5C6EF6BE4"]
+			hide_dependent_lines: true
+			id: "1397BB2E6F0977E3"
+			tasks: [{
+				id: "4EFCAAC1AFDD085D"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A4F79BBB1663A8A"]
+			icon: "minecraft:soul_sand"
+			id: "0D0929371A0D5EF1"
+			tasks: [
+				{
+					id: "14FCF5F7F1B4D615"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+				{
+					id: "2238F35379B34AB7"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "魂火纠缠！"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D0929371A0D5EF1"]
+			icon: "minecraft:quartz"
+			id: "17E171A0188D147C"
+			tasks: [
+				{
+					id: "289328CA178A1ED4"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "39E9DE7484C9EEBC"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09B9CAFEED675973"]
+			icon: "create:andesite_funnel"
+			id: "62FE12DF528BFED6"
+			tasks: [
+				{
+					id: "30C18795FBA85C7E"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+				{
+					id: "244F4347FF414C8E"
+					item: "create:andesite_tunnel"
+					type: "item"
+				}
+				{
+					id: "2725C29C32E428D3"
+					item: "create:belt_connector"
+					type: "item"
+				}
+			]
+			title: "安山物流"
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5CE9547FA232B3AE"]
+			id: "7EB94EA036B46B63"
+			tasks: [{
+				id: "01ACEC38B00C6C80"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["030D46744F9BEEF1"]
+			id: "5CE9547FA232B3AE"
+			tasks: [{
+				advancement: "create:burner"
+				criterion: ""
+				id: "45A51F21A12DA2BD"
+				type: "advancement"
+			}]
+			title: "生物熔炉"
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0D0929371A0D5EF1"]
+			id: "030D46744F9BEEF1"
+			tasks: [{
+				id: "6AE16D2946FD1D67"
+				item: "minecraft:blaze_rod"
+				type: "item"
+			}]
+			title: "与火共舞"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1A9C09A42F1DBD9B"]
+			icon: "minecraft:redstone"
+			id: "203D292DA29251BE"
+			tasks: [
+				{
+					id: "7C602C733642F3BB"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "13AB34A2199FBBB9"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "量产红石"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"17E171A0188D147C"
+				"203D292DA29251BE"
+			]
+			icon: "minecraft:repeater"
+			id: "052988F306649291"
+			tasks: [
+				{
+					id: "3D77631831210F6D"
+					item: "minecraft:repeater"
+					type: "item"
+				}
+				{
+					id: "63803215663E595B"
+					item: "minecraft:comparator"
+					type: "item"
+				}
+			]
+			title: "电路基础"
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A7E3C985A931FDA"]
+			id: "24C4DD8EEB1A8C40"
+			tasks: [{
+				id: "711A9C5D6D7AAAA0"
+				item: "minecraft:pointed_dripstone"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["24C4DD8EEB1A8C40"]
+			icon: "minecraft:lava_bucket"
+			id: "58F0BAEB227A2225"
+			tasks: [{
+				id: "3C5ED6677FAA2A78"
+				title: "量产"
+				type: "checkmark"
+			}]
+			title: "“无限”岩浆"
+			x: 2.0d
+			y: -6.0d
+		}
+	]
+	title: "黄铜时代"
+}

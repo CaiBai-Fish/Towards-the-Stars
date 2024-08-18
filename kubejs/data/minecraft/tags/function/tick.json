@@ -1,0 +1,7 @@
+{
+    "replace":false,
+    "values": [
+        "dayshower:settings/storage_settings",
+        "dayshower:settings/word_check"
+    ]
+}

@@ -1,0 +1,541 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "0FFAE3F9D186A0E0"
+	group: "4557159B183F2AE3"
+	icon: {
+		Count: 1
+		id: "ad_astra:tier_1_rover"
+		tag: {
+			BotariumData: { }
+		}
+	}
+	id: "0FFAE3F9D186A0E0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5DE9D5184F18A713"]
+			id: "78946C5DE5593F95"
+			tasks: [{
+				id: "067A425D23BAB074"
+				item: "ad_astra:desh_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0854D09D85D828CB"
+				"187BCF2BB3E868B4"
+			]
+			icon: "ad_astra:moon_cobblestone"
+			id: "5DE9D5184F18A713"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:moon"
+				id: "403323EE959C8C14"
+				ignore_dimension: false
+				position: [I;
+					0
+					140
+					0
+				]
+				size: [I;
+					1
+					1
+					1
+				]
+				type: "location"
+			}]
+			title: "天外来客"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5DE9D5184F18A713"]
+			id: "54D1C15BAA555364"
+			tasks: [{
+				id: "0C696B9A47F88193"
+				item: "ad_astra:cheese"
+				type: "item"
+			}]
+			title: "星外美食！"
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"78946C5DE5593F95"
+				"5BCEDFFE25E91A0B"
+			]
+			id: "452650D9B31741C9"
+			subtitle: "获取氧气之电解水"
+			tasks: [{
+				id: "1E9FDB2226C56067"
+				item: "ad_astra:oxygen_distributor"
+				type: "item"
+			}]
+			title: "脱下航天服"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["78946C5DE5593F95"]
+			id: "5BCEDFFE25E91A0B"
+			tasks: [{
+				id: "7B2601F2ED1513F6"
+				item: "ad_astra:water_pump"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5E17A566A795B461"]
+			icon: "create:belt_connector"
+			id: "3CBC605287B5661B"
+			tasks: [{
+				id: "4C2C11148D53D897"
+				title: "建立一条太空生产线"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5DE9D5184F18A713"]
+			icon: "minecraft:emerald"
+			id: "66875657BCA189D6"
+			subtitle: "与外星村民进行友好的交流"
+			tasks: [{
+				id: "084B7BD46938A59E"
+				structure: "ad_astra:lunarian_village"
+				type: "structure"
+			}]
+			title: "星际村庄"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["452650D9B31741C9"]
+			icon: "ad_astra:moon_cobblestone_stairs"
+			id: "756325DBB4DD8513"
+			tasks: [{
+				id: "4ECEC30ED463C5BB"
+				title: "在月球建造基地"
+				type: "checkmark"
+			}]
+			title: "定居月球"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["66875657BCA189D6"]
+			id: "7FE92A9EB7D7341D"
+			tasks: [{
+				icon: "minecraft:spyglass"
+				id: "5FA73774E20B80D0"
+				structure: "ad_astra:lunar_tower"
+				type: "structure"
+			}]
+			title: "月球瞭望台"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["278AF7CAEF5E53B5"]
+			icon: {
+				Count: 1
+				id: "ad_astra:tier_2_rocket"
+				tag: {
+					BotariumData: { }
+				}
+			}
+			id: "1AD82ACB4CFF75A6"
+			tasks: [{
+				id: "3BB305B1AC700FFF"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_2_rocket"
+					tag: {
+						BotariumData: { }
+					}
+				}
+				type: "item"
+			}]
+			title: "制造二阶火箭"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3CBC605287B5661B"]
+			icon: "kubejs:tier_2_rocket_frame"
+			id: "278AF7CAEF5E53B5"
+			tasks: [
+				{
+					id: "2CED39DDDF063C54"
+					item: "kubejs:tier_2_rocket_frame"
+					type: "item"
+				}
+				{
+					id: "348C2D5F2107A807"
+					item: "kubejs:tier_2_rocket_outerwall"
+					type: "item"
+				}
+			]
+			title: "准备去往更深的星空"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1AD82ACB4CFF75A6"]
+			icon: "ad_astra:mars_globe"
+			id: "57FB4668FBADA163"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:mars"
+				id: "4F82A936867E8478"
+				type: "dimension"
+			}]
+			title: "造访火星"
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["756325DBB4DD8513"]
+			icon: "ad_astra:moon_cobblestone"
+			id: "5E17A566A795B461"
+			tasks: [{
+				count: 128L
+				id: "441B0EC3FCBFF0AD"
+				item: "ad_astra:moon_cobblestone"
+				type: "item"
+			}]
+			title: "宇宙源于圆石"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["78946C5DE5593F95"]
+			hide_dependency_lines: true
+			id: "6DE29410F2DF9306"
+			invisible: true
+			invisible_until_tasks: 2
+			subtitle: "第一个空间站"
+			tasks: [
+				{
+					count: 32L
+					id: "6AFFDF5A76F9577B"
+					item: "ad_astra:desh_ingot"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "1825654DB88CC50F"
+					item: "ad_astra:steel_ingot"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "51059DB9421BB54F"
+					item: "create:iron_sheet"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "03A573E727E7A313"
+					item: "ad_astra:desh_plate"
+					type: "item"
+				}
+			]
+			title: "准备材料"
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6DE29410F2DF9306"]
+			id: "2821C8F7CA9662AC"
+			tasks: [{
+				dimension: "ad_astra:earth_orbit"
+				id: "6B0155A617CFF6DE"
+				type: "dimension"
+			}]
+			title: "建造空间站"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["54D1C15BAA555364"]
+			id: "2234B42618E2AE10"
+			tasks: [{
+				id: "1945D123017BD98F"
+				item: "ad_astra:cheese_block"
+				type: "item"
+			}]
+			title: "无尽的奶酪！"
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3CBC605287B5661B"]
+			id: "1702B113A46048C0"
+			tasks: [{
+				id: "41E97A890E2B067B"
+				item: "ad_astra:solar_panel"
+				type: "item"
+			}]
+			title: "清洁能源"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["57FB4668FBADA163"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			icon: "minecraft:potato"
+			id: "4A24A781E3F6B5AF"
+			invisible: true
+			optional: true
+			progression_mode: "flexible"
+			shape: "hexagon"
+			tasks: [{
+				icon: "minecraft:potato"
+				id: "5FE4E9C2DCB7A7FD"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:potatoes"
+				type: "observation"
+			}]
+			title: "在火星种土豆！"
+			x: 8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["57FB4668FBADA163"]
+			id: "271D52356D3F3837"
+			tasks: [{
+				id: "7267269945422597"
+				item: "ad_astra:ostrum_ingot"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["271D52356D3F3837"]
+			id: "77698695EF593DFE"
+			subtitle: "更高效的燃料"
+			tasks: [{
+				id: "77BF5B7DB71B5C45"
+				item: "ad_astra:cryo_freezer"
+				type: "item"
+			}]
+			title: "凛冬将至"
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["77698695EF593DFE"]
+			id: "037F4575D50AE49F"
+			subtitle: "提前准备好生产线，万一以后用得到呢"
+			tasks: [{
+				id: "343CD97900A5E232"
+				item: "ad_astra:cryo_fuel_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["271D52356D3F3837"]
+			icon: {
+				Count: 1
+				id: "ad_astra:netherite_space_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3B69F008CA08AD38"
+			tasks: [
+				{
+					id: "439669BB6E0546FF"
+					item: {
+						Count: 1
+						id: "ad_astra:netherite_space_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4AE66E7867E158E4"
+					item: {
+						Count: 1
+						id: "ad_astra:netherite_space_suit"
+						tag: {
+							BotariumData: { }
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0BD4C08365CAF0C6"
+					item: {
+						Count: 1
+						id: "ad_astra:netherite_space_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "66E86046A9FDF1A7"
+					item: {
+						Count: 1
+						id: "ad_astra:netherite_space_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "航天服升级"
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["271D52356D3F3837"]
+			id: "029F4BB11224CB06"
+			tasks: [{
+				id: "5D239C19044BF17F"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_3_rocket"
+					tag: {
+						BotariumData: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1702B113A46048C0"]
+			id: "341610181AD96D2C"
+			tasks: [{
+				id: "62DB7E15C542EFA9"
+				item: "ad_astra:gravity_normalizer"
+				type: "item"
+			}]
+			title: "自定义重力"
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["029F4BB11224CB06"]
+			icon: "ad_astra:mercury_globe"
+			id: "45EDD5E7FB89A863"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:venus"
+				id: "5C015B4B13DAF898"
+				type: "dimension"
+			}]
+			title: "登录水星"
+			x: 14.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["45EDD5E7FB89A863"]
+			id: "0ECF98155410FBF0"
+			tasks: [{
+				id: "294EB5707D26EF7F"
+				item: "ad_astra:calorite_ingot"
+				type: "item"
+			}]
+			title: "天然的合金"
+			x: 16.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0ECF98155410FBF0"]
+			id: "658D299E87F9CE5D"
+			tasks: [
+				{
+					id: "18705651CB58DD8B"
+					item: {
+						Count: 1
+						id: "ad_astra:jet_suit_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4F81E4EEAE43B222"
+					item: {
+						Count: 1
+						id: "ad_astra:jet_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0708A184F4018CF0"
+					item: {
+						Count: 1
+						id: "ad_astra:jet_suit_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3A4903EEE81092AA"
+					item: {
+						Count: 1
+						id: "ad_astra:jet_suit_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "完美的航天服"
+			x: 16.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["78946C5DE5593F95"]
+			id: "47823FA089CEFCF4"
+			tasks: [{
+				id: "299D60A74E60AC77"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rover"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "驰骋星空"
+			x: 0.0d
+			y: 1.0d
+		}
+	]
+	title: "星际探索"
+}

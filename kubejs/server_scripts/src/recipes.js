@@ -1,0 +1,331 @@
+ServerEvents.recipes(event => {
+    //Saw 手锯
+    event.shaped(Item.of('kubejs:stone_saw', 1),[
+        'ACC',
+        'ABC'
+    ],{
+        A:'minecraft:stick',
+        B:'minecraft:flint',
+        C:'kubejs:stone_rod'
+    })
+    event.shaped(Item.of('kubejs:iron_saw', 1),[
+        'ACC',
+        'ABC'
+    ],{
+        A:'minecraft:stick',
+        B:'minecraft:flint',
+        C:'createaddition:iron_rod'
+    })
+    event.shaped(Item.of('kubejs:stone_rod',1),[
+        'A',
+        'A'
+    ],{
+        A:'#forge:cobblestone'
+    })
+    //模板
+    event.shaped(Item.of('kubejs:base_template', 1),[
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A:'#forge:stone',
+        B:'minecraft:diamond'
+    })
+    event.shaped(Item.of('kubejs:base_template', 3),[
+        'ABA',
+        'ACA',
+        'AAA'
+    ],{
+        A:'#forge:stone',
+        C:'minecraft:diamond',
+        B:'kubejs:base_template'
+    })
+    event.shaped(Item.of('enderitemod:enderite_upgrade_smithing_template', 2),[
+        'ABA',
+        'ACA',
+        'AAA'
+    ],{
+        A:'minecraft:end_stone',
+        B:'kubejs:base_template',
+        C:'minecraft:netherite_ingot'
+    })
+    event.shaped(Item.of('kubejs:diamond_template', 1),[
+        'ABA',
+        'ACA',
+        'AAA'
+    ],{
+        A:'minecraft:iron_ingot',
+        B:'kubejs:base_template',
+        C:'minecraft:diamond'
+    })
+
+    //Others 杂项
+    //锻造台
+    event.smithing('kubejs:netherite_saw', 'kubejs:diamond_saw', 'minecraft:netherite_ingot')
+
+    //切石机
+    event.stonecutting('2x minecraft:oak_slab', 'minecraft:oak_planks')
+    event.stonecutting('2x minecraft:spruce_slab', 'minecraft:spruce_planks')
+    event.stonecutting('2x minecraft:birch_slab', 'minecraft:birch_planks')
+    event.stonecutting('2x minecraft:jungle_slab', 'minecraft:jungle_planks')
+    event.stonecutting('2x minecraft:acacia_slab', 'minecraft:acacia_planks')
+    event.stonecutting('2x minecraft:dark_oak_slab', 'minecraft:dark_oak_planks')
+    event.stonecutting('2x minecraft:mangrove_slab', 'minecraft:mangrove_planks')
+    event.stonecutting('2x minecraft:crimson_slab', 'minecraft:crimson_planks')
+    event.stonecutting('2x minecraft:warped_slab', 'minecraft:warped_planks')
+    event.stonecutting('2x ad_astra:glacian_slab', 'ad_astra:glacian_planks')
+    event.stonecutting('2x ad_astra:aeronos_slab', 'ad_astra:aeronos_planks')
+    event.stonecutting('2x ad_astra:strophar_slab', 'ad_astra:strophar_planks')
+    event.stonecutting('2x architects_palette:twisted_slab', 'architects_palette:twisted_planks')
+    event.stonecutting('2x deeperdarker:echo_slab', 'deeperdarker:echo_planks')
+    event.stonecutting('4x minecraft:pointed_dripstone', 'minecraft:dripstone_block')
+    event.stonecutting('2x minecraft:dragon_egg', 'minecraft:dragon_egg')
+
+    event.smoking('minecraft:coal_block', 'architects_palette:charcoal_block')
+    event.smoking('minecraft:coal', 'minecraft:charcoal')
+    
+    //有序合成    
+    let taa = (tem, mod) => {
+        let inputid = mod + ':iron_' + tem
+        let outputid = mod + ':diamond_' + tem
+        event.smithing(outputid, 'kubejs:diamond_template', 'minecraft:diamond', inputid)
+    }
+    taa('sword', 'minecraft')
+    taa('helmet', 'minecraft')
+    taa('chestplate', 'minecraft')
+    taa('leggings', 'minecraft')
+    taa('boots', 'minecraft')
+    taa('shovel', 'minecraft')
+    taa('pickaxe', 'minecraft')
+    taa('axe', 'minecraft')
+    taa('hoe', 'minecraft')
+    taa('wand', 'constructionwand')
+    taa('knife', 'farmersdelight')
+    event.smithing('constructionwand:infinity_wand', 'constructionwand:diamond_wand', 'minecraft:nether_star')
+    let sim = (temp) => {
+        let inputid = 'simplyswords:netherite_' + temp
+        let outputid = 'simplyswords:runic_' + temp
+        event.smithing(outputid, 'simplyswords:runic_tablet', inputid, 'minecraft:diamond')
+        event.smithing(outputid, 'simplyswords:runic_tablet', outputid, 'minecraft:diamond')
+    }
+    sim('longsword')
+    sim('twinblade')
+    sim('rapier')
+    sim('katana')
+    sim('sai')
+    sim('spear')
+    sim('glaive')
+    sim('warglaive')
+    sim('cutlass')
+    sim('claymore')
+    sim('greathammer')
+    sim('greataxe')
+    sim('chakram')
+    sim('scythe')
+    sim('halberd')
+
+    event.shaped(Item.of('create:andesite_alloy', 4),[
+        'AA',
+        'BB'
+    ],{
+        A:'minecraft:andesite',
+        B:'architects_palette:algal_brick'
+    })
+    event.shaped(Item.of('create:andesite_alloy', 4),[
+        'AA',
+        'BB'
+    ],{
+        A:'architects_palette:algal_brick',
+        B:'minecraft:andesite'
+    })
+    event.shaped(Item.of('kubejs:screwdriver', 1),[
+        'B  ',
+        ' AC',
+        ' CA'
+    ],{
+        A:'createaddition:iron_rod',
+        B:'minecraft:iron_nugget',
+        C:'minecraft:blue_dye'
+    })
+    event.shaped(Item.of('kubejs:drill_head', 1),[
+        'AA ',
+        'ABC',
+        ' CB'
+    ],{
+        A:'minecraft:iron_nugget',
+        B:'minecraft:iron_ingot',
+        C:'create:iron_sheet'
+    })
+    event.shaped(Item.of('kubejs:saw_blade', 1),[
+        ' A ',
+        'ABA',
+        ' A '
+    ],{
+        A:'create:iron_sheet',
+        B:'minecraft:iron_ingot'
+    })
+    event.shaped(Item.of('create:flywheel', 1),[
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A:'create:brass_ingot',
+        B:'create:large_cogwheel'
+    })
+    event.shaped(Item.of('ad_astra:steel_cable', 4),[
+        ' A ',
+        'BBB',
+        ' A '
+    ], {
+        A:'ad_astra:steel_plate',
+        B:'createaddition:copper_wire'
+    })
+    event.shaped(Item.of('ad_astra:desh_cable', 4),[
+        ' A ',
+        'BBB',
+        ' A '
+    ], {
+        A:'ad_astra:desh_plate',
+        B:'createaddition:copper_wire'
+    })
+    event.shaped(Item.of('ad_astra:desh_fluid_pipe', 4),[
+        'A',
+        'B',
+        'A'
+    ],{
+        A:'ad_astra:desh_plate',
+        B:'minecraft:glass'
+    })
+    event.shaped(Item.of('ad_astra:ostrum_fluid_pipe', 4),[
+        'A',
+        'B',
+        'A'
+    ],{
+        A:'ad_astra:ostrum_plate',
+        B:'minecraft:glass'
+    })
+    event.shaped(Item.of('explorerscompass:explorerscompass', 1),[
+        'ABA',
+        'DCD',
+        'ADA'
+    ],{
+        A:'minecraft:redstone',
+        B:'create:precision_mechanism',
+        C:'minecraft:compass',
+        D:'kubejs:iron_mechanism'
+    })
+    event.shaped(Item.of('naturescompass:naturescompass', 1),[
+        'ABA',
+        'CDC',
+        'ABA'
+    ],{
+        A:'#minecraft:saplings',
+        B:'#minecraft:logs',
+        C:'kubejs:iron_mechanism',
+        D:'minecraft:compass'
+    })
+
+    event.shaped(Item.of('createaddition:barbed_wire', 1),[
+        'ABA'
+    ],{
+        A:'createaddition:iron_wire',
+        B:'minecraft:iron_bars'
+    })
+    event.shaped(Item.of('kubejs:rotor', 1),[
+        ' A ',
+        'ABA',
+        ' A '
+    ],{
+        A:'createaddition:copper_wire',
+        B:'createaddition:iron_rod'
+    })
+
+    event.shaped(Item.of('deeperdarker:heart_of_the_deep', 1),[
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A:'deeperdarker:reinforced_echo_shard',
+        B:'kubejs:incomplete_heart_of_the_deep'
+    })
+    event.shaped(Item.of('kubejs:incomplete_heart_of_the_deep', 1),[
+        'AAAAA',
+        'AABAA',
+        'ABBBA',
+        'AABAA',
+        'AAAAA'
+    ],{
+        A:'butchercraft:heart',
+        B:'minecraft:echo_shard'
+    })
+    event.shaped(Item.of('minecraft:elytra', 1),[
+        ' AAA AAA ',
+        'ACBBCBBCA',
+        'ACBBCBBCA',
+        'ACBB BBCA',
+        ' ABB BBA ',
+        ' ABB BBA ',
+        '  AB BA  '
+    ],{
+        A:'minecraft:shulker_shell',
+        B:'minecraft:phantom_membrane',
+        C:'enderitemod:enderite_ingot'
+    })
+    event.shaped(Item.of('minecraft:hopper', 1),[
+        'A A',
+        'A A',
+        ' A '
+    ],{
+        A:'create:iron_sheet'
+    })
+    event.shaped(Item.of('kubejs:extinguished_blaze_rod', 2),[
+        'A',
+        'A'
+    ],{
+        A:'minecraft:soul_sand'
+    })
+    event.shaped(Item.of('minecraft:echo_shard', 4),[
+        ' A ',
+        'ABA',
+        ' A '
+    ],{
+        A:'minecraft:amethyst_shard',
+        B:'minecraft:sculk'
+    })
+
+    event.shaped(Item.of('quark:pickarang', 1),[
+        'ABC',
+        '  B',
+        '  A'
+    ],{
+        A:'minecraft:diamond',
+        B:'#minecraft:planks',
+        C:'quark:diamond_heart'
+    })
+
+    event.shaped(Item.of('ad_astra:wrench', 1),[
+        'AA',
+        'AB',
+        ' C'
+    ],{
+        A:'ad_astra:steel_plate',
+        B:'create:cogwheel',
+        C:'createaddition:iron_rod'
+    })
+    event.shaped('kubejs:harvester', [
+        'ABA',
+        'ABA'
+    ],{
+        A:'create:andesite_alloy',
+        B:'create:iron_sheet'
+    })
+
+    event.shapeless(Item.of('createaddition:diamond_grit_sandpaper', 1),['minecraft:paper', 'createaddition:diamond_grit'])
+    event.shapeless(Item.of('createaddition:portable_energy_interface', 1), ['ad_astra:iron_cable', 'createaddition:connector'])
+    event.shapeless(Item.of('architects_palette:charcoal_block', 1), '9x minecraft:charcoal')
+    event.shapeless(Item.of('minecraft:blaze_rod', 1), ['kubejs:extinguished_blaze_rod', 'minecraft:flint_and_steel']).damageIngredient('minecraft:flint_and_steel', 1)
+    event.shapeless(Item.of('minecraft:gunpowder', 3), ['2x minecraft:charcoal', 'minecraft:blaze_powder'])
+    event.shapeless(Item.of('minecraft:glowstone_dust', 2), ['minecraft:redstone', 'minecraft:blaze_powder'])
+    event.shapeless(Item.of('minecraft:diamond', 1), '9x kubejs:diamond_nugget')
+    event.shapeless(Item.of('kubejs:gun_book', 1), ['3x minecraft:gunpowder', 'minecraft:netherite_ingot'])
+})

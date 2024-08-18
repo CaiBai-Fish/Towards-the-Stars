@@ -1,0 +1,623 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "08EDDC8DB6D15EC2"
+	group: "47C31061524D9D17"
+	hide_quest_until_deps_visible: true
+	icon: "create:andesite_encased_large_cogwheel"
+	id: "08EDDC8DB6D15EC2"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["70231A229736BDBE"]
+			hide: false
+			icon: "create:cogwheel"
+			id: "558504A255CB55BF"
+			rewards: [{
+				id: "79BB4A54517DB166"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "4754D597B6FD6F55"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "30F3FA4AB46DAC63"
+					item: "create:mechanical_mixer"
+					type: "item"
+				}
+				{
+					id: "78BD6B2FBFF7A603"
+					item: "create:mechanical_drill"
+					type: "item"
+				}
+				{
+					id: "3DED0502EAC3DBF4"
+					item: "create:mechanical_saw"
+					type: "item"
+				}
+				{
+					id: "4A86DF6554E57A08"
+					item: "create:deployer"
+					type: "item"
+				}
+				{
+					id: "399D4C4CDE01DE07"
+					item: "create:depot"
+					type: "item"
+				}
+			]
+			title: "步入安山时代"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["558504A255CB55BF"]
+			icon: "minecraft:crying_obsidian"
+			id: "194A6E621FB86BB7"
+			tasks: [
+				{
+					id: "78FBCA46F622FD74"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					id: "4A35A63877315637"
+					item: "create:limestone"
+					type: "item"
+				}
+				{
+					id: "6448B37744163134"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "黄金“石”代！"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["194A6E621FB86BB7"]
+			icon: "minecraft:dripstone_block"
+			id: "77AD7B516A0DC842"
+			tasks: [{
+				id: "5F4EC3A3F64048B3"
+				item: "minecraft:dripstone_block"
+				type: "item"
+			}]
+			title: "“浸出液”"
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["558504A255CB55BF"]
+			icon: "minecraft:oak_log"
+			id: "1FFCD1DB862F612F"
+			rewards: [
+				{
+					id: "1C9108A806E1B99F"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+				{
+					id: "3BD4718464A4FD26"
+					item: "minecraft:potato"
+					type: "item"
+				}
+				{
+					id: "50882E442D864A06"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+				{
+					id: "6A8CAECA3B6AA034"
+					item: "farmersdelight:onion"
+					type: "item"
+				}
+				{
+					id: "1586900F8B68238D"
+					item: "minecraft:pumpkin_seeds"
+					type: "item"
+				}
+				{
+					id: "1CC3FB36170174A6"
+					item: "minecraft:melon_seeds"
+					type: "item"
+				}
+				{
+					id: "47CE82CC4D77B4FB"
+					item: "farmersdelight:cabbage_seeds"
+					type: "item"
+				}
+				{
+					id: "470D9DFA4E46244C"
+					item: "farmersdelight:rice"
+					type: "item"
+				}
+				{
+					id: "48733F57533DC031"
+					item: "farmersdelight:tomato_seeds"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0210881F866C9344"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "kubejs:logs"
+						}
+					}
+					title: "Any #kubejs:logs"
+					type: "item"
+				}
+				{
+					id: "60B582ABEA193A3F"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "“朋克”森林"
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0456A9A6E6EB5C31"]
+			icon: "minecraft:oak_planks"
+			id: "78B0B9C22B91F56B"
+			tasks: [
+				{
+					id: "7D044E0BFC367925"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:planks"
+						}
+					}
+					title: "任意木板"
+					type: "item"
+				}
+				{
+					id: "38F4FA4C27C36439"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "切第一刀"
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1FFCD1DB862F612F"]
+			icon: "minecraft:stripped_oak_log"
+			id: "0456A9A6E6EB5C31"
+			tasks: [
+				{
+					id: "559EEAB6C5E30744"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:stripped_logs"
+						}
+					}
+					title: "任意去皮原木"
+					type: "item"
+				}
+				{
+					id: "7DA9CDE136062FEC"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "刨去树皮"
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["77AD7B516A0DC842"]
+			icon: "minecraft:clay_ball"
+			id: "759B915914DCE0BF"
+			tasks: [{
+				id: "291FE26D92414F0A"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "磨一磨"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["759B915914DCE0BF"]
+			icon: "create:mechanical_mixer"
+			id: "29114F0DC610ADB4"
+			tasks: [{
+				id: "206EC0FB04355B07"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "安山合金的另种生产"
+			x: 1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["78B0B9C22B91F56B"]
+			icon: "minecraft:oak_slab"
+			id: "3ED39D7B06A54275"
+			tasks: [
+				{
+					id: "74AA9745CE2D427B"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:wooden_slabs"
+						}
+					}
+					title: "任意木台阶"
+					type: "item"
+				}
+				{
+					id: "0374A0651D49F1B9"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "二次切割"
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"3ED39D7B06A54275"
+				"29114F0DC610ADB4"
+			]
+			icon: "create:andesite_casing"
+			id: "2B7EFE0306CCB149"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7028A88D2743369D"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "2E2EBC22F9C17A06"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "第一条流水线"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1FFCD1DB862F612F"]
+			icon: "create:mechanical_harvester"
+			id: "2EC21040F21F57D5"
+			rewards: [
+				{
+					count: 2
+					id: "4551979A0208F45E"
+					item: "minecraft:pig_spawn_egg"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "14DF7E8A27FE3BEA"
+					item: "minecraft:chicken_spawn_egg"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "07B05D1E2F4B164F"
+					item: "minecraft:sheep_spawn_egg"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1698870E4F87D6CB"
+					item: "minecraft:cow_spawn_egg"
+					type: "item"
+				}
+				{
+					id: "1C853CA0B00F4A1E"
+					item: {
+						Count: 1
+						id: "minecraft:bee_nest"
+						tag: {
+							BlockEntityTag: {
+								Bees: [
+									{
+										EntityData: {
+											AbsorptionAmount: 0.0f
+											Age: 0
+											AngerTime: 0
+											Attributes: [
+												{
+													Base: 0.30000001192092896d
+													Name: "minecraft:generic.movement_speed"
+												}
+												{
+													Base: 0.1d
+													Name: "caelus:fall_flying"
+												}
+												{
+													Base: 1.0d
+													Name: "forge:swim_speed"
+												}
+												{
+													Base: 0.0d
+													Name: "minecraft:generic.armor"
+												}
+												{
+													Base: 0.08d
+													Name: "forge:entity_gravity"
+												}
+												{
+													Base: 0.0d
+													Name: "forge:step_height_addition"
+												}
+											]
+											CanUpdate: 1b
+											CitadelData: { }
+											ForcedAge: 0
+											ForgeCaps: {
+												"curios:inventory": {
+													Curios: [ ]
+												}
+												"tacz:synced_entity_data": [ ]
+												"twilightforest:cap_shield": {
+													permshields: 0
+													tempshields: 0
+												}
+												"twilightforest:cap_thrown": {
+													throwCooldown: 0
+													throwX: 0.0d
+													throwY: 0.0d
+													throwZ: 0.0d
+													yetiThrown: 0b
+												}
+												"twilightforest:giant_pick_mine": {
+													giantBlockConversion: 0
+													giantPickBreaking: 0b
+													giantPickMining: 0L
+												}
+											}
+											ForgeData: { }
+											HasNectar: 0b
+											HasStung: 0b
+											Health: 5.0f
+											InLove: 0
+											Invulnerable: 0b
+											PersistenceRequired: 0b
+											UUID: [I;
+												905321327
+												-402831105
+												-1388004711
+												1792865203
+											]
+											id: "minecraft:bee"
+										}
+										MinOccupationTicks: 600
+										TicksInHive: 208
+									}
+									{
+										EntityData: {
+											AbsorptionAmount: 0.0f
+											Age: 0
+											AngerTime: 0
+											Attributes: [
+												{
+													Base: 0.30000001192092896d
+													Name: "minecraft:generic.movement_speed"
+												}
+												{
+													Base: 0.1d
+													Name: "caelus:fall_flying"
+												}
+												{
+													Base: 0.08d
+													Name: "forge:entity_gravity"
+												}
+												{
+													Base: 0.0d
+													Name: "forge:step_height_addition"
+												}
+											]
+											CanUpdate: 1b
+											CitadelData: { }
+											ForcedAge: 0
+											ForgeCaps: {
+												"curios:inventory": {
+													Curios: [ ]
+												}
+												"tacz:synced_entity_data": [ ]
+												"twilightforest:cap_shield": {
+													permshields: 0
+													tempshields: 0
+												}
+												"twilightforest:cap_thrown": {
+													throwCooldown: 0
+													throwX: 0.0d
+													throwY: 0.0d
+													throwZ: 0.0d
+													yetiThrown: 0b
+												}
+												"twilightforest:giant_pick_mine": {
+													giantBlockConversion: 0
+													giantPickBreaking: 0b
+													giantPickMining: 0L
+												}
+											}
+											ForgeData: { }
+											HasNectar: 0b
+											HasStung: 0b
+											Health: 10.0f
+											InLove: 0
+											Invulnerable: 0b
+											PersistenceRequired: 0b
+											UUID: [I;
+												-669084701
+												524831237
+												-1509715729
+												-1376107275
+											]
+											id: "minecraft:bee"
+										}
+										MinOccupationTicks: 600
+										TicksInHive: 105
+									}
+								]
+								ForgeCaps: { }
+								id: "minecraft:beehive"
+							}
+							display: {
+								Lore: ["\"(+NBT)\""]
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "更高效的收获方式"
+			tasks: [
+				{
+					id: "69611ABFEE5F10D2"
+					item: "create:mechanical_harvester"
+					type: "item"
+				}
+				{
+					id: "43F78928FD0A2A01"
+					title: "自动收获"
+					type: "checkmark"
+				}
+			]
+			title: "自给自足"
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["194A6E621FB86BB7"]
+			icon: "minecraft:granite"
+			id: "3F1252C824A71425"
+			tasks: [
+				{
+					id: "0E7B63634CF79FB1"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					id: "6E4C8E433DA09381"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					id: "57E0D2955718B541"
+					item: "minecraft:calcite"
+					type: "item"
+				}
+				{
+					id: "056AAF4EAF65639D"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					id: "76B6A520388817C8"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "完全量产"
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2EC21040F21F57D5"]
+			icon: "quark:feeding_trough"
+			id: "1977DB3C871020A5"
+			rewards: [{
+				id: "09964FFB09A831CE"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [
+				{
+					id: "68E9C2824EF26D26"
+					item: "quark:feeding_trough"
+					type: "item"
+				}
+				{
+					id: "028D4EAF3EA7D157"
+					title: "自动收获"
+					type: "checkmark"
+				}
+			]
+			title: "解放双手！"
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1FFCD1DB862F612F"]
+			id: "3A8F7917ACBB9EFA"
+			subtitle: "“石墨在高温高压下结晶生长成钻石”"
+			tasks: [{
+				id: "250436C483ECD82B"
+				item: "kubejs:diamond_nugget"
+				type: "item"
+			}]
+			title: "合成钻石"
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3A8F7917ACBB9EFA"]
+			id: "02435F4339651531"
+			tasks: [{
+				id: "6410DCA424138A24"
+				item: "kubejs:base_template"
+				type: "item"
+			}]
+			title: "量产模板"
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["02435F4339651531"]
+			icon: {
+				Count: 1
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2EC98CBEE657EE6F"
+			tasks: [{
+				id: "3C383C7A73775C4A"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/diamond"
+					}
+				}
+				title: "任意钻石工具"
+				type: "item"
+			}]
+			title: "钻石工具"
+			x: -5.0d
+			y: 6.0d
+		}
+	]
+	title: "机械改变生活！"
+}

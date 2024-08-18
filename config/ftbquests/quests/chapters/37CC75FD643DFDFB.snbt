@@ -1,0 +1,107 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "37CC75FD643DFDFB"
+	group: "47C31061524D9D17"
+	icon: {
+		Count: 1
+		id: "tacz:modern_kinetic_gun"
+		tag: {
+			GunCurrentAmmoCount: 30
+			GunFireMode: "AUTO"
+			GunId: "tacz:ak47"
+			HasBulletInBarrel: 1b
+		}
+	}
+	id: "37CC75FD643DFDFB"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["71E1504B4B4DBA1D"]
+			id: "0D19A0C0CADCC645"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "0DBBE378D6625FF4"
+				item: "tacz:gun_smith_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D19A0C0CADCC645"]
+			icon: {
+				Count: 1
+				id: "tacz:modern_kinetic_gun"
+				tag: {
+					GunCurrentAmmoCount: 30
+					GunFireMode: "AUTO"
+					GunId: "tacz:ak47"
+					HasBulletInBarrel: 1b
+				}
+			}
+			id: "12A7CF598A0A1225"
+			tasks: [{
+				id: "239397582563FBED"
+				title: "武器合成"
+				type: "checkmark"
+			}]
+			title: "火力时代"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D19A0C0CADCC645"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "tacz:762x39"
+				}
+			}
+			id: "5E679A41BFFBF6EC"
+			tasks: [{
+				id: "70CED8BBF3D4FA68"
+				title: "军火工厂"
+				type: "checkmark"
+			}]
+			title: "弹药"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5E679A41BFFBF6EC"
+				"12A7CF598A0A1225"
+			]
+			id: "444AA9E8C1C904D6"
+			tasks: [{
+				id: "46CD4CE45F319366"
+				title: "准备就绪"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1770747D259D642F"
+				"444AA9E8C1C904D6"
+			]
+			id: "30F9063A181D2749"
+			subtitle: "用枪械干掉一只末影龙"
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				id: "4788A5D4BDB9EADF"
+				type: "kill"
+				value: 1L
+			}]
+			title: "“大人，时代变了！”"
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+	title: "射速即是正义！"
+}

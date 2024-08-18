@@ -1,0 +1,8 @@
+{
+	chapter_groups: [
+		{ id: "660400AB14D22AD6", title: "序章" }
+		{ id: "47C31061524D9D17", title: "齿轮的魅力" }
+		{ id: "4557159B183F2AE3", title: "迈向太空的旅程" }
+		{ id: "57BAD24D35A67E3B", title: "终末之诗" }
+	]
+}

@@ -1,0 +1,377 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "1E877C6E1EEEDB28"
+	group: "660400AB14D22AD6"
+	icon: "minecraft:filled_map"
+	id: "1E877C6E1EEEDB28"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7D850CAD3CD8908C"]
+			icon: "minecraft:wheat"
+			id: "1EDB7D2C62AD03D5"
+			rewards: [
+				{
+					id: "53CED01EF6019057"
+					item: "minecraft:crafting_table"
+					type: "item"
+				}
+				{
+					id: "06C7BF78CF175763"
+					item: "minecraft:furnace"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "623E43A7A53F25BD"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "298D53E5C2BEFFBC"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "17CA44A18FC957AD"
+					item: {
+						Count: 1
+						id: "minecraft:wooden_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "morevillagers:first_village"
+				criterion: ""
+				icon: "minecraft:oak_leaves"
+				id: "74B4149E2FE12994"
+				type: "advancement"
+			}]
+			title: "在村庄中寻找一个安身之处"
+			x: -13.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1EDB7D2C62AD03D5"]
+			description: ["记得要种树！"]
+			icon: "minecraft:oak_log"
+			id: "374F5C60B97AAC74"
+			subtitle: "想致富，先撸树！"
+			tasks: [{
+				consume_items: false
+				count: 128L
+				id: "6E751C9BDBDD426F"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "任意原木"
+				type: "item"
+			}]
+			title: "先搞亿点木头"
+			x: -11.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1EDB7D2C62AD03D5"]
+			id: "6CA8607BAA684ED6"
+			rewards: [
+				{
+					id: "587E710378456CE5"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "3297C713480B999F"
+					item: "create:water_wheel"
+					type: "item"
+				}
+			]
+			subtitle: "有连锁采集，问题不大"
+			tasks: [{
+				consume_items: false
+				count: 128L
+				icon: "minecraft:cobblestone"
+				id: "4660D9CF5F00C60A"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:cobblestone"
+					}
+				}
+				title: "任意圆石"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6CA8607BAA684ED6"]
+			id: "63CBE5F059FC59F8"
+			ignore_reward_blocking: true
+			rewards: [
+				{
+					id: "70D883A6BBD14D98"
+					item: "kubejs:compressed_andesite"
+					type: "item"
+				}
+				{
+					count: 9
+					id: "1A6F98185DE3AE86"
+					item: "minecraft:observer"
+					type: "item"
+				}
+			]
+			subtitle: "有备无患！"
+			tasks: [
+				{
+					consume_items: false
+					count: 64L
+					id: "0879C25466ADB63F"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 64L
+					id: "7BC9FCD68ACFFEEC"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 16L
+					id: "7D819E93566743C3"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 64L
+					id: "1056F3EF3CA8E635"
+					item: "create:zinc_ingot"
+					type: "item"
+				}
+			]
+			title: "一点基础矿物"
+			x: -11.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6CA8607BAA684ED6"]
+			id: "08A76671C27F3C35"
+			rewards: [
+				{
+					id: "467918A19442587E"
+					item: "create:encased_fan"
+					type: "item"
+				}
+				{
+					id: "2FEAC7C7EBC3D78E"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "63B2A6A484A4EE90"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			subtitle: "也许以后可以量产？"
+			tasks: [{
+				consume_items: false
+				count: 64L
+				id: "0124F8A5DA43AA46"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			title: "最基础的材料"
+			x: -7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"1EDB7D2C62AD03D5"
+				"63CBE5F059FC59F8"
+			]
+			icon: "minecraft:kelp"
+			id: "59F9B0C32AB3C76E"
+			rewards: [{
+				id: "0DC405B9811BEC95"
+				item: "create:millstone"
+				type: "item"
+			}]
+			subtitle: "来自深海的植物，也许有变成金属的潜力？"
+			tasks: [
+				{
+					consume_items: false
+					id: "62350D740D05FF15"
+					item: "minecraft:kelp"
+					type: "item"
+				}
+				{
+					id: "55F75112622F1FFE"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "海带的多种用途"
+			x: -11.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["59F9B0C32AB3C76E"]
+			id: "7E09DDB050379601"
+			subtitle: "黏土可以烧制成好看的陶器，也可以……？"
+			tasks: [{
+				id: "6D937C39C9CC04A3"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "沙中淘宝"
+			x: -9.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E09DDB050379601"]
+			id: "6327A8EBAEF9D46B"
+			tasks: [{
+				id: "6617C5A20303CE41"
+				item: "architects_palette:algal_blend"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["63CBE5F059FC59F8"]
+			id: "2F795E476E20564A"
+			subtitle: "用一点经验换一种批量烧炼方式，很划算吧！"
+			tasks: [{
+				advancement: "create:fan_processing"
+				criterion: ""
+				id: "319C4A99938AA878"
+				type: "advancement"
+			}]
+			title: "露天熔炉！"
+			x: -9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6327A8EBAEF9D46B"
+				"2F795E476E20564A"
+			]
+			id: "6BAE82E82CE64FFB"
+			subtitle: "明明是用海带做的，为什么有种金属的感觉？"
+			tasks: [{
+				consume_items: false
+				id: "182D5F32DFB2306A"
+				item: "architects_palette:algal_brick"
+				type: "item"
+			}]
+			title: "海的颜色"
+			x: -7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["374F5C60B97AAC74"]
+			icon: "minecraft:oak_planks"
+			id: "67266B2EB42EC7BD"
+			tasks: [{
+				id: "3E6033CA9E0B1D7E"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:planks"
+					}
+				}
+				title: "任意木板"
+				type: "item"
+			}]
+			title: "木板"
+			x: -7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"6BAE82E82CE64FFB"
+				"08A76671C27F3C35"
+			]
+			id: "50C487F24C19563B"
+			shape: "hexagon"
+			size: 1.2d
+			subtitle: "用海带做的金属，当然算生物金属……吧"
+			tasks: [{
+				id: "21BEA712B7F41219"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "真正的生物金属！……？"
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"67266B2EB42EC7BD"
+				"50C487F24C19563B"
+			]
+			id: "70231A229736BDBE"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "以后你用它的地方多着呢"
+			tasks: [{
+				id: "5975B1DB798E08A9"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["63CBE5F059FC59F8"]
+			id: "116D65C484BC0EF8"
+			optional: true
+			tasks: [
+				{
+					id: "2E9C2814CB1F30DF"
+					item: {
+						Count: 1
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "629FC7F5FC26680E"
+					item: {
+						Count: 1
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "指南针"
+			x: -10.5d
+			y: -1.0d
+		}
+	]
+	title: "旅途开始的准备"
+}

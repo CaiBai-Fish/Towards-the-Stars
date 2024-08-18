@@ -1,0 +1,128 @@
+{
+	/* Default Generators
+	   {
+	     "id": "mod_id:block_id",
+	     "weight": 95.5,
+	     "dimensions": [
+	       "mod_id:dimension_id",
+	       "mod_id:dimension_id"
+	     ],
+	     "excludedDimensions": [
+	       "mod_id:dimension_id",
+	       "mod_id:dimension_id"
+	     ],
+	     "minY": 0,
+	     "maxY": 69
+	   }
+	*/
+	"cobbleGen": [
+		{
+			"id": "minecraft:cobblestone",
+			"weight": 100.0,
+			"minY": 0,
+			"dimensions": [
+				"minecraft:overworld",
+				"minecraft:the_end",
+				"minecraft:nether"
+			]
+		},
+		{
+			"id": "minecraft:cobbled_deepslate",
+			"weight": 100.0,
+			"maxY": 0,
+			"dimensions": [
+				"minecraft:overworld",
+				"minecraft:the_end",
+				"minecraft:nether"
+			]
+
+		},
+		{
+			"id":"ad_astra:moon_cobblestone",
+			"weight":100.0,
+	     "dimensions": [
+	       "ad_astra:moon"
+	     ]
+		},
+		{
+			"id":"ad_astra:mars_cobblestone",
+			"weight":100.0,
+	     "dimensions": [
+	       "ad_astra:mars"
+	     ]
+		},
+	],
+	"stoneGen": [
+		{
+			"id": "minecraft:stone",
+			"weight": 100.0,
+		},
+	],
+	"basaltGen": [
+		{
+			"id": "minecraft:basalt",
+			"weight": 100.0,
+		},
+	],
+	/* Custom Generators
+	   <stoneGen|cobbleGen|basaltGen>: {
+	     "mod_id:modifier_block_id": [
+	       {
+	         "id": "mod_id:block_id",
+	         "weight": 95.5,
+	         "dimensions": [
+	           "mod_id:dimension_id",
+	           "mod_id:dimension_id"
+	         ],
+	         "excludedDimensions": [
+	           "mod_id:dimension_id",
+	           "mod_id:dimension_id"
+	         ],
+	         "minY": 0,
+	         "maxY": 69
+	       },
+	       ...
+	     ]
+	   }
+	*/
+	"customGen": {
+		"cobbleGen": {
+			"kubejs:compressed_andesite": [
+				{
+					"id": "minecraft:andesite",
+					"weight": 100.0,
+				},
+			],
+			"kubejs:compressed_granite": [
+				{
+					"id": "minecraft:granite",
+					"weight": 100.0
+				}
+			],
+			"kubejs:compressed_diorite": [
+				{
+					"id": "minecraft:diorite",
+					"weight": 100.0
+				}
+			],
+			"kubejs:compressed_tuff": [
+				{
+					"id": "minecraft:tuff",
+					"weight":100.0
+				}
+			],
+			"kubejs:compressed_caltite": [
+				{
+					"id": "minecraft:calcite",
+					"weight":100.0
+				}
+			],
+			"kubejs:compressed_limestone": [
+				{
+					"id": "create:limestone",
+					"weight":100.0
+				}
+			],
+		},
+	},
+}
