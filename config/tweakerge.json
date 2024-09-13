@@ -730,7 +730,7 @@
     "tweakFakeSneakPlacement": false,
     "tweakFastBlockPlacement": false,
     "tweakFastLeftClick": false,
-    "tweakFastRightClick": false,
+    "tweakFastRightClick": true,
     "tweakFillCloneLimit": false,
     "tweakFlySpeed": false,
     "tweakFlexibleBlockPlacement": false,

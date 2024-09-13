@@ -65,8 +65,8 @@
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 0.0
+                "max": 3.0,
+                "min": 1.0
               },
               "function": "minecraft:looting_enchant"
             }
@@ -172,20 +172,6 @@
         "max": 3.0,
         "min": 1.0
       }
-    },
-    {
-      "rolls":1.0,
-      "entries":[
-        {
-          "type":"minecraft:item",
-          "name":"kubejs:heart",
-          "weight":4
-        },
-        {
-          "type":"minecraft:empty",
-          "weight":6
-        }
-      ]
     }
   ]
 }
