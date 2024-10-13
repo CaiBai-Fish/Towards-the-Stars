@@ -710,6 +710,7 @@
     "tweakAfterClicker": false,
     "tweakAimLock": false,
     "tweakAngelBlock": false,
+    "tweakAutoSwitchElytra": false,
     "tweakBlockReachOverride": false,
     "tweakBlockTypeBreakRestriction": false,
     "tweakBreakingGrid": false,
@@ -730,7 +731,7 @@
     "tweakFakeSneakPlacement": false,
     "tweakFastBlockPlacement": false,
     "tweakFastLeftClick": false,
-    "tweakFastRightClick": true,
+    "tweakFastRightClick": false,
     "tweakFillCloneLimit": false,
     "tweakFlySpeed": false,
     "tweakFlexibleBlockPlacement": false,
@@ -795,6 +796,9 @@
       "keys": ""
     },
     "tweakAngelBlock": {
+      "keys": ""
+    },
+    "tweakAutoSwitchElytra": {
       "keys": ""
     },
     "tweakBlockReachOverride": {

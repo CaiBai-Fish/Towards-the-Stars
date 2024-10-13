@@ -2,7 +2,9 @@ ServerEvents.recipes(event => {
     //remove 配方删除
     event.remove({type:'create:splashing', output:'minecraft:quartz'})
     event.remove({type:'ad_astra:nasa_workbench'})
+    event.remove({type:'create:compacting', input:'minecraft:flint'})
     event.remove({type:'create:crushing', output:'minecraft:quartz'})
+    event.remove({type:'create:milling', output:'minecraft:flint'})
     event.remove({output:['minecraft:andesite', 'minecraft:granite', 'minecraft:diorite', 'minecraft:lead'], mod:'minecraft'})
     event.remove({output:['minecraft:redstone', 'minecraft:netherrack', 'minecraft:glowstone_dust', 'minecraft:gunpowder'], input:'create:cinder_flour'})
     event.remove({output:['#forge:tools',, '#forge:armors'], input:'minecraft:diamond'})

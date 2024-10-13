@@ -21,3 +21,8 @@ usernamecache.json
 /journeymap/data
 /journeymap/data
 /journeymap/data
+*.bak
+*.log
+/journeymap/data
+/journeymap/data
+/.replay_cache

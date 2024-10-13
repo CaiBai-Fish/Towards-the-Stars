@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "2698B2F63851032D"
 	group: "47C31061524D9D17"
+	hide_quest_details_until_startable: true
 	icon: "createaddition:electric_motor"
 	id: "2698B2F63851032D"
 	order_index: 2
@@ -203,7 +204,10 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["4E96A7E174D15AD3"]
+			dependencies: [
+				"4E96A7E174D15AD3"
+				"1A9C09A42F1DBD9B"
+			]
 			hide: true
 			icon: "createaddition:chocolate_cake"
 			id: "3F4B0E12C1A5FC4B"
@@ -233,8 +237,8 @@
 				}
 			]
 			title: "自动化食品及附魔工业"
-			x: 9.0d
-			y: -1.5d
+			x: 7.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["4E96A7E174D15AD3"]
@@ -245,7 +249,14 @@
 			size: 1.5d
 			tasks: [{
 				id: "2479D3E39731FB92"
-				item: "railways:track_oak"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:tracks"
+					}
+				}
+				title: "Any #create:tracks"
 				type: "item"
 			}]
 			title: "长途运输"
@@ -304,6 +315,26 @@
 			}]
 			x: 7.0d
 			y: 3.0d
+		}
+		{
+			dependencies: [
+				"6B178B615CE2E135"
+				"4E96A7E174D15AD3"
+			]
+			hide: true
+			icon: "ae2:controller"
+			id: "32A0A731FBA7314E"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "本部分需要对AE2有较深了解"
+			tasks: [{
+				id: "1F4B61ED341915A2"
+				title: "确认"
+				type: "checkmark"
+			}]
+			title: "高效自动化"
+			x: 9.0d
+			y: -1.5d
 		}
 	]
 	title: "电气时代"

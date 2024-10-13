@@ -73,7 +73,12 @@
 					type: "item"
 				}
 				{
-					id: "6448B37744163134"
+					id: "1779DD25A66AD65D"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					id: "1EAF24FDFD965D11"
 					title: "自动生产"
 					type: "checkmark"
 				}
@@ -143,6 +148,16 @@
 				{
 					id: "48733F57533DC031"
 					item: "farmersdelight:tomato_seeds"
+					type: "item"
+				}
+				{
+					id: "5135C12397E25621"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+				{
+					id: "7E32A3C4AFFE1987"
+					item: "minecraft:rose_bush"
 					type: "item"
 				}
 			]
@@ -283,8 +298,15 @@
 			]
 			icon: "create:andesite_casing"
 			id: "2B7EFE0306CCB149"
+			rewards: [{
+				count: 256
+				id: "10C01141FC8FE032"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 1.5d
+			subtitle: "下矿挖的铁还够吗"
 			tasks: [
 				{
 					id: "7028A88D2743369D"
@@ -504,42 +526,7 @@
 				}
 			]
 			title: "自给自足"
-			x: -1.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["194A6E621FB86BB7"]
-			icon: "minecraft:granite"
-			id: "3F1252C824A71425"
-			tasks: [
-				{
-					id: "0E7B63634CF79FB1"
-					item: "minecraft:granite"
-					type: "item"
-				}
-				{
-					id: "6E4C8E433DA09381"
-					item: "minecraft:diorite"
-					type: "item"
-				}
-				{
-					id: "57E0D2955718B541"
-					item: "minecraft:calcite"
-					type: "item"
-				}
-				{
-					id: "056AAF4EAF65639D"
-					item: "minecraft:tuff"
-					type: "item"
-				}
-				{
-					id: "76B6A520388817C8"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
-			title: "完全量产"
-			x: 1.0d
+			x: -5.0d
 			y: 2.0d
 		}
 		{
@@ -564,59 +551,172 @@
 				}
 			]
 			title: "解放双手！"
-			x: -1.0d
+			x: -5.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["1FFCD1DB862F612F"]
-			id: "3A8F7917ACBB9EFA"
-			subtitle: "“石墨在高温高压下结晶生长成钻石”"
+			dependencies: ["1977DB3C871020A5"]
+			id: "532B78D90A81D42F"
+			optional: true
 			tasks: [{
-				id: "250436C483ECD82B"
-				item: "kubejs:diamond_nugget"
+				count: 65L
+				id: "367D238CC2CF947A"
+				item: { Count: 128, id: "minecraft:white_wool" }
 				type: "item"
 			}]
-			title: "合成钻石"
+			title: "大丰收"
 			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["532B78D90A81D42F"]
+			hide: true
+			hide_dependency_lines: true
+			id: "4E8473BDAEE3291C"
+			rewards: [{
+				id: "0C777F755380F694"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			shape: "hexagon"
+			subtitle: "组装最大应力的风车"
+			tasks: [{
+				advancement: "create:windmill_maxed"
+				criterion: ""
+				id: "23C9893416BE47EB"
+				type: "advancement"
+			}]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["194A6E621FB86BB7"]
+			id: "7E3FCB6A4DC9BB98"
+			tasks: [{
+				id: "5C5975943134F89B"
+				item: "minecraft:netherrack"
+				type: "item"
+			}]
+			x: 5.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["3A8F7917ACBB9EFA"]
-			id: "02435F4339651531"
+			dependencies: ["558504A255CB55BF"]
+			id: "3D2C5AECC2F61CDA"
 			tasks: [{
-				id: "6410DCA424138A24"
-				item: "kubejs:base_template"
+				id: "72CDA469B215A2C8"
+				item: "create:goggles"
 				type: "item"
 			}]
-			title: "量产模板"
-			x: -5.0d
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"3D2C5AECC2F61CDA"
+				"281FD409ACB9AE8A"
+			]
+			id: "1B8DD0C582233731"
+			tasks: [{
+				id: "0686199ACAA01905"
+				item: "create:schematicannon"
+				type: "item"
+			}]
+			x: 0.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["02435F4339651531"]
-			icon: {
-				Count: 1
-				id: "minecraft:diamond_pickaxe"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "2EC98CBEE657EE6F"
-			tasks: [{
-				id: "3C383C7A73775C4A"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "forge:tools/diamond"
-					}
-				}
-				title: "任意钻石工具"
+			can_repeat: true
+			dependencies: ["1FFCD1DB862F612F"]
+			id: "1F332C02339D71B2"
+			rewards: [{
+				id: "36A3AE580D069E5B"
+				item: "minecraft:beehive"
 				type: "item"
 			}]
-			title: "钻石工具"
+			tasks: [{
+				count: 64L
+				id: "1199DD4B142F95C8"
+				item: "minecraft:rose_bush"
+				type: "item"
+			}]
+			title: "量产玫瑰"
 			x: -5.0d
-			y: 6.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["194A6E621FB86BB7"]
+			description: [""]
+			icon: "minecraft:tube_coral_block"
+			id: "2A93D8D798F424B0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "78C807EE831D58E4"
+				table_id: 7945026105960278593L
+				type: "random"
+			}]
+			subtitle: "珊瑚块不够了来这里换"
+			tasks: [
+				{
+					count: 16L
+					id: "73293D82C4562FDE"
+					item: { Count: 64, id: "minecraft:sea_pickle" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "344DF7CF5A9E8DF3"
+					item: { Count: 16, id: "minecraft:cobblestone" }
+					type: "item"
+				}
+			]
+			title: "量产海泡菜"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2A93D8D798F424B0"]
+			id: "53FA7450E1E44687"
+			tasks: [{
+				id: "548A9B1AAC9D3567"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			title: "量产黏液球"
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53FA7450E1E44687"]
+			id: "4259D2A0A98A8687"
+			tasks: [{
+				id: "398CBCEB8920950E"
+				item: {
+					Count: 1
+					id: "create:super_glue"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "连接万物"
+			x: 7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1F332C02339D71B2"]
+			id: "706B04EC38F6B511"
+			subtitle: "太浪费食物了"
+			tasks: [{
+				id: "0BA17BA37EA222C4"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			title: "量产红石"
+			x: -7.0d
+			y: 0.0d
 		}
 	]
 	title: "机械改变生活！"

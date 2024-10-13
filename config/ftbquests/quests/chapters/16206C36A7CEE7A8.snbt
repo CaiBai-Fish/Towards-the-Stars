@@ -37,6 +37,11 @@
 			]
 			icon: "create:precision_mechanism"
 			id: "09B9CAFEED675973"
+			rewards: [{
+				id: "5972CF4BF293CEC3"
+				item: "kubejs:compressed_calcite"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "63BE9B8EA7D49711"
@@ -57,21 +62,18 @@
 			dependencies: ["2B7EFE0306CCB149"]
 			icon: "create:mechanical_pump"
 			id: "47DB605838B10DAB"
+			rewards: [{
+				id: "326C6537AF2396F7"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{
-					count: 8L
-					id: "658EDEBAFF4EA0B8"
-					item: "kubejs:copper_mechanism"
-					type: "item"
-				}
-				{
-					id: "63253C00F55DBD3C"
-					item: "create:copper_casing"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "63253C00F55DBD3C"
+				item: "create:copper_casing"
+				type: "item"
+			}]
 			title: "流体力学"
 			x: 0.0d
 			y: 0.0d
@@ -80,6 +82,11 @@
 			dependencies: ["47DB605838B10DAB"]
 			icon: "create:mechanical_pump"
 			id: "4A4F79BBB1663A8A"
+			rewards: [{
+				id: "25AA78E88E6FF707"
+				item: "minecraft:nether_wart"
+				type: "item"
+			}]
 			subtitle: "之前的机器是不是可以改成自动化了呢"
 			tasks: [
 				{
@@ -134,9 +141,9 @@
 		}
 		{
 			dependencies: ["4A4F79BBB1663A8A"]
+			hide_dependent_lines: true
 			icon: "minecraft:grass_block"
 			id: "222CBED553CB44D9"
-			optional: true
 			tasks: [
 				{
 					id: "5BE6670A10098F2C"
@@ -181,7 +188,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["09B9CAFEED675973"]
+			dependencies: ["67D3D35A4F94DF3B"]
 			icon: "minecraft:diorite"
 			id: "0FBCA6448662AA19"
 			tasks: [
@@ -196,55 +203,91 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["0FBCA6448662AA19"]
-			id: "2B1610CCF6F14EFC"
-			tasks: [{
-				id: "116AC9ADAD2402A1"
-				item: "minecraft:granite"
-				type: "item"
-			}]
-			x: 16.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0FBCA6448662AA19"]
-			id: "0044FFFDABFC6237"
-			tasks: [{
-				id: "11D806ED9BF90461"
-				item: "minecraft:andesite"
-				type: "item"
-			}]
-			x: 16.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["0FBCA6448662AA19"]
-			id: "10AF4EE0A2E7E9CF"
-			tasks: [{
-				id: "20D12A1E6528063F"
-				item: "minecraft:tuff"
-				type: "item"
-			}]
-			x: 16.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["0FBCA6448662AA19"]
-			id: "67D3D35A4F94DF3B"
-			tasks: [{
-				id: "7CD41BF445ACBFA5"
-				item: "minecraft:calcite"
-				type: "item"
-			}]
 			x: 16.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["67D3D35A4F94DF3B"]
+			icon: "minecraft:granite"
+			id: "2B1610CCF6F14EFC"
+			tasks: [
+				{
+					id: "116AC9ADAD2402A1"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					id: "080C6CDBCEA246C8"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 16.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["67D3D35A4F94DF3B"]
+			icon: "minecraft:andesite"
+			id: "0044FFFDABFC6237"
+			tasks: [
+				{
+					id: "11D806ED9BF90461"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					id: "43FC252627AA5C1E"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 16.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["67D3D35A4F94DF3B"]
+			icon: "minecraft:tuff"
+			id: "10AF4EE0A2E7E9CF"
+			tasks: [
+				{
+					id: "20D12A1E6528063F"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					id: "5DEB699A6C38B0F2"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 16.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"09B9CAFEED675973"
+				"31E9ECB1A0A1BE62"
+			]
+			icon: "minecraft:calcite"
+			id: "67D3D35A4F94DF3B"
+			tasks: [
+				{
+					id: "7CD41BF445ACBFA5"
+					item: "minecraft:calcite"
+					type: "item"
+				}
+				{
+					id: "45F66EDB7DE5C4F7"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FBCA6448662AA19"]
+			hide_dependent_lines: true
 			id: "59693A1A119E4C49"
 			tasks: [{
 				id: "69362B161440F8F2"
@@ -255,7 +298,11 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["2B1610CCF6F14EFC"]
+			dependencies: [
+				"2B1610CCF6F14EFC"
+				"706B04EC38F6B511"
+			]
+			hide_dependent_lines: true
 			id: "05A92AA7E7997898"
 			tasks: [{
 				id: "540F993AFA0C4A24"
@@ -267,6 +314,7 @@
 		}
 		{
 			dependencies: ["0044FFFDABFC6237"]
+			hide_dependent_lines: true
 			id: "671F354AC98D803E"
 			tasks: [{
 				id: "7FB2BCC04510C3EC"
@@ -278,6 +326,7 @@
 		}
 		{
 			dependencies: ["10AF4EE0A2E7E9CF"]
+			hide_dependent_lines: true
 			id: "7C989B3BA5DC9E45"
 			tasks: [{
 				id: "5B419278439E8D2C"
@@ -325,7 +374,7 @@
 					type: "item"
 				}
 			]
-			title: "“矿物源于圆石”"
+			title: "“矿物源于陨石”"
 			x: 20.0d
 			y: 0.0d
 		}
@@ -481,30 +530,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1A9C09A42F1DBD9B"]
-			icon: "minecraft:redstone"
-			id: "203D292DA29251BE"
-			tasks: [
-				{
-					id: "7C602C733642F3BB"
-					item: "minecraft:redstone"
-					type: "item"
-				}
-				{
-					id: "13AB34A2199FBBB9"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
-			title: "量产红石"
-			x: 6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"17E171A0188D147C"
-				"203D292DA29251BE"
-			]
+			dependencies: ["17E171A0188D147C"]
 			icon: "minecraft:repeater"
 			id: "052988F306649291"
 			tasks: [
@@ -546,6 +572,353 @@
 			title: "“无限”岩浆"
 			x: 2.0d
 			y: -6.0d
+		}
+		{
+			dependencies: ["02435F4339651531"]
+			icon: {
+				Count: 1
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2EC98CBEE657EE6F"
+			tasks: [{
+				id: "3C383C7A73775C4A"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/diamond"
+					}
+				}
+				title: "任意钻石工具"
+				type: "item"
+			}]
+			title: "钻石工具"
+			x: 26.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3A8F7917ACBB9EFA"]
+			id: "02435F4339651531"
+			tasks: [{
+				id: "6410DCA424138A24"
+				item: "kubejs:base_template"
+				type: "item"
+			}]
+			title: "量产模板"
+			x: 24.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6B178B615CE2E135"]
+			id: "3A8F7917ACBB9EFA"
+			subtitle: "“石墨在高温高压下结晶生长成钻石”"
+			tasks: [{
+				id: "250436C483ECD82B"
+				item: "kubejs:diamond_nugget"
+				type: "item"
+			}]
+			title: "合成钻石"
+			x: 22.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["030D46744F9BEEF1"]
+			id: "281FD409ACB9AE8A"
+			tasks: [{
+				id: "4E03FA9E02985981"
+				item: "minecraft:gunpowder"
+				type: "item"
+			}]
+			title: "量产火药"
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["47DB605838B10DAB"]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "naturescompass:naturescompass"
+				tag: { }
+			}
+			id: "116D65C484BC0EF8"
+			optional: true
+			tasks: [
+				{
+					id: "2E9C2814CB1F30DF"
+					item: {
+						Count: 1
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "629FC7F5FC26680E"
+					item: {
+						Count: 1
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "指南针"
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["116D65C484BC0EF8"]
+			id: "27257C63B68EC38C"
+			optional: true
+			tasks: [{
+				id: "0899756E1B904AF2"
+				structure: "ae2:meteorite"
+				type: "structure"
+			}]
+			title: "寻找陨石"
+			x: 12.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"27257C63B68EC38C"
+				"34D1DBBB5D0E599E"
+			]
+			id: "31E9ECB1A0A1BE62"
+			tasks: [{
+				id: "0645B6F4919369B8"
+				item: "ae2:sky_stone_block"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["222CBED553CB44D9"]
+			id: "34D1DBBB5D0E599E"
+			tasks: [{
+				id: "3CE03B0EC4BDE79D"
+				item: "ae2:sky_dust"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["05A92AA7E7997898"]
+			id: "72AFC36F641A94CD"
+			tasks: [{
+				id: "2F3598DFA04E9C8C"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			title: "新的红石生产方法"
+			x: 20.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6B178B615CE2E135"]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "16DE226360DA1C07"
+			tasks: [
+				{
+					id: "5DB1967026B90991"
+					item: {
+						Count: 1
+						id: "minecraft:iron_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "246F9DF651F572D5"
+					item: {
+						Count: 1
+						id: "minecraft:iron_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2F44E54CFE22C585"
+					item: {
+						Count: 1
+						id: "minecraft:iron_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3FCF0188914FC752"
+					item: {
+						Count: 1
+						id: "minecraft:iron_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "铁皮裹身"
+			x: 22.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"16DE226360DA1C07"
+				"02435F4339651531"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:diamond_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "5719C14443CBE5EA"
+			tasks: [
+				{
+					id: "11604FCE1440166C"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "52D370290760850A"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "29C52D1DF9109EC1"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0158D46E638EE529"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "升级！"
+			x: 24.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5719C14443CBE5EA"
+				"7E3FCB6A4DC9BB98"
+				"543FCC7EF291D5CE"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:netherite_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "5270E886DC1B4E0B"
+			tasks: [
+				{
+					id: "3AF9659DBFECE384"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "406332E1EE197592"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4042B278242509EC"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0DE858736E708602"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "残骸裹身"
+			x: 26.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3A8F7917ACBB9EFA"]
+			hide_dependent_lines: true
+			id: "543FCC7EF291D5CE"
+			tasks: [{
+				id: "759392C0B725B7FD"
+				item: "minecraft:ancient_debris"
+				type: "item"
+			}]
+			title: "合成残骸"
+			x: 24.0d
+			y: 3.0d
 		}
 	]
 	title: "黄铜时代"

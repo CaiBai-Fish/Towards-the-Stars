@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "43DD9FC4F5904FAC"
 	group: "47C31061524D9D17"
+	hide_quest_details_until_startable: true
 	icon: {
 		Count: 1
 		id: "createbigcannons:flak_autocannon_round"

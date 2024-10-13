@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "37CC75FD643DFDFB"
 	group: "47C31061524D9D17"
+	hide_quest_details_until_startable: true
 	icon: {
 		Count: 1
 		id: "tacz:modern_kinetic_gun"
@@ -18,7 +19,8 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["71E1504B4B4DBA1D"]
+			dependencies: ["2698B2F63851032D"]
+			hide: true
 			id: "0D19A0C0CADCC645"
 			shape: "hexagon"
 			size: 1.5d

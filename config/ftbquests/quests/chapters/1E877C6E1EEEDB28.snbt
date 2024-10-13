@@ -121,6 +121,7 @@
 		}
 		{
 			dependencies: ["6CA8607BAA684ED6"]
+			icon: "minecraft:iron_ingot"
 			id: "63CBE5F059FC59F8"
 			ignore_reward_blocking: true
 			rewards: [
@@ -333,6 +334,43 @@
 				"50C487F24C19563B"
 			]
 			id: "70231A229736BDBE"
+			rewards: [{
+				id: "67DE88D2D2AA92B7"
+				item: {
+					Count: 1
+					id: "minecraft:fishing_rod"
+					tag: {
+						Damage: 0
+						Enchantments: [
+							{
+								id: "minecraft:lure"
+								lvl: 3s
+							}
+							{
+								id: "minecraft:luck_of_the_sea"
+								lvl: 3s
+							}
+							{
+								id: "minecraft:mending"
+								lvl: 1s
+							}
+							{
+								id: "enderitemod:void_floating"
+								lvl: 3s
+							}
+							{
+								id: "minecraft:unbreaking"
+								lvl: 3s
+							}
+						]
+						RepairCost: 31
+						display: {
+							Name: "{\"text\":\"吃饱喝好\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			subtitle: "以后你用它的地方多着呢"
@@ -343,34 +381,6 @@
 			}]
 			x: -3.0d
 			y: 0.0d
-		}
-		{
-			dependencies: ["63CBE5F059FC59F8"]
-			id: "116D65C484BC0EF8"
-			optional: true
-			tasks: [
-				{
-					id: "2E9C2814CB1F30DF"
-					item: {
-						Count: 1
-						id: "explorerscompass:explorerscompass"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "629FC7F5FC26680E"
-					item: {
-						Count: 1
-						id: "naturescompass:naturescompass"
-						tag: { }
-					}
-					type: "item"
-				}
-			]
-			title: "指南针"
-			x: -10.5d
-			y: -1.0d
 		}
 	]
 	title: "旅途开始的准备"

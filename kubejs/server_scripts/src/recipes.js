@@ -101,28 +101,8 @@ ServerEvents.recipes(event => {
     taa('hoe', 'minecraft')
     taa('wand', 'constructionwand')
     taa('knife', 'farmersdelight')
+    taa('saw', 'kubejs')
     event.smithing('constructionwand:infinity_wand', 'constructionwand:diamond_wand', 'minecraft:nether_star')
-    let sim = (temp) => {
-        let inputid = 'simplyswords:netherite_' + temp
-        let outputid = 'simplyswords:runic_' + temp
-        event.smithing(outputid, 'simplyswords:runic_tablet', inputid, 'minecraft:diamond')
-        event.smithing(outputid, 'simplyswords:runic_tablet', outputid, 'minecraft:diamond')
-    }
-    sim('longsword')
-    sim('twinblade')
-    sim('rapier')
-    sim('katana')
-    sim('sai')
-    sim('spear')
-    sim('glaive')
-    sim('warglaive')
-    sim('cutlass')
-    sim('claymore')
-    sim('greathammer')
-    sim('greataxe')
-    sim('chakram')
-    sim('scythe')
-    sim('halberd')
 
     event.shaped(Item.of('create:andesite_alloy', 4),[
         'AA',
@@ -212,17 +192,18 @@ ServerEvents.recipes(event => {
         A:'minecraft:redstone',
         B:'create:precision_mechanism',
         C:'minecraft:compass',
-        D:'kubejs:iron_mechanism'
+        D:'create:iron_sheet'
     })
     event.shaped(Item.of('naturescompass:naturescompass', 1),[
-        'ABA',
+        'AEA',
         'CDC',
         'ABA'
     ],{
         A:'#minecraft:saplings',
         B:'#minecraft:logs',
-        C:'kubejs:iron_mechanism',
-        D:'minecraft:compass'
+        C:'create:iron_sheet',
+        D:'minecraft:compass',
+        E:'create:precision_mechanism'
     })
 
     event.shaped(Item.of('createaddition:barbed_wire', 1),[

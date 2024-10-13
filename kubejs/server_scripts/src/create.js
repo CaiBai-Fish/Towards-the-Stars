@@ -5,22 +5,21 @@ ServerEvents.recipes(event => {
         ['minecraft:andesite', 'architects_palette:algal_brick'
     ])
     event.recipes.create.compacting('minecraft:dripstone_block', [Fluid.water(200), 'create:limestone'])
-    event.recipes.create.compacting('2x create:asurine', ['minecraft:diorite', 'minecraft:andesite', 'create:cinder_flour'])
-    event.recipes.create.compacting('2x create:crimsite', ['minecraft:diorite', 'minecraft:granite', 'create:cinder_flour'])
-    event.recipes.create.compacting('2x create:ochrum', ['minecraft:diorite', 'minecraft:tuff', 'create:cinder_flour'])
-    event.recipes.create.compacting('2x create:veridium', ['minecraft:diorite', 'minecraft:calcite', 'create:cinder_flour'])
+    event.recipes.create.compacting('minecraft:calcite', [Fluid.water(100), 'ae2:sky_stone_block', 'minecraft:quartz'])
+    event.recipes.create.compacting('2x create:asurine', ['minecraft:calcite', 'minecraft:andesite', 'create:cinder_flour', 'ae2:sky_dust'])
+    event.recipes.create.compacting('2x create:crimsite', ['minecraft:calcite', 'minecraft:granite', 'create:cinder_flour', 'ae2:sky_dust'])
+    event.recipes.create.compacting('2x create:ochrum', ['minecraft:calcite', 'minecraft:tuff', 'create:cinder_flour', 'ae2:sky_dust'])
+    event.recipes.create.compacting('2x create:veridium', ['minecraft:calcite', 'minecraft:diorite', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('minecraft:diamond', '9x kubejs:diamond_nugget')
     event.recipes.create.compacting('deeperdarker:sculk_stone', '6x minecraft:sculk')
+    event.recipes.create.compacting('kubejs:diamond_nugget', 'minecraft:coal_block').superheated()
 
     event.recipes.create.crushing('2x ad_astra:sky_stone', 'ad_astra:sky_stone')
     
     event.recipes.create.milling('minecraft:sand', 'minecraft:gravel')
-    event.recipes.create.milling('2x ad_astra:sky_stone', 'ad_astra:sky_stone')
 
     event.recipes.create.splashing('minecraft:quartz', 'minecraft:soul_sand')
     event.recipes.create.splashing('minecraft:netherrack', 'minecraft:blackstone')
-
-    event.recipes.create.pressing('kubejs:diamond_nugget', 'minecraft:coal_block')
 
     event.recipes.create.mixing('enderitemod:cracked_enderite_ore', ['minecraft:ancient_debris', '16x minecraft:ender_pearl'])
     
@@ -213,12 +212,56 @@ ServerEvents.recipes(event => {
     event.shapeless('create:powered_latch', ['minecraft:repeater', 'minecraft:lever'])
     event.shapeless('create:powered_toggle_latch', 'create:powered_latch')
     event.shapeless('create:powered_latch', 'create:powered_toggle_latch')
+    event.shapeless('minecraft:redstone', ['create:wheat_flour', 'minecraft:red_dye'])
 
     event.recipes.create.item_application('create:adjustable_chain_gearshift', ['create:encased_chain_drive', 'minecraft:redstone'])
     event.recipes.create.item_application('create:controller_rail', ['minecraft:powered_rail', 'create:electron_tube'])
     event.recipes.create.item_application('create:linear_chassis', ['#kubejs:logs', 'create:andesite_alloy'])
     event.recipes.create.item_application('create:radial_chassis', ['#kubejs:logs', 'create:zinc_ingot'])
+
+    event.recipes.create.splashing([Item.of('minecraft:nether_wart').withChance(0.3),
+                                    Item.of('minecraft:crimson_fungus').withChance(0.2),
+                                    Item.of('minecraft:warped_fungus').withChance(0.2)
+    ], 'minecraft:soul_soil')
+    let a = 'minecraft:stone_slab'
+    event.recipes.create.sequenced_assembly(Item.of('create:millstone'),
+        a,
+        [
+            event.recipes.create.deploying(a, [a, 'create:cogwheel']),
+            event.recipes.create.deploying(a, [a, 'minecraft:stone_slab'])
+        ]).loops(1).transitionalItem(a)
+    event.recipes.create.sequenced_assembly(Item.of('create:mechanical_mixer'),
+        'create:andesite_casing',
+        [
+            event.recipes.create.deploying('create:andesite_casing', ['create:andesite_casing', 'create:cogwheel']),
+            event.recipes.create.deploying('create:andesite_casing', ['create:andesite_casing', 'create:whisk'])
+        ]).loops(1).transitionalItem('create:andesite_casing')
+    event.recipes.create.sequenced_assembly(Item.of('create:sequenced_gearshift'),
+        'create:encased_chain_drive',
+        [
+            event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'create:cogwheel']),
+            event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'electron_tube'])
+        ]).loops(1).transitionalItem('create:encased_chain_drive')
     
+    event.stonecutting('create:depot', 'create:andesite_casing')
+
+        event.shaped(Item.of('create:water_wheel', 1),[
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A:'#minecraft:wooden_slabs',
+        B:'create:large_cogwheel'
+    })
+    event.shaped(Item.of('create:large_water_wheel', 1),[
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A:'#minecraft:wooden_slabs',
+        B:'create:water_wheel'
+    })
+
     event.recipes.create.sequenced_assembly('create:cart_assembler',
         '#minecraft:planks',
         [
@@ -330,45 +373,5 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying('ad_astra:venus_cobblestone', ['ad_astra:venus_cobblestone', 'ad_astra:calorite_ingot'])
         ]
     ).loops(1).transitionalItem('ad_astra:venus_cobblestone')
-
-    //杂项
-    let a = 'minecraft:stone_slab'
-    event.recipes.create.sequenced_assembly(Item.of('create:millstone'),
-        a,
-        [
-            event.recipes.create.deploying(a, [a, 'create:cogwheel']),
-            event.recipes.create.deploying(a, [a, 'minecraft:stone_slab'])
-        ]).loops(1).transitionalItem(a)
-    event.recipes.create.sequenced_assembly(Item.of('create:mechanical_mixer'),
-        'create:andesite_casing',
-        [
-            event.recipes.create.deploying('create:andesite_casing', ['create:andesite_casing', 'create:cogwheel']),
-            event.recipes.create.deploying('create:andesite_casing', ['create:andesite_casing', 'create:whisk'])
-        ]).loops(1).transitionalItem('create:andesite_casing')
-    event.recipes.create.sequenced_assembly(Item.of('create:sequenced_gearshift'),
-        'create:encased_chain_drive',
-        [
-            event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'create:cogwheel']),
-            event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'electron_tube'])
-        ]).loops(1).transitionalItem('create:encased_chain_drive')
-    
-    event.stonecutting('create:depot', 'create:andesite_casing')
-
-        event.shaped(Item.of('create:water_wheel', 1),[
-        'AAA',
-        'ABA',
-        'AAA'
-    ],{
-        A:'#minecraft:wooden_slabs',
-        B:'create:large_cogwheel'
-    })
-    event.shaped(Item.of('create:large_water_wheel', 1),[
-        'AAA',
-        'ABA',
-        'AAA'
-    ],{
-        A:'#minecraft:wooden_slabs',
-        B:'create:water_wheel'
-    })
 
 })
