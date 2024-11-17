@@ -3,9 +3,11 @@
 	default_quest_shape: ""
 	filename: "1D9FAF5FA8AB61B2"
 	group: "57BAD24D35A67E3B"
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_visible: true
 	icon: "minecraft:netherrack"
 	id: "1D9FAF5FA8AB61B2"
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [ ]
 	title: "空荡荡的地狱"

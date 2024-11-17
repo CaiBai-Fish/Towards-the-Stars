@@ -8,6 +8,8 @@ ServerEvents.recipes(event => {
     event.remove({output:['minecraft:andesite', 'minecraft:granite', 'minecraft:diorite', 'minecraft:lead'], mod:'minecraft'})
     event.remove({output:['minecraft:redstone', 'minecraft:netherrack', 'minecraft:glowstone_dust', 'minecraft:gunpowder'], input:'create:cinder_flour'})
     event.remove({output:['#forge:tools',, '#forge:armors'], input:'minecraft:diamond'})
+    event.remove({output:'minecraft:sugar', input:'minecraft:honey_bottle'})
+    event.remove({input:'ae2:sky_stone_block', output:'ae2:sky_dust'})
     event.remove({input:['ad_astra:hammer']})
     event.remove({ not: {type: 'create:sequenced_assembly'}, output:'create:andesite_alloy'})
     event.remove({output:['ad_astra:iron_rod', 'ad_astra:tier_1_rover', 'ad_astra:nasa_workbench', 'ad_astra:wheel', 'ad_astra:engine_frame', 'ad_astra:engine_fan',
@@ -52,4 +54,5 @@ ServerEvents.recipes(event => {
     event.replaceInput({output:'minecraft:shaper_armor_trim_smithing_template'}, 'minecraft:terracotta','minecraft:bricks')
     event.replaceInput({output:'aquaculture:iron_fishing_rod'}, 'minecraft:iron_ingot', 'createaddition:iron_rod')
     event.replaceInput({input:'ad_astra:iron_rod'}, 'ad_astra:iron_rod', 'createaddition:iron_rod')
+    //event.replaceOutput({input:'ae2:sky_stone_block', output:'ae2:sky_dust'}, 'ae2:sky_dust', Item.of('ae2:sky_dust', 3))
 })

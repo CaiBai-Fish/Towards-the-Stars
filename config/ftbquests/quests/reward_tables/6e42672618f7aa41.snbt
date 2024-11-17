@@ -1,7 +1,7 @@
 {
 	id: "6E42672618F7AA41"
 	loot_size: 1
-	order_index: 0
+	order_index: 1
 	rewards: [
 		{ item: "minecraft:tube_coral_block" }
 		{ item: "minecraft:brain_coral_block" }

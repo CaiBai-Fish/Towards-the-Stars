@@ -28,4 +28,5 @@ ServerEvents.tags('item', event => {
             event.add('kubejs:logs', [logsId]);
         }
     });
+    event.add('kubejs:powder', ['create:wheat_flour', 'farmersdelight:rice'])
 })

@@ -132,9 +132,9 @@ ServerEvents.recipes(event => {
         'ABC',
         ' CB'
     ],{
-        A:'minecraft:iron_nugget',
+        A:'create:zinc_nugget',
         B:'minecraft:iron_ingot',
-        C:'create:iron_sheet'
+        C:'createaddition:zinc_sheet'
     })
     event.shaped(Item.of('kubejs:saw_blade', 1),[
         ' A ',
@@ -143,6 +143,14 @@ ServerEvents.recipes(event => {
     ],{
         A:'create:iron_sheet',
         B:'minecraft:iron_ingot'
+    })
+    event.shaped(Item.of('kubejs:plough', 1),[
+        'ABA',
+        'CCC'
+    ],{
+        A:'create:iron_sheet',
+        B:'createaddition:zinc_sheet',
+        C:'create:andesite_alloy'
     })
     event.shaped(Item.of('create:flywheel', 1),[
         'AAA',
@@ -298,7 +306,16 @@ ServerEvents.recipes(event => {
         'ABA'
     ],{
         A:'create:andesite_alloy',
-        B:'create:iron_sheet'
+        B:'createaddition:zinc_sheet'
+    })
+    event.shaped('minecraft:blaze_spawn_egg', [
+        'AAA',
+        'BCB',
+        'AAA'
+    ],{
+        A:'minecraft:blaze_powder',
+        B:'minecraft:blaze_rod',
+        C:'minecraft:netherrack'
     })
 
     event.shapeless(Item.of('createaddition:diamond_grit_sandpaper', 1),['minecraft:paper', 'createaddition:diamond_grit'])

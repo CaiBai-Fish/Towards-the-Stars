@@ -3,9 +3,11 @@
 	default_quest_shape: ""
 	filename: "1770747D259D642F"
 	group: "57BAD24D35A67E3B"
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_visible: true
 	icon: "minecraft:sculk_shrieker"
 	id: "1770747D259D642F"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [ ]
 	title: "远古的叹息"

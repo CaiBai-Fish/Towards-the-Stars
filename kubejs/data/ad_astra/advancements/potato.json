@@ -4,29 +4,32 @@
       "item": "minecraft:potato"
     },
     "title": {
-      "translate": "advancements.ad_astra.title"
+      "translate": "advancements.ad_astra.potato.title"
     },
     "description": {
-      "translate": "advancements.ad_astra.description"
-    }
+      "translate": "advancements.ad_astra.potato.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
   },
   "parent": "ad_astra:mars",
   "criteria": {
-    "requirement": {
+    "potato": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "player": [
+        "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:player",
-              "location": {
-                "dimension": "ad_astra:mars"
-              }
-            }
+            "block": "minecraft:potatoes",
+            "condition": "minecraft:block_state_property"
           }
-        ]
+        ],
+        "player": {
+          "location":{
+            "dimension": "ad_astra:mars"
+          }
+        }
       }
     }
   },

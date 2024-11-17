@@ -4,6 +4,7 @@
 	filename: "2698B2F63851032D"
 	group: "47C31061524D9D17"
 	hide_quest_details_until_startable: true
+	hide_quest_until_deps_visible: true
 	icon: "createaddition:electric_motor"
 	id: "2698B2F63851032D"
 	order_index: 2
@@ -187,7 +188,7 @@
 				item: "createaddition:modular_accumulator"
 				type: "item"
 			}]
-			title: "电力存储"
+			title: "电力充沛"
 			x: 3.0d
 			y: 2.0d
 		}
@@ -335,6 +336,16 @@
 			title: "高效自动化"
 			x: 9.0d
 			y: -1.5d
+		}
+		{
+			id: "7DFFD4D189A66C82"
+			tasks: [{
+				id: "42F7A4B7CEFAB393"
+				item: "minecraft:sugar"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 6.0d
 		}
 	]
 	title: "电气时代"

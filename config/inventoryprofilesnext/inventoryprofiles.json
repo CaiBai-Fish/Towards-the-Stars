@@ -7,5 +7,10 @@
     },
     "AutoRefillSettings": {
         "tool_damage_threshold": 0
+    },
+    "Tweaks": {
+        "prevent_close_gui_drop_item": {
+            "value": true
+        }
     }
 }

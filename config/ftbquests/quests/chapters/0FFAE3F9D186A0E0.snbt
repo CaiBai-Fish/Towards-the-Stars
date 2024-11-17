@@ -3,6 +3,8 @@
 	default_quest_shape: ""
 	filename: "0FFAE3F9D186A0E0"
 	group: "4557159B183F2AE3"
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_visible: true
 	icon: {
 		Count: 1
 		id: "ad_astra:tier_1_rover"
@@ -341,12 +343,13 @@
 		{
 			dependencies: ["77698695EF593DFE"]
 			id: "037F4575D50AE49F"
-			subtitle: "提前准备好生产线，万一以后用得到呢"
+			subtitle: "比生物乙醇更好用的燃料"
 			tasks: [{
 				id: "343CD97900A5E232"
 				item: "ad_astra:cryo_fuel_bucket"
 				type: "item"
 			}]
+			title: "凛冰燃料"
 			x: 10.0d
 			y: -3.0d
 		}
@@ -534,6 +537,21 @@
 			}]
 			title: "驰骋星空"
 			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0ECF98155410FBF0"]
+			id: "7ABE48521587A736"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "ad_astra:venus"
+				icon: "ad_astra:venus_globe"
+				id: "0EA074547FE74657"
+				type: "dimension"
+			}]
+			title: "造访金星"
+			x: 18.0d
 			y: 1.0d
 		}
 	]

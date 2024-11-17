@@ -10,6 +10,11 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting('2x create:crimsite', ['minecraft:calcite', 'minecraft:granite', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:ochrum', ['minecraft:calcite', 'minecraft:tuff', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:veridium', ['minecraft:calcite', 'minecraft:diorite', 'create:cinder_flour', 'ae2:sky_dust'])
+    event.smoking('minecraft:tuff', 'minecraft:calcite')
+    event.recipes.create.compacting('minecraft:andesite', 'minecraft:calcite')
+    event.blasting('minecraft:granite', 'minecraft:calcite')
+    event.recipes.create.splashing('minecraft:diorite', 'minecraft:calcite')
+    
     event.recipes.create.compacting('minecraft:diamond', '9x kubejs:diamond_nugget')
     event.recipes.create.compacting('deeperdarker:sculk_stone', '6x minecraft:sculk')
     event.recipes.create.compacting('kubejs:diamond_nugget', 'minecraft:coal_block').superheated()
@@ -17,6 +22,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('2x ad_astra:sky_stone', 'ad_astra:sky_stone')
     
     event.recipes.create.milling('minecraft:sand', 'minecraft:gravel')
+    event.recipes.create.milling('3x ae2:sky_dust', 'ae2:sky_stone_block')
 
     event.recipes.create.splashing('minecraft:quartz', 'minecraft:soul_sand')
     event.recipes.create.splashing('minecraft:netherrack', 'minecraft:blackstone')
@@ -204,6 +210,8 @@ ServerEvents.recipes(event => {
     )
 
     //杂项
+    event.recipes.create.mixing('minecraft:sugar', Fluid.of('create:honey', 250))
+
     event.shapeless('create:controller_rail', ['minecraft:powered_rail', 'create:electron_tube'])
     event.shapeless('create:stockpile_switch', 'create:content_observer')
     event.shapeless('create:content_observer', 'create:stockpile_switch')
@@ -212,7 +220,7 @@ ServerEvents.recipes(event => {
     event.shapeless('create:powered_latch', ['minecraft:repeater', 'minecraft:lever'])
     event.shapeless('create:powered_toggle_latch', 'create:powered_latch')
     event.shapeless('create:powered_latch', 'create:powered_toggle_latch')
-    event.shapeless('minecraft:redstone', ['create:wheat_flour', 'minecraft:red_dye'])
+    event.shapeless('minecraft:redstone', ['#kubejs:powder', 'minecraft:red_dye'])
 
     event.recipes.create.item_application('create:adjustable_chain_gearshift', ['create:encased_chain_drive', 'minecraft:redstone'])
     event.recipes.create.item_application('create:controller_rail', ['minecraft:powered_rail', 'create:electron_tube'])

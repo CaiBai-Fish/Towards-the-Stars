@@ -1,0 +1,1194 @@
+[
+  // 僵尸
+  {
+    "mob": "minecraft:zombie",
+    "phase": "difficulty1",
+    "when": "onjoin",
+    "healthmultiply": 0.75,
+    "damagemultiply": 1
+  },
+  {
+    "mob": "minecraft:zombie",
+    "phase": "difficulty2",
+    "when": "onjoin",
+    "healthmultiply": 1,
+    "damagemultiply": 1.1
+  },
+  {
+    "mob": "minecraft:zombie",
+    "phase": "difficulty3",
+    "when": "onjoin",
+    "healthmultiply": 1.22,
+    "damagemultiply": 1.3
+  },
+  {
+    "mob": "minecraft:zombie",
+    "phase": "difficulty4",
+    "when": "onjoin",
+    "healthmultiply": 1.34,
+    "damagemultiply": 1.58
+  },
+  {
+    "mob": "minecraft:zombie",
+    "phase": "difficulty5",
+    "when": "onjoin",
+    "healthmultiply": 1.68,
+  "damagemultiply": 1.7
+  },
+{
+  "mob": "minecraft:zombie",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 溺尸
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:drowned",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 尸壳
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:husk",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 骷髅
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:skeleton",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 凋灵骷髅
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:wither_skeleton",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 流浪者
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:stray",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 苦力怕
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:creeper",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 史莱姆
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:slime",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 岩浆怪
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:magma_cube",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 守卫者
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:guardian",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 远古守卫者
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:elder_guardian",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 蠹虫
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:silverfish",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 幻翼
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:phantom",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 女巫
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:witch",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 僵尸村民
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:zombie_villager",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 掠夺者
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty5",
+  "when": "onjoin"
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:pillager",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 唤魔者
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:evoker",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 卫道士
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:vindicator",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 劫掠兽
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:ravager",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 疣猪兽
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:hoglin",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 猪灵
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:piglin",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 恶魂
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:ghast",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 烈焰人
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:blaze",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// 末影螨
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+  },
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+  },
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+  },
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+  },
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+  },
+  {
+  "mob": "minecraft:endermite",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+  },
+
+// 潜影贝
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:shulker",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// Boss - 凋灵
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty5",
+  "when": "onjoin",
+  "healthmultiply": 1.68,
+"damagemultiply": 1.7
+},
+{
+  "mob": "minecraft:wither",
+  "phase": "difficulty6",
+  "when": "onjoin",
+  "healthmultiply": 2.12,
+"damagemultiply": 2.1
+},
+
+// Boss - 末影龙
+{
+  "mob": "minecraft:ender_dragon",
+  "phase": "difficulty1",
+  "when": "onjoin",
+  "healthmultiply": 0.75,
+"damagemultiply": 1
+},
+{
+  "mob": "minecraft:ender_dragon",
+  "phase": "difficulty2",
+  "when": "onjoin",
+  "healthmultiply": 1,
+"damagemultiply": 1.1
+},
+{
+  "mob": "minecraft:ender_dragon",
+  "phase": "difficulty3",
+  "when": "onjoin",
+  "healthmultiply": 1.22,
+"damagemultiply": 1.3
+},
+{
+  "mob": "minecraft:ender_dragon",
+  "phase": "difficulty4",
+  "when": "onjoin",
+  "healthmultiply": 1.34,
+"damagemultiply": 1.58
+},
+  {
+    "mob": "minecraft:ender_dragon",
+    "phase": "difficulty5",
+    "when": "onjoin",
+    "healthmultiply": 1.68,
+    "damagemultiply": 1.7
+  },
+  {
+    "mob": "minecraft:ender_dragon",
+    "phase": "difficulty6",
+    "when": "onjoin",
+    "healthmultiply": 2.12,
+    "damagemultiply": 2.1
+  }
+]

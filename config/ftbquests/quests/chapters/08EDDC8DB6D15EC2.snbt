@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "08EDDC8DB6D15EC2"
 	group: "47C31061524D9D17"
+	hide_quest_details_until_startable: true
 	hide_quest_until_deps_visible: true
 	icon: "create:andesite_encased_large_cogwheel"
 	id: "08EDDC8DB6D15EC2"
@@ -61,6 +62,12 @@
 			dependencies: ["558504A255CB55BF"]
 			icon: "minecraft:crying_obsidian"
 			id: "194A6E621FB86BB7"
+			rewards: [{
+				count: 16
+				id: "3B6A23E484AEB17C"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "78FBCA46F622FD74"
@@ -188,6 +195,12 @@
 			dependencies: ["0456A9A6E6EB5C31"]
 			icon: "minecraft:oak_planks"
 			id: "78B0B9C22B91F56B"
+			rewards: [{
+				count: 16
+				id: "61407C8B13E824CD"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "7D044E0BFC367925"
@@ -215,6 +228,12 @@
 			dependencies: ["1FFCD1DB862F612F"]
 			icon: "minecraft:stripped_oak_log"
 			id: "0456A9A6E6EB5C31"
+			rewards: [{
+				count: 16
+				id: "2BC79074F076CB83"
+				item: "create:zinc_ingot"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "559EEAB6C5E30744"
@@ -255,6 +274,12 @@
 			dependencies: ["759B915914DCE0BF"]
 			icon: "create:mechanical_mixer"
 			id: "29114F0DC610ADB4"
+			rewards: [{
+				count: 32
+				id: "473E91113D877BD6"
+				item: "create:zinc_ingot"
+				type: "item"
+			}]
 			tasks: [{
 				id: "206EC0FB04355B07"
 				item: "create:andesite_alloy"
@@ -268,6 +293,12 @@
 			dependencies: ["78B0B9C22B91F56B"]
 			icon: "minecraft:oak_slab"
 			id: "3ED39D7B06A54275"
+			rewards: [{
+				count: 16
+				id: "29984E3567BD8B3F"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "74AA9745CE2D427B"
@@ -299,14 +330,13 @@
 			icon: "create:andesite_casing"
 			id: "2B7EFE0306CCB149"
 			rewards: [{
-				count: 256
+				count: 32
 				id: "10C01141FC8FE032"
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "下矿挖的铁还够吗"
 			tasks: [
 				{
 					id: "7028A88D2743369D"
@@ -617,6 +647,12 @@
 				"281FD409ACB9AE8A"
 			]
 			id: "1B8DD0C582233731"
+			rewards: [{
+				count: 12
+				id: "0F34459E5311CA20"
+				item: "minecraft:gold_ingot"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0686199ACAA01905"
 				item: "create:schematicannon"

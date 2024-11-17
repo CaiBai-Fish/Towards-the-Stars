@@ -4,6 +4,7 @@
 	filename: "37CC75FD643DFDFB"
 	group: "47C31061524D9D17"
 	hide_quest_details_until_startable: true
+	hide_quest_until_deps_visible: true
 	icon: {
 		Count: 1
 		id: "tacz:modern_kinetic_gun"
