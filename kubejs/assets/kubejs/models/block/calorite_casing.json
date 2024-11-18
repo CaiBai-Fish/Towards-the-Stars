@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"down": "kubejs:block/calorite_casing_1",
+		"east": "kubejs:block/calorite_casing_2",
+		"north": "kubejs:block/calorite_casing_2",
+    	"particle": "kubejs:block/calorite_casing_2",
+    	"south": "kubejs:block/calorite_casing_2",
+    	"up": "kubejs:block/calorite_casing_1",
+    	"west": "kubejs:block/calorite_casing_2"
+	}
+}

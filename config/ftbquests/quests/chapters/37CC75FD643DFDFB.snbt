@@ -21,7 +21,7 @@
 	quests: [
 		{
 			dependencies: ["2698B2F63851032D"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "0D19A0C0CADCC645"
 			shape: "hexagon"
 			size: 1.5d

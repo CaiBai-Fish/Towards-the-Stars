@@ -472,6 +472,13 @@
 		}
 		{
 			dependencies: ["0ECF98155410FBF0"]
+			icon: {
+				Count: 1
+				id: "ad_astra:jet_suit_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "658D299E87F9CE5D"
 			tasks: [
 				{

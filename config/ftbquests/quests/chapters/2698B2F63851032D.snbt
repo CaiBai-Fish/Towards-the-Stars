@@ -209,7 +209,7 @@
 				"4E96A7E174D15AD3"
 				"1A9C09A42F1DBD9B"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "createaddition:chocolate_cake"
 			id: "3F4B0E12C1A5FC4B"
 			shape: "hexagon"
@@ -243,7 +243,7 @@
 		}
 		{
 			dependencies: ["4E96A7E174D15AD3"]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "railways:track_oak"
 			id: "43B746460C04089D"
 			shape: "hexagon"
@@ -322,7 +322,7 @@
 				"6B178B615CE2E135"
 				"4E96A7E174D15AD3"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "ae2:controller"
 			id: "32A0A731FBA7314E"
 			shape: "hexagon"

@@ -735,7 +735,7 @@
 		{
 			dependencies: ["05A92AA7E7997898"]
 			description: [""]
-			hide: true
+			hide_until_deps_visible: true
 			id: "72AFC36F641A94CD"
 			subtitle: "水洗粉碎铁矿石能较大量产出红石"
 			tasks: [{
@@ -749,7 +749,7 @@
 		}
 		{
 			dependencies: ["6B178B615CE2E135"]
-			hide: true
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "minecraft:iron_helmet"

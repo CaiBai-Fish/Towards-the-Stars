@@ -7,8 +7,17 @@
 	hide_quest_until_deps_visible: true
 	icon: "minecraft:netherrack"
 	id: "1D9FAF5FA8AB61B2"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
-	title: "空荡荡的地狱"
+	quests: [{
+		dependencies: ["0FFAE3F9D186A0E0"]
+		icon: "kubejs:nether_book"
+		id: "761EAF5602DC40B3"
+		shape: "hexagon"
+		size: 1.5d
+		title: "搭建祭坛"
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "空荡荡的下界"
 }

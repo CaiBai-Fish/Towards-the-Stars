@@ -12,7 +12,7 @@
 	quests: [
 		{
 			dependencies: ["70231A229736BDBE"]
-			hide: false
+			hide_until_deps_visible: false
 			icon: "create:cogwheel"
 			id: "558504A255CB55BF"
 			rewards: [{
@@ -600,8 +600,8 @@
 		}
 		{
 			dependencies: ["532B78D90A81D42F"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "4E8473BDAEE3291C"
 			rewards: [{
 				id: "0C777F755380F694"
