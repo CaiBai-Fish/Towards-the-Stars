@@ -1,5 +1,18 @@
 Platform.mods.kubejs.name = 'Towards the Stars'
 StartupEvents.registry('item',event=>{
+	//构件
+	let mechanism = (meName) => {
+		let id = meName.toLowerCase() + '_mechanism'
+		event.create(id).rarity('rare')
+	}
+	mechanism('nether')
+	mechanism('end')
+	let inc = (incName) => {
+		let id = 'incomplete_' + incName.toLowerCase() + '_mechanism'
+		event.create(id, 'create:sequenced_assembly').rarity('rare')
+	}
+	inc('nether')
+	inc('end')
 	// 工具
 	let registerSaw = (materialId, durability) => {
 		let id = materialId.toLowerCase() + '_saw'

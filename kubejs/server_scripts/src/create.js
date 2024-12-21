@@ -38,6 +38,14 @@ ServerEvents.recipes(event => {
             event.recipes.create.pressing('minecraft:netherrack', 'minecraft:netherrack')
         ]
     ).loops(8).transitionalItem('minecraft:netherrack')
+    //构件
+    event.recipes.create.sequenced_assembly('kubejs:incomplete_nether_mechanism',
+        'create:precision_mechanism',
+        [
+            event.recipes.create.deploying('create:precision_mechanism', ['create:precision_mechanism', 'minecraft:ancient_debris']),
+            event.recipes.create.pressing('create:precision_mechanism', 'create:precision_mechanism')
+        ]
+    ).loops(3).transitionalItem('create:precision_mechanism')
     //机器配方
     //安山机壳
     let casing1 = 'create:andesite_casing'

@@ -9,15 +9,180 @@
 	id: "1D9FAF5FA8AB61B2"
 	order_index: 0
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["0FFAE3F9D186A0E0"]
-		icon: "kubejs:nether_book"
-		id: "761EAF5602DC40B3"
-		shape: "hexagon"
-		size: 1.5d
-		title: "搭建祭坛"
-		x: 0.0d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			dependencies: ["0FFAE3F9D186A0E0"]
+			icon: "minecraft:blaze_powder"
+			id: "761EAF5602DC40B3"
+			rewards: [{
+				id: "1C0997E391FE929F"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					count: 24L
+					id: "72A6FE4558312635"
+					item: { Count: 24, id: "minecraft:netherrack" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2DD82FDFDE2707EF"
+					item: { Count: 8, id: "minecraft:blaze_rod" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "39340398E2D63C98"
+					item: { Count: 8, id: "minecraft:blaze_powder" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "1CAD3413F6711385"
+					item: { Count: 3, id: "minecraft:soul_sand" }
+					type: "item"
+				}
+				{
+					id: "7F3B0433B0F6FA20"
+					item: "minecraft:book"
+					type: "item"
+				}
+			]
+			title: "准备材料"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04CEAE1896673E76"]
+			icon: "supplementaries:pedestal"
+			id: "202BDA95031289A1"
+			tasks: [{
+				hasCustomPicture: false
+				id: "78C6E243B8924F15"
+				ignoreState: false
+				layer: true
+				name: "altars"
+				rightclick: false
+				type: "questsadditions:structure"
+			}]
+			title: "搭建祭坛"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"761EAF5602DC40B3"
+				"2E11FCD05CC78C5A"
+			]
+			id: "04CEAE1896673E76"
+			subtitle: "希望这么久了你屯够了足够的村民哦"
+			tasks: [{
+				entity: "minecraft:villager"
+				icon: "minecraft:emerald"
+				id: "095240722EF68CAA"
+				type: "kill"
+				value: 16200L
+			}]
+			title: "屠杀殆尽！"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["761EAF5602DC40B3"]
+			id: "2E11FCD05CC78C5A"
+			optional: true
+			rewards: [{
+				count: 1296
+				id: "03AE1B058D3CBDD7"
+				item: "minecraft:villager_spawn_egg"
+				type: "item"
+			}]
+			subtitle: "首充送双倍！"
+			tasks: [{
+				id: "663714AC34764A3F"
+				item: {
+					Count: 1
+					id: "minecraft:gold_block"
+					tag: {
+						RepairCost: 0
+						display: {
+							Name: "{\"text\":\"648\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "当然你也可以选择氪金"
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["2E11FCD05CC78C5A"]
+			id: "30A53CDB6B41BFF3"
+			optional: true
+			rewards: [{
+				count: 808
+				id: "4E608C5433853DA2"
+				item: "minecraft:villager_spawn_egg"
+				type: "item"
+			}]
+			subtitle: "双倍当然只有首充才有咯~~"
+			tasks: [{
+				id: "63A4DF0AEF60E0D0"
+				item: {
+					Count: 1
+					id: "minecraft:gold_block"
+					tag: {
+						RepairCost: 0
+						display: {
+							Name: "{\"text\":\"648\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "双倍没啦"
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["202BDA95031289A1"]
+			id: "6118B567A7C2DD75"
+			rewards: [{
+				command: "/gamephrase add @p nether"
+				icon: "minecraft:wither_skeleton_skull"
+				id: "6338E2FBDB865859"
+				silent: true
+				title: "获得许可"
+				type: "command"
+			}]
+			subtitle: "这或许是进入下界唯一的方法？"
+			tasks: [{
+				id: "6F2A4284327D5FAE"
+				item: "kubejs:nether_book"
+				type: "item"
+			}]
+			title: "解开封印"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6118B567A7C2DD75"]
+			id: "2DB0104F708C96EA"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "4A4533C1318B6D0D"
+				type: "dimension"
+			}]
+			title: "前往第十八层"
+			x: 6.0d
+			y: 2.0d
+		}
+	]
 	title: "空荡荡的下界"
 }

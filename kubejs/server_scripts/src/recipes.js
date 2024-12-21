@@ -203,7 +203,7 @@ ServerEvents.recipes(event => {
         D:'create:iron_sheet'
     })
     event.shaped(Item.of('naturescompass:naturescompass', 1),[
-        'AEA',
+        'AFA',
         'CDC',
         'ABA'
     ],{
@@ -211,7 +211,7 @@ ServerEvents.recipes(event => {
         B:'#minecraft:logs',
         C:'create:iron_sheet',
         D:'minecraft:compass',
-        E:'create:precision_mechanism'
+        F:'create:precision_mechanism'
     })
 
     event.shaped(Item.of('createaddition:barbed_wire', 1),[
@@ -316,6 +316,23 @@ ServerEvents.recipes(event => {
         A:'minecraft:blaze_powder',
         B:'minecraft:blaze_rod',
         C:'minecraft:netherrack'
+    })
+    event.shaped('kubejs:nether_book', [
+        'AAAAAAA',
+        'ABCBCBA',
+        'ACDHDCA',
+        'ABGFGBA',
+        'ACDHDCA',
+        'ABCBCBA',
+        'AAAAAAA'
+    ],{
+        A:'minecraft:book',
+        B:'minecraft:blaze_rod',
+        C:'minecraft:blaze_powder',
+        D:'minecraft:soul_sand',
+        F:'kubejs:nether_mechanism',
+        G:'minecraft:ender_pearl',
+        H:'minecraft:nether_star'
     })
 
     event.shapeless(Item.of('createaddition:diamond_grit_sandpaper', 1),['minecraft:paper', 'createaddition:diamond_grit'])

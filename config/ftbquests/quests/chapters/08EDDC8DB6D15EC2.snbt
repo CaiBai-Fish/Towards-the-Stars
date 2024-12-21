@@ -754,6 +754,19 @@
 			x: -7.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["2EC21040F21F57D5"]
+			icon: "minecraft:emerald"
+			id: "31D08E64F473E7D2"
+			subtitle: "说不定以后有大用呢？"
+			tasks: [{
+				id: "046692A40D2A461F"
+				title: "繁殖村民"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
 	]
 	title: "机械改变生活！"
 }
