@@ -50,19 +50,19 @@
 	     "dimensions": [
 	       "ad_astra:mars"
 	     ]
-		},
+		}
 	],
 	"stoneGen": [
 		{
 			"id": "minecraft:stone",
-			"weight": 100.0,
-		},
+			"weight": 100.0
+		}
 	],
 	"basaltGen": [
 		{
 			"id": "minecraft:basalt",
-			"weight": 100.0,
-		},
+			"weight": 100.0
+		}
 	],
 	/* Custom Generators
 	   <stoneGen|cobbleGen|basaltGen>: {
@@ -90,8 +90,8 @@
 			"kubejs:compressed_andesite": [
 				{
 					"id": "minecraft:andesite",
-					"weight": 100.0,
-				},
+					"weight": 100.0
+				}
 			],
 			"kubejs:compressed_granite": [
 				{
@@ -122,7 +122,7 @@
 					"id": "create:limestone",
 					"weight":100.0
 				}
-			],
-		},
-	},
+			]
+		}
+	}
 }

@@ -20,8 +20,8 @@ BlockEvents.rightClicked('supplementaries:pedestal', e => {
             e.server.runCommandSilent(`particle minecraft:smoke ${ppos.x} ${ppos.y + 1} ${ppos.z} 0.5 0.5 0.5 0.02 10 force`)
             
             // 给予玩家阶段
-            e.server.runCommand(`gamephase add ${str} nether`)
-            //GamePhase.addPhase(player.name.string, "nehter")
+            //e.server.runCommand(`gamephase add ${str} nether`)
+            GamePhase.addPhase(player.name.string, "nehter")
         }
     }
 })

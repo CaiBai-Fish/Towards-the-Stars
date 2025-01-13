@@ -1,19 +1,13 @@
 ServerEvents.recipes(event => {
     event.recipes.create.item_application(Item.of('minecraft:end_stone'), ['minecraft:cobblestone', 'minecraft:ender_pearl'])
     event.recipes.create.deploying(Item.of('ad_astra:wheel'), ['ad_astra:steel_plate', 'create:belt_connector'])
-    event.recipes.create.mixing(Item.of('create:andesite_alloy', 2),
-        ['minecraft:andesite', 'architects_palette:algal_brick'
-    ])
     event.recipes.create.compacting('minecraft:dripstone_block', [Fluid.water(200), 'create:limestone'])
     event.recipes.create.compacting('minecraft:calcite', [Fluid.water(100), 'ae2:sky_stone_block', 'minecraft:quartz'])
     event.recipes.create.compacting('2x create:asurine', ['minecraft:calcite', 'minecraft:andesite', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:crimsite', ['minecraft:calcite', 'minecraft:granite', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:ochrum', ['minecraft:calcite', 'minecraft:tuff', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:veridium', ['minecraft:calcite', 'minecraft:diorite', 'create:cinder_flour', 'ae2:sky_dust'])
-    event.smoking('minecraft:tuff', 'minecraft:calcite')
     event.recipes.create.compacting('minecraft:andesite', 'minecraft:calcite')
-    event.blasting('minecraft:granite', 'minecraft:calcite')
-    event.recipes.create.splashing('minecraft:diorite', 'minecraft:calcite')
     
     event.recipes.create.compacting('minecraft:diamond', '9x kubejs:diamond_nugget')
     event.recipes.create.compacting('deeperdarker:sculk_stone', '6x minecraft:sculk')
@@ -26,8 +20,14 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.splashing('minecraft:quartz', 'minecraft:soul_sand')
     event.recipes.create.splashing('minecraft:netherrack', 'minecraft:blackstone')
+    event.recipes.create.splashing('minecraft:diorite', 'minecraft:calcite')
 
+    event.recipes.create.mixing(Item.of('create:andesite_alloy', 2),
+    ['minecraft:andesite', 'architects_palette:algal_brick'])
     event.recipes.create.mixing('enderitemod:cracked_enderite_ore', ['minecraft:ancient_debris', '16x minecraft:ender_pearl'])
+    event.recipes.create.mixing('ad_astra:steel_ingot', ['minecraft:iron_ingot', '#c:coal']).heated()
+
+    event.recipes.create.emptying(Fluid.of('butcher:blood_liquid', 1000), 'butcher:blood_liquid_bucket')
     
     event.recipes.create.sequenced_assembly(Item.of('minecraft:ancient_debris'),
         'minecraft:netherrack',
@@ -46,6 +46,7 @@ ServerEvents.recipes(event => {
             event.recipes.create.pressing('create:precision_mechanism', 'create:precision_mechanism')
         ]
     ).loops(3).transitionalItem('create:precision_mechanism')
+    event.recipes.create.mixing('kubejs:nether_mechanism', ['kubejs:incomplete_nether_mechanism', Fluid.of('butcher:blood_liquid', 1000)]).heated()
     //机器配方
     //安山机壳
     let casing1 = 'create:andesite_casing'
@@ -81,7 +82,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly('create:gantry_carriage',
         casing1,
         [
-            event.recipes.create.deploying(casing1, [casing1, 'create:shaft']),
             event.recipes.create.pressing(casing1, casing1),
             event.recipes.create.deploying(casing1, [casing1, 'create:cogwheel']),
             event.recipes.create.deploying(casing1, [casing1, '#minecraft:planks'])
@@ -95,6 +95,25 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying(casing1, [casing1, 'create:iron_sheet'])
         ]
     ).loops(1).transitionalItem(casing1)
+    event.recipes.create.sequenced_assembly('createaddition:rolling_mill',
+        casing1,
+        [
+            event.recipes.create.cutting(casing1, casing1),
+            event.recipes.create.deploying(casing1, [casing1, 'create:iron_sheet']),
+            event.recipes.create.deploying(casing1, [casing1, 'create:iron_sheet']),
+            event.recipes.create.deploying(casing1, [casing1, 'create:shaft']),
+            event.recipes.create.deploying(casing1, [casing1, 'create:shaft'])
+        ]
+    ).loops(1).transitionalItem(casing1)
+    event.recipes.create.sequenced_assembly('create_mechanical_extruder:mechanical_extruder',
+        'create:mechanical_drill',
+        [
+            event.recipes.create.deploying('create:mechanical_drill', ['create:mechanical_drill', '#forge:glass']),
+            event.recipes.create.deploying('create:mechanical_drill', ['create:mechanical_drill', '#forge:glass']),
+            event.recipes.create.deploying('create:mechanical_drill', ['create:mechanical_drill', '#forge:glass']),
+            event.recipes.create.deploying('create:mechanical_drill', ['create:mechanical_drill', 'create:shaft'])
+        ]
+    ).loops(1).transitionalItem('create:mechanical_drill')
     //铜机壳
     let casing2 = 'create:copper_casing'
     event.stonecutting('create:copper_backtank', casing2)

@@ -4,6 +4,7 @@
 	filename: "1770747D259D642F"
 	group: "57BAD24D35A67E3B"
 	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
 	hide_quest_until_deps_visible: true
 	icon: "minecraft:sculk_shrieker"
 	id: "1770747D259D642F"

@@ -14,6 +14,7 @@
         "continuous_crafting_saved_value": false
     },
     "AutoRefillSettings": {
+        "autorefill_blacklist": "'@butchercraft'",
         "tool_damage_threshold": 0
     },
     "Tweaks": {

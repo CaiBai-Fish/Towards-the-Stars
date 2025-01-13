@@ -5,7 +5,7 @@ kubejs/jsconfig.json
 kubejs/README.txt
 /local
 /logs
-/mods/.connector
+/mods
 kubejs/server_scripts/jsconfig.json
 patchouli_data.json
 /PCL
@@ -36,3 +36,10 @@ Towards the Stars.json
 /crash-reports
 /journeymap/data
 *.zip
+*.outdated
+/data
+/XaeroWaypoints_BACKUP*
+/xaero
+*.xml
+/tacz
+/mods

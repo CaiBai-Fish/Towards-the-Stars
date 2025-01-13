@@ -1,0 +1,16 @@
+{
+    "name": "蛙心",
+    "icon": "butcher:frog_heart",
+    "category": "butcher:resources",
+    "read_by_default": true,
+    "sortnum": 9,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:frog_heart",
+            "link_recipe": true,
+            "title" : "蛙心",
+            "text": "食用蛙心可以获得60秒二级跳跃增强。"
+        }
+    ]
+}

@@ -4,7 +4,7 @@
 	filename: "16206C36A7CEE7A8"
 	group: "47C31061524D9D17"
 	hide_quest_details_until_startable: true
-	hide_quest_until_deps_visible: true
+	hide_quest_until_deps_complete: true
 	icon: "create_things_and_misc:brass_speaker"
 	id: "16206C36A7CEE7A8"
 	order_index: 1
@@ -207,18 +207,16 @@
 			dependencies: ["67D3D35A4F94DF3B"]
 			icon: "minecraft:diorite"
 			id: "0FBCA6448662AA19"
-			tasks: [
-				{
-					id: "4C8C765C1EF68481"
-					item: "minecraft:diorite"
-					type: "item"
-				}
-				{
-					id: "6A3A18095C5DD310"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "257F2E01E2038A13"
+				item: "create:veridium"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C8C765C1EF68481"
+				item: "minecraft:diorite"
+				type: "item"
+			}]
 			x: 16.0d
 			y: 3.0d
 		}
@@ -226,18 +224,16 @@
 			dependencies: ["67D3D35A4F94DF3B"]
 			icon: "minecraft:granite"
 			id: "2B1610CCF6F14EFC"
-			tasks: [
-				{
-					id: "116AC9ADAD2402A1"
-					item: "minecraft:granite"
-					type: "item"
-				}
-				{
-					id: "080C6CDBCEA246C8"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "5C827509902841D0"
+				item: "create:crimsite"
+				type: "item"
+			}]
+			tasks: [{
+				id: "116AC9ADAD2402A1"
+				item: "minecraft:granite"
+				type: "item"
+			}]
 			x: 16.0d
 			y: 1.0d
 		}
@@ -245,18 +241,16 @@
 			dependencies: ["67D3D35A4F94DF3B"]
 			icon: "minecraft:andesite"
 			id: "0044FFFDABFC6237"
-			tasks: [
-				{
-					id: "11D806ED9BF90461"
-					item: "minecraft:andesite"
-					type: "item"
-				}
-				{
-					id: "43FC252627AA5C1E"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "43995D12A6D7C63C"
+				item: "create:asurine"
+				type: "item"
+			}]
+			tasks: [{
+				id: "11D806ED9BF90461"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
 			x: 16.0d
 			y: -1.0d
 		}
@@ -264,25 +258,23 @@
 			dependencies: ["67D3D35A4F94DF3B"]
 			icon: "minecraft:tuff"
 			id: "10AF4EE0A2E7E9CF"
-			tasks: [
-				{
-					id: "20D12A1E6528063F"
-					item: "minecraft:tuff"
-					type: "item"
-				}
-				{
-					id: "5DEB699A6C38B0F2"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "76EC45AC40750F52"
+				item: "create:ochrum"
+				type: "item"
+			}]
+			tasks: [{
+				id: "20D12A1E6528063F"
+				item: "minecraft:tuff"
+				type: "item"
+			}]
 			x: 16.0d
 			y: -3.0d
 		}
 		{
 			dependencies: [
 				"09B9CAFEED675973"
-				"31E9ECB1A0A1BE62"
+				"44B8900A89943F11"
 			]
 			icon: "minecraft:calcite"
 			id: "67D3D35A4F94DF3B"
@@ -424,7 +416,7 @@
 			icon: "create:mechanical_crafter"
 			id: "3C1CE1F5C6EF6BE4"
 			tasks: [{
-				count: 63L
+				count: 21L
 				id: "3B0F01CBC90C05BA"
 				item: "create:mechanical_crafter"
 				type: "item"
@@ -596,6 +588,7 @@
 		}
 		{
 			dependencies: ["02435F4339651531"]
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "minecraft:diamond_pickaxe"
@@ -622,6 +615,7 @@
 		}
 		{
 			dependencies: ["3A8F7917ACBB9EFA"]
+			hide_until_deps_complete: true
 			id: "02435F4339651531"
 			tasks: [{
 				id: "6410DCA424138A24"
@@ -637,6 +631,7 @@
 				"6B178B615CE2E135"
 				"5FE08FF2D7F7787E"
 			]
+			hide_until_deps_visible: true
 			id: "3A8F7917ACBB9EFA"
 			subtitle: "“石墨在高温高压下结晶生长成钻石”"
 			tasks: [{
@@ -661,7 +656,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["47DB605838B10DAB"]
+			dependencies: ["09B9CAFEED675973"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -712,6 +707,7 @@
 				"27257C63B68EC38C"
 				"34D1DBBB5D0E599E"
 			]
+			dependency_requirement: "one_completed"
 			id: "31E9ECB1A0A1BE62"
 			tasks: [{
 				id: "0645B6F4919369B8"
@@ -739,6 +735,8 @@
 			id: "72AFC36F641A94CD"
 			subtitle: "水洗粉碎铁矿石能较大量产出红石"
 			tasks: [{
+				consume_items: true
+				count: 64L
 				id: "2F3598DFA04E9C8C"
 				item: "minecraft:redstone"
 				type: "item"
@@ -749,6 +747,7 @@
 		}
 		{
 			dependencies: ["6B178B615CE2E135"]
+			hide_until_deps_complete: true
 			hide_until_deps_visible: true
 			icon: {
 				Count: 1
@@ -813,6 +812,7 @@
 				"16DE226360DA1C07"
 				"02435F4339651531"
 			]
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "minecraft:diamond_helmet"
@@ -877,6 +877,7 @@
 				"7E3FCB6A4DC9BB98"
 				"543FCC7EF291D5CE"
 			]
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "minecraft:netherite_helmet"
@@ -938,6 +939,7 @@
 		{
 			dependencies: ["3A8F7917ACBB9EFA"]
 			hide_dependent_lines: true
+			hide_until_deps_visible: true
 			id: "543FCC7EF291D5CE"
 			tasks: [{
 				id: "759392C0B725B7FD"
@@ -947,6 +949,18 @@
 			title: "合成残骸"
 			x: 24.0d
 			y: 3.0d
+		}
+		{
+			dependencies: ["31E9ECB1A0A1BE62"]
+			id: "44B8900A89943F11"
+			tasks: [{
+				id: "22DE29ED260CFB70"
+				item: "create_mechanical_extruder:mechanical_extruder"
+				type: "item"
+			}]
+			title: "更快的刷石方式"
+			x: 13.0d
+			y: -1.0d
 		}
 	]
 	title: "黄铜时代"

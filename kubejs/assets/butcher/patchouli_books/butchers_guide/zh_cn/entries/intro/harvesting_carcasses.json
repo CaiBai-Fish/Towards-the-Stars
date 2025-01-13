@@ -1,0 +1,23 @@
+{
+    "name": "分解尸体",
+    "icon": "butcher:raw_tbone_steak",
+    "category": "butcher:intro",
+    "read_by_default": true,
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:raw_tbone_steak",
+            "link_recipe": true,
+            "title" : "分解尸体",
+            "text": "一旦你放完血，现在可以开始分解尸体了。为此，你只需要一把切肉刀。你可以在尸体悬挂时分解（这并不适用于所有尸体），或者你可以拿起尸体并将其放在屠宰桌上。简单地多次用切肉刀右键点击尸体来分解它。"
+        },
+        {
+          "type": "patchouli:image",
+          "images": [
+            "butcher:images/entries/intro/harvesting_carcass.png"
+          ],
+          "border": true
+        }
+    ]
+}

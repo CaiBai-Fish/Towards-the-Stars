@@ -3,6 +3,8 @@
     "item.kubejs.end_mechanism": "末地构件",
     "item.kubejs.stone_saw": "石手锯",
     "item.kubejs.iron_saw": "铁手锯",
+    "item.kubejs.incomplete_end_mechanism": "末地构件（未完成）",
+    "item.kubejs.incomplete_nether_mechanism": "下界构件（未完成）",
     "item.kubejs.diamond_saw": "钻石手锯",
     "item.kubejs.nether_book": "下界之书",
     "item.kubejs.netherite_saw": "下界合金手锯",

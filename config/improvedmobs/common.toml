@@ -5,7 +5,7 @@
 	"Enable difficulty scaling" = true
 	#Time in ticks for which the difficulty shouldnt increase at the beginning. One full minecraft day is 24000 ticks
 	#Range: > 0
-	"Difficulty Delay" = 0
+	"Difficulty Delay" = 240000
 	#If true ignores mobs from spawners
 	"Ignore Spawner" = false
 	#Handles increase in difficulty regarding current difficulty.
@@ -14,9 +14,9 @@
 	#So the difficulty increases by 0.01 every 2400 ticks (->0.1 per mc day since a mc day has 24000 ticks) till it reaches a difficulty of 10.
 	#Then it increases by 1 per mc day till it reaches 30 and then stops.
 	#If you want to use negative values use | instead of - as the delimiter.
-	"Difficulty Increase" = ["0.0-0.1", "250.0-0.0"]
+	"Difficulty Increase" = ["0.0-0.01", "10.0-0.05", "30.0-0.1", "50.0-0.13", "150.0-0.0"]
 	#Wether difficulty should only increase with at least one online players or not
-	"Ignore Players" = false
+	"Ignore Players" = true
 	#If true will increase difficulty by the amount of time skipped. Else will only increase difficulty once.
 	"Punish Time Skip" = true
 	#Disable/Enable friendly fire for owned pets.
@@ -55,7 +55,7 @@
 	#<#minecraft:raiders|ATTRIBUTES> will add all entities in the raiders tag to everything except attributes
 	#<minecraft:sheep|ATTRIBUTES> will add sheep to everything except attributes
 	#<minecraft> disables everything for all minecraft mobs
-	"Entity Configs" = ["UNINITIALIZED"]
+	"Entity Configs" = ["alexsmobs:emu", "alexsmobs:cockroach", "alexsmobs:froststalker", "aquaculture:minnow", "alexsmobs:centipede_tail", "ad_astra:glacian_ram", "aquaculture:tambaqui", "alexsmobs:snow_leopard", "alexsmobs:lobster", "alexsmobs:seagull", "aquaculture:pink_salmon", "aquaculture:atlantic_herring", "alexsmobs:moose", "alexsmobs:seal", "minecraft:glow_squid", "alexsmobs:shoebill", "alexsmobs:flutter", "aquaculture:catfish", "alexsmobs:roadrunner", "alexsmobs:laviathan", "minecraft:trader_llama", "alexsmobs:terrapin", "alexsmobs:capuchin_monkey", "alexsmobs:endergrade", "minecraft:horse", "aquaculture:brown_shrooma", "alexsmobs:anaconda", "minecraft:polar_bear", "aquaculture:muskellunge", "aquaculture:bayad", "aquaculture:brown_trout", "simplyswords:battlestandarddark", "minecraft:llama", "minecraft:pig", "twilightforest:raven", "aquaculture:bluegill", "minecraft:turtle", "aquaculture:red_shrooma", "alexsmobs:alligator_snapping_turtle", "alexsmobs:maned_wolf", "minecraft:sheep", "aquaculture:atlantic_halibut", "create_things_and_misc:balloon_blaze", "minecraft:tadpole", "minecraft:goat", "minecraft:dolphin", "alexsmobs:rattlesnake", "alexsmobs:gelada_monkey", "minecraft:cod", "aquaculture:gar", "aquaculture:red_grouper", "alexsmobs:mantis_shrimp", "alexsmobs:komodo_dragon", "alexsmobs:hammerhead_shark", "minecraft:donkey", "alexsmobs:tiger", "alexsmobs:raccoon", "twilightforest:loyal_zombie", "alexsmobs:grizzly_bear", "alexsmobs:platypus", "minecraft:squid", "minecraft:skeleton_horse", "twilightforest:tiny_bird", "alexsmobs:potoo", "quark:stoneling", "minecraft:cow", "aquaculture:rainbow_trout", "alexsmobs:fly", "minecraft:bee", "aquaculture:perch", "alexsmobs:devils_hole_pupfish", "quark:shiba", "simplyswords:battlestandard", "alexsmobs:crocodile", "quark:toretoise", "alexsmobs:blue_jay", "alexsmobs:toucan", "minecraft:salmon", "alexsmobs:sea_bear", "twilightforest:quest_ram", "aquaculture:jellyfish", "alexsmobs:triops", "minecraft:snow_golem", "alexsmobs:rhinoceros", "minecraft:mooshroom", "alexsmobs:frilled_shark", "alexsmobs:bison", "alexsmobs:anteater", "alexsmobs:mudskipper", "minecraft:villager", "alexsmobs:rain_frog", "aquaculture:tuna", "alexsmobs:bald_eagle", "alexsmobs:sugar_glider", "supplementaries:red_merchant", "minecraft:rabbit", "minecraft:axolotl", "alexsmobs:blobfish", "aquaculture:piranha", "alexsmobs:gorilla", "aquaculture:box_turtle", "aquaculture:blackfish", "aquaculture:arapaima", "alexsmobs:orca", "alexsmobs:tusklin", "minecraft:strider", "minecraft:parrot", "alexsmobs:leafcutter_ant", "quark:crab", "alexsmobs:cosmic_cod", "alexsmobs:underminer", "twilightforest:bighorn_sheep", "alexsmobs:mungus", "alexsmobs:jerboa", "minecraft:bat", "minecraft:wandering_trader", "alexsmobs:caiman", "aquaculture:carp", "alexsmobs:spectre", "alexsmobs:cosmaw", "aquaculture:pacific_halibut", "ad_astra:lunarian", "alexsmobs:catfish", "minecraft:frog", "minecraft:iron_golem", "deeperdarker:angler_fish", "aquaculture:pollock", "alexsmobs:kangaroo", "alexsmobs:comb_jelly", "twilightforest:deer", "alexsmobs:banana_slug", "railways:conductor", "aquaculture:arrau_turtle", "alexsmobs:mimic_octopus", "aquaculture:boulti", "alexsmobs:hummingbird", "alexsmobs:elephant", "alexsmobs:bunfungus", "aquaculture:capitaine", "alexsmobs:gazelle", "twilightforest:squirrel", "minecraft:mule", "minecraft:sniffer", "alexsmobs:skunk", "alexsmobs:crow", "minecraft:zombie_horse", "alexsmobs:sunbird", "minecraft:camel", "alexsmobs:flying_fish", "aquaculture:atlantic_cod", "alexsmobs:tasmanian_devil", "alexsmobs:centipede_body", "aquaculture:synodontis", "twilightforest:boar", "minecraft:cat", "minecraft:pufferfish", "aquaculture:starshell_turtle", "alexsmobs:stradpole", "alexsmobs:tarantula_hawk", "twilightforest:dwarf_rabbit", "minecraft:fox", "aquaculture:smallmouth_bass", "alexsmobs:cachalot_whale", "minecraft:allay", "minecraft:tropical_fish", "ad_astra:lunarian_wandering_trader", "deeperdarker:sculk_snapper", "simplyswords:simplybeeentity", "minecraft:ocelot", "twilightforest:penguin", "alexsmobs:warped_toad", "minecraft:chicken", "alexsmobs:giant_squid", "minecraft:wolf", "minecraft:panda"]
 	#Any of the following 
 	#[ATTRIBUTES, ARMOR, HELDITEMS, BLOCKBREAK, USEITEM, LADDER, STEAL, GUARDIAN, PARROT, TARGETVILLAGER, NEUTRALAGGRO, PEHKUI]
 	#added here will disable that feature completely.

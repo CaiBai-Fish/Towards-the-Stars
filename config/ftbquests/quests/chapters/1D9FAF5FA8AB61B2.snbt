@@ -4,6 +4,7 @@
 	filename: "1D9FAF5FA8AB61B2"
 	group: "57BAD24D35A67E3B"
 	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
 	hide_quest_until_deps_visible: true
 	icon: "minecraft:netherrack"
 	id: "1D9FAF5FA8AB61B2"
@@ -12,6 +13,7 @@
 	quests: [
 		{
 			dependencies: ["0FFAE3F9D186A0E0"]
+			hide_until_deps_complete: true
 			icon: "minecraft:blaze_powder"
 			id: "761EAF5602DC40B3"
 			rewards: [{

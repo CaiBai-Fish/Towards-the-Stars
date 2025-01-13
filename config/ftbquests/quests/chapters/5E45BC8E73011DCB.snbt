@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "5E45BC8E73011DCB"
 	group: "4557159B183F2AE3"
+	hide_quest_until_deps_complete: true
 	icon: {
 		Count: 1
 		id: "ad_astra:tier_1_rocket"
@@ -15,10 +16,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"2698B2F63851032D"
-				"21619DB9C65FDC44"
-			]
+			dependencies: ["21619DB9C65FDC44"]
 			id: "35A2B9D89801949E"
 			shape: "hexagon"
 			size: 1.5d

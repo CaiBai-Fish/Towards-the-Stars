@@ -81,8 +81,18 @@ ServerEvents.recipes(event => {
     event.stonecutting('4x minecraft:pointed_dripstone', 'minecraft:dripstone_block')
     event.stonecutting('2x minecraft:dragon_egg', 'minecraft:dragon_egg')
 
+    //烟熏
     event.smoking('minecraft:coal_block', 'architects_palette:charcoal_block')
     event.smoking('minecraft:coal', 'minecraft:charcoal')
+    event.smoking('minecraft:tuff', 'minecraft:calcite')
+
+    //熔炉
+    event.smelting('minecraft:iron_nugget', 'createaddition:iron_rod')
+    
+
+    //高炉
+    //event.blasting()
+    event.blasting('minecraft:granite', 'minecraft:calcite')
     
     //有序合成    
     let taa = (tem, mod) => {
@@ -244,7 +254,7 @@ ServerEvents.recipes(event => {
         'AABAA',
         'AAAAA'
     ],{
-        A:'butchercraft:heart',
+        A:'butcher:heart',
         B:'minecraft:echo_shard'
     })
     event.shaped(Item.of('minecraft:elytra', 1),[

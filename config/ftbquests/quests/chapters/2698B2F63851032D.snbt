@@ -4,7 +4,7 @@
 	filename: "2698B2F63851032D"
 	group: "47C31061524D9D17"
 	hide_quest_details_until_startable: true
-	hide_quest_until_deps_visible: true
+	hide_quest_until_deps_complete: true
 	icon: "createaddition:electric_motor"
 	id: "2698B2F63851032D"
 	order_index: 2
@@ -12,6 +12,7 @@
 	quests: [
 		{
 			dependencies: ["6FFB213B0155D810"]
+			hide_until_deps_complete: true
 			icon: "ad_astra:coal_generator"
 			id: "082706A2330BB0F1"
 			shape: "hexagon"
@@ -176,6 +177,11 @@
 			dependencies: ["5FE08FF2D7F7787E"]
 			icon: "create:blaze_burner"
 			id: "51116F89BF9A7A02"
+			tasks: [{
+				id: "22ADAD66B101C7FE"
+				title: "稳定供应酒精"
+				type: "checkmark"
+			}]
 			title: "永不停息的蓝焰"
 			x: 1.0d
 			y: 6.0d
@@ -328,16 +334,12 @@
 			shape: "hexagon"
 			size: 1.5d
 			subtitle: "本部分需要对AE2有较深了解"
-			tasks: [{
-				id: "1F4B61ED341915A2"
-				title: "确认"
-				type: "checkmark"
-			}]
 			title: "高效自动化"
 			x: 9.0d
 			y: -1.5d
 		}
 		{
+			dependencies: ["463B9E4A00241212"]
 			id: "7DFFD4D189A66C82"
 			tasks: [{
 				id: "42F7A4B7CEFAB393"

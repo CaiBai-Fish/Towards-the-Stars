@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
     ]})
     event.remove({output:['architects_palette:charcoal_block', 'minecraft:hopper', 'enderitemod:enderite_upgrade_smithing_template', 'constructionwand:iron_wand',
         'constructionwand:diamond_wand', 'constructionwand:infinity_wand', 'tacz:gun_smith_table', 'ad_astra:wrench', 'explorerscompass:explorerscompass',
-        'naturescompass:naturescompass']
+        'naturescompass:naturescompass', 'create_mechanical_extruder:mechanical_extruder']
     })
     //配方修改
     event.replaceInput({output:'deeperdarker:reinforced_echo_shard'}, 'minecraft:echo_shard', 'kubejs:echo_mechanism')

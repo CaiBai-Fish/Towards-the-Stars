@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "281218CDD0EF9AC1"
 	group: "57BAD24D35A67E3B"
+	hide_quest_until_deps_complete: true
 	icon: "twilightforest:twilight_portal_miniature_structure"
 	id: "281218CDD0EF9AC1"
 	order_index: 2

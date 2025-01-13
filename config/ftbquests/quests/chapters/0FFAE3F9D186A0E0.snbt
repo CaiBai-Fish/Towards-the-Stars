@@ -4,6 +4,7 @@
 	filename: "0FFAE3F9D186A0E0"
 	group: "4557159B183F2AE3"
 	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
 	hide_quest_until_deps_visible: true
 	icon: {
 		Count: 1

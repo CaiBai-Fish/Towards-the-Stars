@@ -1,0 +1,16 @@
+{
+    "name": "凋灵之心",
+    "icon": "butcher:witheredheart",
+    "category": "butcher:resources",
+    "read_by_default": true,
+    "sortnum": 8,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:witheredheart",
+            "link_recipe": true,
+            "title" : "凋灵之心",
+            "text": "屠宰凋灵的尸体获得凋灵之心。食用这颗心将赋予你凋灵的能力。它在受到伤害时有5%的几率让你获得再生和无敌效果，持续60秒。"
+        }
+    ]
+}

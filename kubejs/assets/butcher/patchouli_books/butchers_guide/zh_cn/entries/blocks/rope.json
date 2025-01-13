@@ -1,0 +1,20 @@
+{
+      "name": "挂绳",
+    "icon": "butcher:rope",
+    "category": "butcher:blocks",
+    "read_by_default": true,
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:rope",
+            "link_recipe": true,
+            "title" : "挂绳",
+            "text": "挂绳是一个独立的方块，用于挂起动物尸体。所谓独立，意味着它不需要像钩子那样需要另一个方块（比如链条）。这是一种比钩子更便宜的替代品，但它只能使用3次就会断裂，它适用于游戏早期阶段。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:roperecipe"
+        }
+    ]
+}

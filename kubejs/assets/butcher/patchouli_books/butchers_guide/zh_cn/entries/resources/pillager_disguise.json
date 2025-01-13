@@ -1,0 +1,16 @@
+{
+    "name": "掠夺者伪装",
+    "icon": "butcher:pillagerdisguise_helmet",
+    "category": "butcher:resources",
+    "read_by_default": true,
+    "sortnum": 7,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:pillagerdisguise_helmet",
+            "link_recipe": true,
+            "title" : "掠夺者伪装",
+            "text": "掠夺者伪装是一套独特且令人毛骨悚然的新盔甲，可以从掠夺者的尸体上获得。当穿戴一整套掠夺者伪装时，掠夺者将不再对你表现出攻击性，因为他们会将你看作是他们中的一员。 $(br2)同时，穿戴这套盔甲时，你还可以按下$(#f92020)$(k:butcher.pillagernosepress)$()来发出掠夺者的声音。"
+        }
+    ]
+}

@@ -4,7 +4,7 @@
 	filename: "08EDDC8DB6D15EC2"
 	group: "47C31061524D9D17"
 	hide_quest_details_until_startable: true
-	hide_quest_until_deps_visible: true
+	hide_quest_until_deps_complete: true
 	icon: "create:andesite_encased_large_cogwheel"
 	id: "08EDDC8DB6D15EC2"
 	order_index: 0
@@ -165,6 +165,11 @@
 				{
 					id: "7E32A3C4AFFE1987"
 					item: "minecraft:rose_bush"
+					type: "item"
+				}
+				{
+					id: "4B9F7438501B0FDB"
+					item: "minecraft:bamboo"
 					type: "item"
 				}
 			]

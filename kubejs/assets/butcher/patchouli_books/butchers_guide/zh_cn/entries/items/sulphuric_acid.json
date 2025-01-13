@@ -1,0 +1,16 @@
+{
+    "name": "硫酸",
+    "icon": "butcher:sulfuricacid",
+    "category": "butcher:items",
+    "read_by_default": true,
+    "sortnum": 8,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:sulfuricacid",
+            "link_recipe": true,
+            "title" : "硫酸",
+            "text": "酸被用来溶解尸体的肉体和器官，以获得它们的骨骼残骸用作装饰。要对尸体使用酸，只需用装有酸的小瓶右键点击悬挂或未悬挂的尸体，随着时间的推移，皮肤会嘶嘶地溶解，留下骨骼残骸。"
+        }
+    ]
+}
