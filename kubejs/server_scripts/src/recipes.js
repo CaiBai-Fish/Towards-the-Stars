@@ -170,7 +170,7 @@ ServerEvents.recipes(event => {
         A:'create:brass_ingot',
         B:'create:large_cogwheel'
     })
-    event.shaped(Item.of('ad_astra:steel_cable', 4),[
+    event.shaped('4x ad_astra:steel_cable',[
         ' A ',
         'BBB',
         ' A '
@@ -178,7 +178,7 @@ ServerEvents.recipes(event => {
         A:'ad_astra:steel_plate',
         B:'createaddition:copper_wire'
     })
-    event.shaped(Item.of('ad_astra:desh_cable', 4),[
+    event.shaped('4x ad_astra:desh_cable',[
         ' A ',
         'BBB',
         ' A '
@@ -186,7 +186,7 @@ ServerEvents.recipes(event => {
         A:'ad_astra:desh_plate',
         B:'createaddition:copper_wire'
     })
-    event.shaped(Item.of('ad_astra:desh_fluid_pipe', 4),[
+    event.shaped('4x ad_astra:desh_fluid_pipe',[
         'A',
         'B',
         'A'
@@ -194,7 +194,7 @@ ServerEvents.recipes(event => {
         A:'ad_astra:desh_plate',
         B:'minecraft:glass'
     })
-    event.shaped(Item.of('ad_astra:ostrum_fluid_pipe', 4),[
+    event.shaped('4x ad_astra:ostrum_fluid_pipe',[
         'A',
         'B',
         'A'
@@ -202,7 +202,7 @@ ServerEvents.recipes(event => {
         A:'ad_astra:ostrum_plate',
         B:'minecraft:glass'
     })
-    event.shaped(Item.of('explorerscompass:explorerscompass', 1),[
+    event.shaped('explorerscompass:explorerscompass',[
         'ABA',
         'DCD',
         'ADA'
@@ -212,7 +212,7 @@ ServerEvents.recipes(event => {
         C:'minecraft:compass',
         D:'create:iron_sheet'
     })
-    event.shaped(Item.of('naturescompass:naturescompass', 1),[
+    event.shaped('naturescompass:naturescompass',[
         'AFA',
         'CDC',
         'ABA'
@@ -224,13 +224,13 @@ ServerEvents.recipes(event => {
         F:'create:precision_mechanism'
     })
 
-    event.shaped(Item.of('createaddition:barbed_wire', 1),[
+    event.shaped('createaddition:barbed_wire',[
         'ABA'
     ],{
         A:'createaddition:iron_wire',
         B:'minecraft:iron_bars'
     })
-    event.shaped(Item.of('kubejs:rotor', 1),[
+    event.shaped('kubejs:rotor',[
         ' A ',
         'ABA',
         ' A '
@@ -239,7 +239,7 @@ ServerEvents.recipes(event => {
         B:'createaddition:iron_rod'
     })
 
-    event.shaped(Item.of('deeperdarker:heart_of_the_deep', 1),[
+    event.shaped('deeperdarker:heart_of_the_deep',[
         'AAA',
         'ABA',
         'AAA'
@@ -247,7 +247,7 @@ ServerEvents.recipes(event => {
         A:'deeperdarker:reinforced_echo_shard',
         B:'kubejs:incomplete_heart_of_the_deep'
     })
-    event.shaped(Item.of('kubejs:incomplete_heart_of_the_deep', 1),[
+    event.shaped('kubejs:incomplete_heart_of_the_deep',[
         'AAAAA',
         'AABAA',
         'ABBBA',
@@ -257,7 +257,7 @@ ServerEvents.recipes(event => {
         A:'butcher:heart',
         B:'minecraft:echo_shard'
     })
-    event.shaped(Item.of('minecraft:elytra', 1),[
+    event.shaped('minecraft:elytra',[
         ' AAA AAA ',
         'ACBBCBBCA',
         'ACBBCBBCA',
@@ -270,20 +270,20 @@ ServerEvents.recipes(event => {
         B:'minecraft:phantom_membrane',
         C:'enderitemod:enderite_ingot'
     })
-    event.shaped(Item.of('minecraft:hopper', 1),[
+    event.shaped('minecraft:hopper',[
         'A A',
         'A A',
         ' A '
     ],{
         A:'create:iron_sheet'
     })
-    event.shaped(Item.of('kubejs:extinguished_blaze_rod', 2),[
+    event.shaped('kubejs:extinguished_blaze_rod',[
         'A',
         'A'
     ],{
         A:'minecraft:soul_sand'
     })
-    event.shaped(Item.of('minecraft:echo_shard', 4),[
+    event.shaped('minecraft:echo_shard',[
         ' A ',
         'ABA',
         ' A '
@@ -292,7 +292,7 @@ ServerEvents.recipes(event => {
         B:'minecraft:sculk'
     })
 
-    event.shaped(Item.of('quark:pickarang', 1),[
+    event.shaped('quark:pickarang',[
         'ABC',
         '  B',
         '  A'
@@ -301,8 +301,7 @@ ServerEvents.recipes(event => {
         B:'#minecraft:planks',
         C:'quark:diamond_heart'
     })
-
-    event.shaped(Item.of('ad_astra:wrench', 1),[
+    event.shaped('ad_astra:wrench',[
         'AA',
         'AB',
         ' C'
@@ -327,12 +326,22 @@ ServerEvents.recipes(event => {
         B:'minecraft:blaze_rod',
         C:'minecraft:netherrack'
     })
+
+    event.shaped('kubejs:twilight_key', [
+        ' A ',
+        'ABA',
+        ' A '
+    ],{
+        A:'kubejs:key_fragments',
+        B:'kubejs:twilight_mechanism'
+    })
+
     event.shaped('kubejs:nether_book', [
         'AAAAAAA',
         'ABCBCBA',
-        'ACDHDCA',
+        'ACDGDCA',
         'ABGFGBA',
-        'ACDHDCA',
+        'ACDGDCA',
         'ABCBCBA',
         'AAAAAAA'
     ],{
@@ -340,9 +349,8 @@ ServerEvents.recipes(event => {
         B:'minecraft:blaze_rod',
         C:'minecraft:blaze_powder',
         D:'minecraft:soul_sand',
-        F:'kubejs:nether_mechanism',
-        G:'minecraft:ender_pearl',
-        H:'minecraft:nether_star'
+        F:'minecraft:ender_pearl',
+        G:'kubejs:nether_mechanism'
     })
 
     event.shapeless(Item.of('createaddition:diamond_grit_sandpaper', 1),['minecraft:paper', 'createaddition:diamond_grit'])

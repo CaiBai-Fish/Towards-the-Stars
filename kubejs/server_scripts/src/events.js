@@ -5,23 +5,33 @@ BlockEvents.rightClicked('supplementaries:pedestal', e => {
         let player = e.player
         let item = e.item
         let block = e.block
-        let str = player.name.string
 
-        // 检查展示台上是否有特定的物品（例如 kubejs:nether_book）
-        if (item.id == 'kubejs:nether_book' && block.id == 'supplementaries:pedestal'/* && !GamePhase.hasPhase(str, "nether")*/)
+        // 检查展示台上是否有kubejs:nether_book
+        if (item.id == 'kubejs:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether"))
             {
-            let ppos = e.block.pos
-            e.level.destroyBlock(ppos,false)
+            let pos = e.block.pos
+            e.level.destroyBlock(pos,false)
 
             // 触发粒子效果
-            e.server.runCommandSilent(`particle minecraft:portal ${ppos.x} ${ppos.y + 1} ${ppos.z} 0.5 0.5 0.5 0.1 50 force`)
-            e.server.runCommandSilent(`particle minecraft:flame ${ppos.x} ${ppos.y + 1} ${ppos.z} 1 0 1 0.1 100 force`)
-            e.server.runCommandSilent(`particle minecraft:end_rod ${ppos.x} ${ppos.y + 1} ${ppos.z} 0 1 0 0.1 30 force`)
-            e.server.runCommandSilent(`particle minecraft:smoke ${ppos.x} ${ppos.y + 1} ${ppos.z} 0.5 0.5 0.5 0.02 10 force`)
-            
+            let duration = 40; // 2秒
+    let interval = 2; // 每 2 tick 刷新一次
+
+    for (let t = 0; t < duration; t += interval) {
+        e.server.schedule(t, () => {
+            let radius = 1.5 + (t / duration) * 0.5; // 半径逐渐扩大
+            for (let i = 0; i < 360; i += 10) {
+                let radians = i * (Math.PI / 180);
+                let xOffset = Math.cos(radians) * radius;
+                let zOffset = Math.sin(radians) * radius;
+
+                // 生成环形粒子
+                e.level.spawnParticles("minecraft:portal", false, pos.x + 0.5 + xOffset, pos.y + 0.1, pos.z + 0.5 + zOffset, 0, 0, 0, 10, 0.05);
+                e.level.spawnParticles("minecraft:crit", false, pos.x + 0.5 + xOffset * 0.9, pos.y + 0.2, pos.z + 0.5 + zOffset * 0.9, 0, 0.02, 0, 5, 0.02);
+            }
+        });
+    }
             // 给予玩家阶段
-            //e.server.runCommand(`gamephase add ${str} nether`)
-            GamePhase.addPhase(player.name.string, "nehter")
+            GamePhase.addPhase(player, "nether")
         }
     }
 })

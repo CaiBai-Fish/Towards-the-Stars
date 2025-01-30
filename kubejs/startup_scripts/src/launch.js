@@ -7,12 +7,14 @@ StartupEvents.registry('item',event=>{
 	}
 	mechanism('nether')
 	mechanism('end')
+	mechanism('twilight')
 	let inc = (incName) => {
 		let id = 'incomplete_' + incName.toLowerCase() + '_mechanism'
 		event.create(id, 'create:sequenced_assembly').rarity('rare')
 	}
 	inc('nether')
 	inc('end')
+	inc('twilight')
 	// 工具
 	let registerSaw = (materialId, durability) => {
 		let id = materialId.toLowerCase() + '_saw'
