@@ -55,7 +55,7 @@
 			id: "09B9CAFEED675973"
 			rewards: [{
 				id: "5972CF4BF293CEC3"
-				item: "kubejs:compressed_calcite"
+				item: "uc:double_compressed_calcite"
 				type: "item"
 			}]
 			tasks: [
@@ -78,11 +78,34 @@
 			dependencies: ["2B7EFE0306CCB149"]
 			icon: "create:mechanical_pump"
 			id: "47DB605838B10DAB"
-			rewards: [{
-				id: "326C6537AF2396F7"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
+			rewards: [
+				{
+					id: "326C6537AF2396F7"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "57956F75F8B6395A"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "18C53AF3B5C65994"
+					item: "create:fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "66D221950770528A"
+					item: "create:item_drain"
+					type: "item"
+				}
+				{
+					id: "6143580F33961AD6"
+					item: "create:spout"
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -104,23 +127,6 @@
 				type: "item"
 			}]
 			subtitle: "之前的机器是不是可以改成自动化了呢"
-			tasks: [
-				{
-					id: "156AEFE5F6D9E6EF"
-					item: "create:mechanical_pump"
-					type: "item"
-				}
-				{
-					id: "30F2D41EBE21CB61"
-					item: "create:fluid_pipe"
-					type: "item"
-				}
-				{
-					id: "1E6A2A353A966114"
-					item: "create:item_drain"
-					type: "item"
-				}
-			]
 			title: "流体运输"
 			x: 4.0d
 			y: 0.0d
@@ -200,7 +206,7 @@
 				}
 			]
 			title: "自动化炼药！"
-			x: 4.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -295,7 +301,6 @@
 		}
 		{
 			dependencies: ["0FBCA6448662AA19"]
-			hide_dependent_lines: true
 			id: "59693A1A119E4C49"
 			tasks: [{
 				id: "69362B161440F8F2"
@@ -310,7 +315,6 @@
 				"2B1610CCF6F14EFC"
 				"706B04EC38F6B511"
 			]
-			hide_dependent_lines: true
 			id: "05A92AA7E7997898"
 			tasks: [{
 				id: "540F993AFA0C4A24"
@@ -322,7 +326,6 @@
 		}
 		{
 			dependencies: ["0044FFFDABFC6237"]
-			hide_dependent_lines: true
 			id: "671F354AC98D803E"
 			tasks: [{
 				id: "7FB2BCC04510C3EC"
@@ -334,7 +337,6 @@
 		}
 		{
 			dependencies: ["10AF4EE0A2E7E9CF"]
-			hide_dependent_lines: true
 			id: "7C989B3BA5DC9E45"
 			tasks: [{
 				id: "5B419278439E8D2C"
@@ -409,7 +411,7 @@
 			]
 			title: "黄铜物流"
 			x: 12.0d
-			y: 4.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["09B9CAFEED675973"]
@@ -546,6 +548,12 @@
 			dependencies: ["17E171A0188D147C"]
 			icon: "minecraft:repeater"
 			id: "052988F306649291"
+			rewards: [{
+				count: 64
+				id: "75B3A766700FD520"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "3D77631831210F6D"
@@ -563,13 +571,22 @@
 			y: 2.0d
 		}
 		{
+			can_repeat: true
 			dependencies: ["4A7E3C985A931FDA"]
 			id: "24C4DD8EEB1A8C40"
+			rewards: [{
+				id: "3B464659DC462620"
+				item: "minecraft:cauldron"
+				type: "item"
+			}]
 			tasks: [{
+				consume_items: true
+				count: 15L
 				id: "711A9C5D6D7AAAA0"
 				item: "minecraft:pointed_dripstone"
 				type: "item"
 			}]
+			title: "滴水石锥"
 			x: 2.0d
 			y: -4.0d
 		}
@@ -687,7 +704,7 @@
 			]
 			title: "指南针"
 			x: 10.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["116D65C484BC0EF8"]
@@ -700,7 +717,7 @@
 			}]
 			title: "寻找陨石"
 			x: 12.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -715,7 +732,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["222CBED553CB44D9"]
@@ -726,11 +743,12 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["05A92AA7E7997898"]
 			description: [""]
+			hide_dependency_lines: true
 			hide_until_deps_visible: true
 			id: "72AFC36F641A94CD"
 			subtitle: "水洗粉碎铁矿石能较大量产出红石"
@@ -947,7 +965,7 @@
 				type: "item"
 			}]
 			title: "合成残骸"
-			x: 24.0d
+			x: 22.0d
 			y: 3.0d
 		}
 		{
@@ -959,8 +977,19 @@
 				type: "item"
 			}]
 			title: "更快的刷石方式"
-			x: 13.0d
-			y: -1.0d
+			x: 14.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["58F0BAEB227A2225"]
+			id: "309AE7536857911E"
+			tasks: [{
+				id: "68B480C8451456D2"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -6.0d
 		}
 	]
 	title: "黄铜时代"

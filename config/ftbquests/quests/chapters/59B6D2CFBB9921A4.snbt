@@ -10,6 +10,16 @@
 	id: "59B6D2CFBB9921A4"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		dependencies: ["1D9FAF5FA8AB61B2"]
+		id: "6298B9C4DAA26BF7"
+		tasks: [{
+			id: "3669C1820CB3EA4A"
+			item: "kubejs:end_mechanism"
+			type: "item"
+		}]
+		x: 0.0d
+		y: -1.0d
+	}]
 	title: "旅途的终末"
 }

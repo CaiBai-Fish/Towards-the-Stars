@@ -6,7 +6,7 @@ ServerEvents.tags('item', event => {
     let tools = (tem, mod) => {
         let id = mod + ':diamond_' + tem
         event.add('forge:tools/diamond', id)
-                //id + '_pickaxe', id + '_axe', id + '_hoe', id + '_shovel', id + '_wand'
+        //id + '_pickaxe', id + '_axe', id + '_hoe', id + '_shovel', id + '_wand'
     }
     tools('pickaxe', 'minecraft')
     tools('axe', 'minecraft')

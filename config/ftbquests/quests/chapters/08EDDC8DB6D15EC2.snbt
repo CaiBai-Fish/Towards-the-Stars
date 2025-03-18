@@ -172,9 +172,15 @@
 					item: "minecraft:bamboo"
 					type: "item"
 				}
+				{
+					id: "0C81F5DA58E5AE50"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
 			]
 			tasks: [
 				{
+					icon: "minecraft:oak_log"
 					id: "0210881F866C9344"
 					item: {
 						Count: 1
@@ -546,6 +552,12 @@
 					}
 					type: "item"
 				}
+				{
+					count: 2
+					id: "6E737565DB2AA1F2"
+					item: "minecraft:bee_spawn_egg"
+					type: "item"
+				}
 			]
 			subtitle: "更高效的收获方式"
 			tasks: [
@@ -568,11 +580,19 @@
 			dependencies: ["2EC21040F21F57D5"]
 			icon: "quark:feeding_trough"
 			id: "1977DB3C871020A5"
-			rewards: [{
-				id: "09964FFB09A831CE"
-				type: "xp"
-				xp: 20
-			}]
+			rewards: [
+				{
+					id: "09964FFB09A831CE"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4A6C22290A9E7A7C"
+					table_id: 7945026105960278593L
+					type: "random"
+				}
+			]
 			tasks: [
 				{
 					id: "68E9C2824EF26D26"
@@ -590,9 +610,18 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1977DB3C871020A5"]
+			dependencies: [
+				"1977DB3C871020A5"
+				"306E6DDB48E3FF9F"
+			]
+			dependency_requirement: "one_completed"
 			id: "532B78D90A81D42F"
 			optional: true
+			rewards: [{
+				id: "0E46B72CE5750E08"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
 			tasks: [{
 				count: 65L
 				id: "367D238CC2CF947A"
@@ -600,8 +629,8 @@
 				type: "item"
 			}]
 			title: "大丰收"
-			x: -5.0d
-			y: 6.0d
+			x: -7.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["532B78D90A81D42F"]
@@ -682,7 +711,7 @@
 				type: "item"
 			}]
 			title: "量产玫瑰"
-			x: -5.0d
+			x: -3.0d
 			y: 0.0d
 		}
 		{
@@ -717,7 +746,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["2A93D8D798F424B0"]
+			dependencies: ["03DDAC67E7AFCF99"]
 			id: "53FA7450E1E44687"
 			tasks: [{
 				id: "548A9B1AAC9D3567"
@@ -726,7 +755,7 @@
 			}]
 			title: "量产黏液球"
 			x: 7.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["53FA7450E1E44687"]
@@ -744,7 +773,7 @@
 			}]
 			title: "连接万物"
 			x: 7.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1F332C02339D71B2"]
@@ -756,13 +785,19 @@
 				type: "item"
 			}]
 			title: "量产红石"
-			x: -7.0d
-			y: 0.0d
+			x: -5.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["2EC21040F21F57D5"]
 			icon: "minecraft:emerald"
 			id: "31D08E64F473E7D2"
+			rewards: [{
+				count: 16
+				id: "7DEF0FC7873BE9FA"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
 			subtitle: "说不定以后有大用呢？"
 			tasks: [{
 				id: "046692A40D2A461F"
@@ -771,6 +806,106 @@
 			}]
 			x: -7.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["2A93D8D798F424B0"]
+			id: "03DDAC67E7AFCF99"
+			tasks: [{
+				id: "7A1458D592A92518"
+				item: "minecraft:lime_dye"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E3FCB6A4DC9BB98"]
+			id: "6D0B45F2273B36F4"
+			tasks: [{
+				id: "323807E3F29F108A"
+				item: "create:cinder_flour"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["558504A255CB55BF"]
+			hide_dependency_lines: true
+			icon: "minecraft:string"
+			id: "306E6DDB48E3FF9F"
+			subtitle: "修复了1.20版本不能使用刷线机的bug"
+			tasks: [
+				{
+					count: 64L
+					id: "6503DA7BE29D3152"
+					item: { Count: 64, id: "minecraft:string" }
+					type: "item"
+				}
+				{
+					id: "67C91284718F9340"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "c:shears"
+						}
+					}
+					title: "Any #c:shears"
+					type: "item"
+				}
+			]
+			title: "刷线机"
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2EC21040F21F57D5"]
+			icon: "minecraft:sugar"
+			id: "13557FCB000DE050"
+			tasks: [
+				{
+					id: "2F7038F8D9957611"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+				{
+					id: "12C3FC33DF5BDCBB"
+					title: "量产"
+					type: "checkmark"
+				}
+			]
+			title: "热量炸弹！"
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1977DB3C871020A5"]
+			id: "3A67F9545838E7E2"
+			tasks: [{
+				count: 16L
+				id: "7C32726434EF6740"
+				item: { Count: 16, id: "minecraft:egg" }
+				type: "item"
+			}]
+			title: "养鸡场"
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"13557FCB000DE050"
+				"6D0B45F2273B36F4"
+				"3A67F9545838E7E2"
+			]
+			id: "44AA2369C63A34C6"
+			tasks: [{
+				id: "58F4AC711E2F5C51"
+				item: "create:blaze_cake_base"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 6.0d
 		}
 	]
 	title: "机械改变生活！"

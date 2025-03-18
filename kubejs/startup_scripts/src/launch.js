@@ -1,5 +1,5 @@
 Platform.mods.kubejs.name = 'Towards the Stars'
-StartupEvents.registry('item',event=>{
+StartupEvents.registry('item', event => {
 	//构件
 	let mechanism = (meName) => {
 		let id = meName.toLowerCase() + '_mechanism'
@@ -53,7 +53,7 @@ StartupEvents.registry('item',event=>{
 
 	//杂项
 	let items = (itemId, durability) => {
-		if (durability == null){
+		if (durability == null) {
 			durability = 0
 		}
 		event.create(itemId)
@@ -69,9 +69,9 @@ StartupEvents.registry('item',event=>{
 	items('magnet')
 	items('diamond_nugget')
 	items('extinguished_blaze_rod')
-	
+
 	event.create('incomplete_heart_of_the_deep', 'create:sequenced_assembly')
-		.maxStackSize(1)
+		.maxStackSize(1).rarity('rare')
 
 	event.create('gun_book')
 		.tooltip('制作中')
@@ -80,9 +80,18 @@ StartupEvents.registry('item',event=>{
 	event.create('key_fragments')
 	event.create('nether_book').rarity('rare')
 
+	// 食物
+	event.create('end_cake').food(food => {   // 末地蛋糕
+		food.alwaysEdible(true)
+		food.eaten(fd => {
+			if(!GamePhase.hasPhase(fd.player, 'end')){
+				GamePhase.addPhase(fd.player, 'end')
+			}
+		})
+	})
 })
 
-StartupEvents.registry('block',event=>{
+StartupEvents.registry('block', event => {
 	//机壳
 	let casing = (casingId) => {
 		let id = casingId.toLowerCase() + '_casing'
@@ -94,24 +103,23 @@ StartupEvents.registry('block',event=>{
 	casing('Ostrum')
 	casing('Calorite')
 
-	let stone = (stoneId) => {
-		let id = 'compressed_' + stoneId
-		event.create(id)
-			.hardness(1.5)
-			.tagBlock('kubejs:compressed_stones')
-			.material('stone')
-	}
-	stone('andesite')
-	stone('granite')
-	stone('diorite')
-	stone('tuff')
-	stone('calcite')
-	stone('limestone')
-
 	let block = (blockId, hardness) => {
 		let id = blockId.toLowerCase()
 		event.create(id)
 			.hardness(hardness)
 	}
 	block('Control_Core', 50)
+})
+
+StartupEvents.registry('fluid', event => {
+	let melted = (meltedId, Color) => {
+		let id = 'melted_' + meltedId.toLowerCase()
+		event.create(id).thickTexture(Color).bucketColor(Color).temperature(2000)
+	}
+	melted('andesite', 0x88888C)
+	melted('calcite', 0xEDF2F1)
+	melted('diorite', 0xABACAD)
+	melted('granite', 0xA26D57)
+	melted('tuff', 0x696D6E)
+	event.create('end_mechanism_melt').thickTexture(0x60986e).noBucket().temperature(1500)
 })

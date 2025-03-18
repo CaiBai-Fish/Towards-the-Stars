@@ -1,37 +1,70 @@
+// 世界加载完成时重载kjs
+/*LevelEvents.loaded(e => {
+    e.server.runCommand(`reload`)
+})*/
+
 BlockEvents.rightClicked('supplementaries:pedestal', e => {
-    if (e.block.id == 'supplementaries:pedestal') {
-        
-        // 获取玩家、物品和方块信息
-        let player = e.player
-        let item = e.item
-        let block = e.block
+    // 获取玩家、物品和方块信息
+    let player = e.player
+    let item = e.item
+    let block = e.block
+    let level = e.level
+    let server = e.server
+    // 检查展示台上是否有kubejs:nether_book
+    if (item.id == 'kubejs:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether")) {
+        let pos = e.block.pos
 
-        // 检查展示台上是否有kubejs:nether_book
-        if (item.id == 'kubejs:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether"))
-            {
-            let pos = e.block.pos
-            e.level.destroyBlock(pos,false)
+        // 触发粒子效果
+        let duration = 100 // 5秒
+        let interval = 3 // 每 2 tick 刷新一次
+        let radius = 3 // 法阵固定半径
 
-            // 触发粒子效果
-            let duration = 40; // 2秒
-    let interval = 2; // 每 2 tick 刷新一次
+        for (let t = 0; t < duration; t += interval) {
+            server.scheduleInTicks(t, () => {
+                for (let i = 0; i < 360; i += 3) {
+                    for (let j = 0; j < 3; j++) {
+                        let radians = i * (3.14 / 180);
+                        let xOffset = Math.cos(radians) * radius
+                        let zOffset = Math.sin(radians) * radius
 
-    for (let t = 0; t < duration; t += interval) {
-        e.server.schedule(t, () => {
-            let radius = 1.5 + (t / duration) * 0.5; // 半径逐渐扩大
-            for (let i = 0; i < 360; i += 10) {
-                let radians = i * (Math.PI / 180);
-                let xOffset = Math.cos(radians) * radius;
-                let zOffset = Math.sin(radians) * radius;
+                        // 血红色粒子
+                        level.spawnParticles("minecraft:dust 1 0 0 0.5",
+                            true,
+                            pos.x + 0.5 + xOffset, pos.y + 1, pos.z + 0.5 + zOffset,
+                            0, 0, 0,
+                            5, 0.01
+                        )
+                    }
+                    let innerRadians = (i + 8) * (3.14 / 180)
+                    let innerX = Math.cos(innerRadians) * radius * 0.4
+                    let innerZ = Math.sin(innerRadians) * radius * 0.4
 
-                // 生成环形粒子
-                e.level.spawnParticles("minecraft:portal", false, pos.x + 0.5 + xOffset, pos.y + 0.1, pos.z + 0.5 + zOffset, 0, 0, 0, 10, 0.05);
-                e.level.spawnParticles("minecraft:crit", false, pos.x + 0.5 + xOffset * 0.9, pos.y + 0.2, pos.z + 0.5 + zOffset * 0.9, 0, 0.02, 0, 5, 0.02);
-            }
-        });
-    }
-            // 给予玩家阶段
-            GamePhase.addPhase(player, "nether")
+                    // 小环
+                    level.spawnParticles('minecraft:dust 1 0 0 0.3',
+                        true,
+                        pos.x + 0.5 + innerX, pos.y + 1, pos.z + 0.5 + innerZ,
+                        0, 0, 0,
+                        5, 0.01
+                    )
+                }
+
+            })
+            server.scheduleInTicks(duration, () => {
+                level.destroyBlock(pos, false)
+            })
         }
+
+        // 给予玩家阶段
+        //GamePhase.addPhase(player, "nether")
+    }
+})
+
+BlockEvents.leftClicked(e => {
+    if (e.item.id == 'minecraft:shears' && e.block.id == 'minecraft:tripwire') {
+        let pos = e.block.pos
+        e.cancel()
+        e.server.scheduleInTicks(2, () => {
+            e.server.runCommandSilent(`setblock ${pos.x} ${pos.y} ${pos.z} minecraft:tripwire[disarmed=true]`)
+        })
     }
 })

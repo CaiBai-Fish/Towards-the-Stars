@@ -8,22 +8,22 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.mixing('2x ad_astra:cheese_block', ['8x ad_astra:cheese', 'ad_astra:cheese_block'])
 
-    event.recipes.create.splashing([Item.of('minecraft:iron_nugget').withChance(0.15), 
-                                Item.of('ad_astra:desh_nugget').withChance(0.25),
-                                Item.of('minecraft:diamond').withChance(0.01),
-                                Item.of('ad_astra:ice_shard').withChance(0.04)], 'ad_astra:moon_sand')
-    event.recipes.create.splashing([Item.of('minecraft:iron_nugget').withChance(0.15), 
-                                Item.of('ad_astra:ostrum_nugget').withChance(0.25),
-                                Item.of('minecraft:diamond').withChance(0.01),
-                                Item.of('ad_astra:ice_shard').withChance(0.04)], 'ad_astra:mars_sand')
     event.recipes.create.splashing([Item.of('minecraft:iron_nugget').withChance(0.15),
-                                Item.of('minecraft:gold_nugget').withChance(0.05),
-                                Item.of('ad_astra:calorite_nugget').withChance(0.25),
-                                Item.of('minecraft:diamond').withChance(0.01)], 'ad_astra:venus_sand')
+    Item.of('ad_astra:desh_nugget').withChance(0.25),
+    Item.of('minecraft:diamond').withChance(0.01),
+    Item.of('ad_astra:ice_shard').withChance(0.04)], 'ad_astra:moon_sand')
+    event.recipes.create.splashing([Item.of('minecraft:iron_nugget').withChance(0.15),
+    Item.of('ad_astra:ostrum_nugget').withChance(0.25),
+    Item.of('minecraft:diamond').withChance(0.01),
+    Item.of('ad_astra:ice_shard').withChance(0.04)], 'ad_astra:mars_sand')
+    event.recipes.create.splashing([Item.of('minecraft:iron_nugget').withChance(0.15),
+    Item.of('minecraft:gold_nugget').withChance(0.05),
+    Item.of('ad_astra:calorite_nugget').withChance(0.25),
+    Item.of('minecraft:diamond').withChance(0.01)], 'ad_astra:venus_sand')
     event.recipes.create.crushing([Item.of('ad_astra:ice_shard').withChance(0.5),
-                                Item.of('create:copper_nugget').withChance(0.15),
-                                Item.of('minecraft:iron_nugget').withChance(0.15),
-                                Item.of('minecraft:lapis_lazuli').withChance(0.1)], 'ad_astra:glacio_stone')
+    Item.of('create:copper_nugget').withChance(0.15),
+    Item.of('minecraft:iron_nugget').withChance(0.15),
+    Item.of('minecraft:lapis_lazuli').withChance(0.1)], 'ad_astra:glacio_stone')
     event.recipes.create.crushing([Item.of('minecraft:iron_nugget').withChance(0.25)], 'ad_astra:mercury_stone')
 
     let core = 'create:precision_mechanism'
@@ -63,23 +63,23 @@ ServerEvents.recipes(event => {
             [
                 event.recipes.create.pressing(material, material)
             ]).loops(6)
-                .transitionalItem(material)
+            .transitionalItem(material)
     }
     frames('1', 'steel')
     frames('2', 'desh')
     frames('3', 'ostrum')
     frames('4', 'calorite')
-    
-    event.shaped(Item.of('ad_astra:cheese_block', 1),[
+
+    event.shaped(Item.of('ad_astra:cheese_block', 1), [
         'AAA',
         'ABA',
         'AAA'
-    ],{
-        A:'ad_astra:cheese',
-        B:'ad_astra:cheese_block'
-    }).keepIngredient('ad_astra:cheese_block')    
+    ], {
+        A: 'ad_astra:cheese',
+        B: 'ad_astra:cheese_block'
+    }).keepIngredient('ad_astra:cheese_block')
     let rocket = (tierId, materialId) => {
-        event.shaped(Item.of('ad_astra:' + tierId + '_rocket'),[
+        event.shaped(Item.of('ad_astra:' + tierId + '_rocket'), [
             '   A   ',
             '  ACA  ',
             '  BCB  ',
@@ -89,33 +89,33 @@ ServerEvents.recipes(event => {
             ' HCDCH ',
             'HFCFCFH',
             'HGGGGGH'
-        ],{
-            A:'ad_astra:rocket_nose_cone',
-            B:'kubejs:' + tierId + '_rocket_outerwall',
-            C:'kubejs:' + tierId + '_rocket_frame',
-            D:'kubejs:control_core',
-            H:'ad_astra:rocket_fin',
-            F:'ad_astra:' + materialId + '_tank',
-            G:'ad_astra:' + materialId + '_engine'
+        ], {
+            A: 'ad_astra:rocket_nose_cone',
+            B: 'kubejs:' + tierId + '_rocket_outerwall',
+            C: 'kubejs:' + tierId + '_rocket_frame',
+            D: 'kubejs:control_core',
+            H: 'ad_astra:rocket_fin',
+            F: 'ad_astra:' + materialId + '_tank',
+            G: 'ad_astra:' + materialId + '_engine'
         })
     }
     rocket('tier_1', 'steel')
     rocket('tier_2', 'desh')
     rocket('tier_3', 'ostrum')
     rocket('tier_4', 'calorite')
-    event.shaped(Item.of('ad_astra:tier_1_rover'),[
+    event.shaped(Item.of('ad_astra:tier_1_rover'), [
         'ACCA',
         'DGGD',
         'DFFD',
         'DFFD',
         'ABBA'
-    ],{
-        A:'ad_astra:wheel',
-        B:'ad_astra:desh_engine',
-        C:'createaddition:iron_rod',
-        D:'ad_astra:desh_plate',
-        G:'ad_astra:steel_block',
-        F:'ad_astra:steel_plate'
+    ], {
+        A: 'ad_astra:wheel',
+        B: 'ad_astra:desh_engine',
+        C: 'createaddition:iron_rod',
+        D: 'ad_astra:desh_plate',
+        G: 'ad_astra:steel_block',
+        F: 'ad_astra:steel_plate'
     })
 
     //机器
@@ -125,12 +125,12 @@ ServerEvents.recipes(event => {
             'ADBA',
             'ADCA',
             'ADAA'
-        ],{
-            A:'create:iron_sheet',
-            B:'createaddition:zinc_sheet',
-            C:'minecraft:furnace',
-            D:'create:copper_sheet'
-        }
+        ], {
+        A: 'create:iron_sheet',
+        B: 'createaddition:zinc_sheet',
+        C: 'minecraft:furnace',
+        D: 'create:copper_sheet'
+    }
     )
     event.recipes.create.mechanical_crafting('ad_astra:compressor',
         [
@@ -138,23 +138,23 @@ ServerEvents.recipes(event => {
             'AACBA',
             'ADCAA',
             'ADAAA'
-        ],{
-            A:'create:iron_sheet',
-            B:'createaddition:zinc_sheet',
-            C:'minecraft:piston',
-            D:'create:copper_sheet'
-        }
+        ], {
+        A: 'create:iron_sheet',
+        B: 'createaddition:zinc_sheet',
+        C: 'minecraft:piston',
+        D: 'create:copper_sheet'
+    }
     )
     event.recipes.create.mechanical_crafting('ad_astra:water_pump',
         [
             'ABABA',
             'AAAAA',
             'ACCCA'
-        ],{
-            A:'kubejs:desh_casing',
-            B:'minecraft:dispenser',
-            C:'minecraft:hopper'
-        }
+        ], {
+        A: 'kubejs:desh_casing',
+        B: 'minecraft:dispenser',
+        C: 'minecraft:hopper'
+    }
     )
     // 序列组装
     let casing1 = 'kubejs:steel_casing'

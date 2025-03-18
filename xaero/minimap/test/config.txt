@@ -11,5 +11,4 @@ ignoreHeightmaps:false
 
 //dimension types (DO NOT EDIT)
 dimensionType:minecraft$overworld:minecraft$overworld
-dimensionType:ad_astra$mars:ad_astra$mars
 //server waypoints

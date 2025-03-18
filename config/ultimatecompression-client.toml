@@ -1,0 +1,32 @@
+
+#Compressor Settings
+[compressors]
+
+	[compressors.gold_compressor]
+		#Number of ticks to complete one compression operation.
+		# 20 ticks is equal to 1 second.
+		# Default: 70
+		#Range: 1 ~ 72000
+		speed = 70
+
+	[compressors.netherite_compressor]
+		#Number of ticks to complete one compression operation.
+		# 20 ticks is equal to 1 second.
+		# Default: 10
+		#Range: 1 ~ 72000
+		speed = 10
+
+	[compressors.iron_compressor]
+		#Number of ticks to complete one compression operation.
+		# 20 ticks is equal to 1 second.
+		# Default: 100
+		#Range: 1 ~ 72000
+		speed = 100
+
+	[compressors.diamond_compressor]
+		#Number of ticks to complete one compression operation.
+		# 20 ticks is equal to 1 second.
+		# Default: 20
+		#Range: 1 ~ 72000
+		speed = 20
+

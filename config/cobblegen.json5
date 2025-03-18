@@ -35,21 +35,20 @@
 				"minecraft:the_end",
 				"minecraft:nether"
 			]
-
 		},
 		{
-			"id":"ad_astra:moon_cobblestone",
-			"weight":100.0,
-	     "dimensions": [
-	       "ad_astra:moon"
-	     ]
+			"id": "ad_astra:moon_cobblestone",
+			"weight": 100.0,
+			"dimensions": [
+				"ad_astra:moon"
+			]
 		},
 		{
-			"id":"ad_astra:mars_cobblestone",
-			"weight":100.0,
-	     "dimensions": [
-	       "ad_astra:mars"
-	     ]
+			"id": "ad_astra:mars_cobblestone",
+			"weight": 100.0,
+			"dimensions": [
+				"ad_astra:mars"
+			]
 		}
 	],
 	"stoneGen": [
@@ -87,42 +86,98 @@
 	*/
 	"customGen": {
 		"cobbleGen": {
-			"kubejs:compressed_andesite": [
+			"uc:double_compressed_andesite": [
 				{
 					"id": "minecraft:andesite",
 					"weight": 100.0
 				}
 			],
-			"kubejs:compressed_granite": [
+			"uc:double_compressed_granite": [
 				{
 					"id": "minecraft:granite",
 					"weight": 100.0
 				}
 			],
-			"kubejs:compressed_diorite": [
+			"uc:double_compressed_diorite": [
 				{
 					"id": "minecraft:diorite",
 					"weight": 100.0
 				}
 			],
-			"kubejs:compressed_tuff": [
+			"uc:double_compressed_tuff": [
 				{
 					"id": "minecraft:tuff",
-					"weight":100.0
+					"weight": 100.0
 				}
 			],
-			"kubejs:compressed_calcite": [
+			"uc:double_compressed_calcite": [
 				{
 					"id": "minecraft:calcite",
-					"weight":100.0
-				}
-			],
-			"kubejs:compressed_limestone": [
-				{
-					"id": "create:limestone",
-					"weight":100.0
+					"weight": 100.0
 				}
 			]
+		}
+	},
+	"advanced": {
+		"kubejs:melted_andesite": {
+			"minecraft:water": {
+				"results": {
+					"*": [
+						{
+							"id": "minecraft:andesite",
+							"weight": 100.0
+						}
+					]
+				}
+			}
+		},
+		"kubejs:melted_calcite": {
+			"minecraft:water": {
+				"results": {
+					"*": [
+						{
+							"id": "minecraft:calcite",
+							"weight": 100.0
+						}
+					]
+				}
+			}
+		},
+		"kubejs:melted_diorite": {
+			"minecraft:water": {
+				"results": {
+					"*": [
+						{
+							"id": "minecraft:diorite",
+							"weight": 100.0
+						}
+					]
+				}
+			}
+		},
+		"kubejs:melted_granite": {
+			"minecraft:water": {
+				"results": {
+					"*": [
+						{
+							"id": "minecraft:granite",
+							"weight": 100.0
+						}
+					]
+				}
+			}
+		},
+		"kubejs:melted_tuff": {
+			"minecraft:water": {
+				"results": {
+					"*": [
+						{
+							"id": "minecraft:tuff",
+							"weight": 100.0
+						}
+					]
+				}
+			}
 		}
 	}
 }

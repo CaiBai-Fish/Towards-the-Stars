@@ -8,13 +8,13 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting('2x create:ochrum', ['minecraft:calcite', 'minecraft:tuff', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('2x create:veridium', ['minecraft:calcite', 'minecraft:diorite', 'create:cinder_flour', 'ae2:sky_dust'])
     event.recipes.create.compacting('minecraft:andesite', 'minecraft:calcite')
-    
+
     event.recipes.create.compacting('minecraft:diamond', '9x kubejs:diamond_nugget')
     event.recipes.create.compacting('deeperdarker:sculk_stone', '6x minecraft:sculk')
     event.recipes.create.compacting('kubejs:diamond_nugget', 'minecraft:coal_block').superheated()
 
     event.recipes.create.crushing('2x ad_astra:sky_stone', 'ad_astra:sky_stone')
-    
+
     event.recipes.create.milling('minecraft:sand', 'minecraft:gravel')
     event.recipes.create.milling('3x ae2:sky_dust', 'ae2:sky_stone_block')
 
@@ -23,12 +23,23 @@ ServerEvents.recipes(event => {
     event.recipes.create.splashing('minecraft:diorite', 'minecraft:calcite')
 
     event.recipes.create.mixing(Item.of('create:andesite_alloy', 2),
-    ['minecraft:andesite', 'architects_palette:algal_brick'])
+        ['minecraft:andesite', 'architects_palette:algal_brick'])
     event.recipes.create.mixing('enderitemod:cracked_enderite_ore', ['minecraft:ancient_debris', '16x minecraft:ender_pearl'])
     event.recipes.create.mixing('ad_astra:steel_ingot', ['minecraft:iron_ingot', '#c:coal']).heated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_andesite', 12), 'minecraft:andesite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_andesite', 1000), 'uc:double_compressed_andesite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_granite', 12), 'minecraft:granite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_granite', 1000), 'uc:double_compressed_granite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_diorite', 12), 'minecraft:diorite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_diorite', 1000), 'uc:double_compressed_diorite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_tuff', 12), 'minecraft:tuff').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_tuff', 1000), 'uc:double_compressed_tuff').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_calcite', 12), 'minecraft:calcite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:melted_calcite', 1000), 'uc:double_compressed_calcite').superheated()
+    event.recipes.create.mixing(Fluid.of('kubejs:end_mechanism_melt', 500), 'kubejs:end_mechanism').superheated()
 
     event.recipes.create.emptying(Fluid.of('butcher:blood_liquid', 1000), 'butcher:blood_liquid_bucket')
-    
+
     event.recipes.create.sequenced_assembly(Item.of('minecraft:ancient_debris'),
         'minecraft:netherrack',
         [
@@ -47,6 +58,29 @@ ServerEvents.recipes(event => {
         ]
     ).loops(3).transitionalItem('create:precision_mechanism')
     event.recipes.create.mixing('kubejs:nether_mechanism', ['kubejs:incomplete_nether_mechanism', Fluid.of('butcher:blood_liquid', 1000)]).heated()
+    event.recipes.create.mechanical_crafting('kubejs:incomplete_end_mechanism',
+        [
+            'DADAD',
+            'ADBDA',
+            'DBCBD',
+            'ADBDA',
+            'DADAD',
+        ], {
+        A: 'minecraft:ender_pearl',
+        B: 'create:precision_mechanism',
+        C: 'minecraft:warped_fungus',
+        D: 'minecraft:warped_wart_block'
+    })
+    let t_end = 'kubejs:incomplete_end_mechanism'
+    event.recipes.create.sequenced_assembly('kubejs:end_mechanism',
+        t_end,
+        [
+            event.recipes.create.deploying(t_end, [t_end, 'minecraft:netherite_ingot']),
+            event.recipes.create.pressing(t_end, t_end),
+            event.recipes.create.deploying(t_end, [t_end, '4x minecraft:ender_eye']),
+            event.recipes.create.pressing(t_end, t_end)
+        ]
+    ).loops(5).transitionalItem(t_end)
     //机器配方
     //安山机壳
     let casing1 = 'create:andesite_casing'
@@ -124,7 +158,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.item_application('create:smart_fluid_pipe', ['create:fluid_valve', 'create:electron_tube'])
     event.recipes.create.item_application('create:item_drain', [casing2, 'quark:grate'])
     event.recipes.create.item_application('create:spout', [casing2, 'minecraft:dried_kelp'])
-    
+
     event.recipes.create.sequenced_assembly('create:fluid_tank',
         casing2,
         [
@@ -213,12 +247,12 @@ ServerEvents.recipes(event => {
             'ACBCA',
             'ACDCA',
             'AAAAA'
-        ],{
-            A:'create:brass_casing',
-            B:'create:cogwheel',
-            C:'create:large_cogwheel',
-            D:'create:precision_mechanism'
-        }
+        ], {
+        A: 'create:brass_casing',
+        B: 'create:cogwheel',
+        C: 'create:large_cogwheel',
+        D: 'create:precision_mechanism'
+    }
     )
     event.recipes.create.mechanical_crafting('create:mechanical_arm',
         [
@@ -227,13 +261,13 @@ ServerEvents.recipes(event => {
             'DBD',
             'ACA',
             'AAA'
-        ],{
-            A:'create:brass_casing',
-            B:'create:brass_ingot',
-            C:'create:large_cogwheel',
-            D:'create:andesite_alloy',
-            X:'create:brass_hand'
-        }
+        ], {
+        A: 'create:brass_casing',
+        B: 'create:brass_ingot',
+        C: 'create:large_cogwheel',
+        D: 'create:andesite_alloy',
+        X: 'create:brass_hand'
+    }
     )
 
     //杂项
@@ -255,8 +289,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.item_application('create:radial_chassis', ['#kubejs:logs', 'create:zinc_ingot'])
 
     event.recipes.create.splashing([Item.of('minecraft:nether_wart').withChance(0.3),
-                                    Item.of('minecraft:crimson_fungus').withChance(0.2),
-                                    Item.of('minecraft:warped_fungus').withChance(0.2)
+    Item.of('minecraft:crimson_fungus').withChance(0.2),
+    Item.of('minecraft:warped_fungus').withChance(0.2)
     ], 'minecraft:soul_soil')
     let a = 'minecraft:stone_slab'
     event.recipes.create.sequenced_assembly(Item.of('create:millstone'),
@@ -277,24 +311,24 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'create:cogwheel']),
             event.recipes.create.deploying('create:encased_chain_drive', ['create:encased_chain_drive', 'electron_tube'])
         ]).loops(1).transitionalItem('create:encased_chain_drive')
-    
+
     event.stonecutting('create:depot', 'create:andesite_casing')
 
-        event.shaped(Item.of('create:water_wheel', 1),[
+    event.shaped(Item.of('create:water_wheel', 1), [
         'AAA',
         'ABA',
         'AAA'
-    ],{
-        A:'#minecraft:wooden_slabs',
-        B:'create:large_cogwheel'
+    ], {
+        A: '#minecraft:wooden_slabs',
+        B: 'create:large_cogwheel'
     })
-    event.shaped(Item.of('create:large_water_wheel', 1),[
+    event.shaped(Item.of('create:large_water_wheel', 1), [
         'AAA',
         'ABA',
         'AAA'
-    ],{
-        A:'#minecraft:wooden_slabs',
-        B:'create:water_wheel'
+    ], {
+        A: '#minecraft:wooden_slabs',
+        B: 'create:water_wheel'
     })
 
     event.recipes.create.sequenced_assembly('create:cart_assembler',
@@ -331,6 +365,13 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying('#forge:cobblestone', ['#forge:cobblestone', 'create:iron_sheet'])
         ]
     ).loops(1).transitionalItem('#forge:cobblestone')
+    event.recipes.create.sequenced_assembly('kubejs:end_cake',
+        'create:blaze_cake_base',
+        [
+            event.recipes.create.filling('create:blaze_cake_base', ['create:blaze_cake_base', Fluid.of('kubejs:end_mechanism_melt', 200)]),
+            event.recipes.create.deploying('create:blaze_cake_base', ['create:blaze_cake_base', 'farmersdelight:cake_slice'])
+        ]
+    ).loops(7).transitionalItem('create:blaze_cake_base')
 
     //蓝图炮
     event.recipes.create.sequenced_assembly('create:schematicannon',
@@ -339,10 +380,10 @@ ServerEvents.recipes(event => {
             event.recipes.create.deploying('create:schematicannon', ['create:schematicannon', 'create:large_cogwheel']),
             event.recipes.create.deploying('create:schematicannon', ['create:schematicannon', 'minecraft:dispenser']),
             event.recipes.create.deploying('create:schematicannon', ['create:schematicannon', 'minecraft:iron_block']),
-            event.recipes.create.deploying('create:schematicannon', ['create:schematicannon', 'minecraft:iron_block'])            
+            event.recipes.create.deploying('create:schematicannon', ['create:schematicannon', 'minecraft:iron_block'])
         ]
     ).loops(1).transitionalItem(casing1)
-    
+
     //机壳配方
     //工作台合成
     event.shapeless(Item.of('create:andesite_casing', 1), ['create:cogwheel', 'create:andesite_alloy', '#forge:stripped_logs', '#kubejs:saws']).damageIngredient('#kubejs:saws', 1)
@@ -353,7 +394,7 @@ ServerEvents.recipes(event => {
         [
             event.recipes.create.deploying(slabs, [slabs, '#kubejs:saws']).damageIngredient('#kubejs:saws', 1),
             event.recipes.create.deploying(slabs, [slabs, 'create:cogwheel']),
-            event.recipes.create.deploying(slabs, [slabs, 'create:andesite_alloy'])            
+            event.recipes.create.deploying(slabs, [slabs, 'create:andesite_alloy'])
         ]
     ).loops(1).transitionalItem(slabs)
     event.recipes.create.sequenced_assembly('create:copper_casing',
@@ -361,7 +402,7 @@ ServerEvents.recipes(event => {
         [
             event.recipes.create.deploying(slabs, [slabs, '#kubejs:saws']).damageIngredient('#kubejs:saws', 1),
             event.recipes.create.deploying(slabs, [slabs, 'create:cogwheel']),
-            event.recipes.create.deploying(slabs, [slabs, 'minecraft:copper_ingot'])            
+            event.recipes.create.deploying(slabs, [slabs, 'minecraft:copper_ingot'])
         ]
     ).loops(1).transitionalItem(slabs)
     event.recipes.create.sequenced_assembly('create:brass_casing',

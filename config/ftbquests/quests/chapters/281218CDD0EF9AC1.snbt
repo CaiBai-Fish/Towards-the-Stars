@@ -8,6 +8,45 @@
 	id: "281218CDD0EF9AC1"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["3E980524EFE7356B"]
+			id: "541D7DCAE143C77A"
+			tasks: [{
+				dimension: "twilightforest:twilight_forest"
+				icon: "twilightforest:twilight_portal_miniature_structure"
+				id: "1E63BCC7B922E273"
+				type: "dimension"
+			}]
+			title: "前往暮色森林"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5311F5F2B0E2D97F"]
+			id: "3E980524EFE7356B"
+			tasks: [{
+				id: "419C8A3795C27706"
+				item: "kubejs:twilight_key"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"59B6D2CFBB9921A4"
+				"1D9FAF5FA8AB61B2"
+			]
+			id: "5311F5F2B0E2D97F"
+			tasks: [{
+				id: "08A1C93A1EFD3D2D"
+				item: "kubejs:key_fragments"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+	]
 	title: "暮色森林"
 }

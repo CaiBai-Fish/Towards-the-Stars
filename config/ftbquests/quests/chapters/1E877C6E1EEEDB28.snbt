@@ -127,7 +127,7 @@
 			rewards: [
 				{
 					id: "70D883A6BBD14D98"
-					item: "kubejs:compressed_andesite"
+					item: "uc:double_compressed_andesite"
 					type: "item"
 				}
 				{

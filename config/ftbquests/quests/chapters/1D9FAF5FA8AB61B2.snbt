@@ -73,7 +73,7 @@
 			}]
 			title: "搭建祭坛"
 			x: 2.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -91,7 +91,7 @@
 			}]
 			title: "屠杀殆尽！"
 			x: 0.0d
-			y: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["761EAF5602DC40B3"]
@@ -116,11 +116,12 @@
 						}
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			title: "当然你也可以选择氪金"
 			x: -2.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
@@ -150,19 +151,16 @@
 			}]
 			title: "双倍没啦"
 			x: -4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["202BDA95031289A1"]
+			dependencies: [
+				"202BDA95031289A1"
+				"5B912E50BB131B4C"
+			]
 			id: "6118B567A7C2DD75"
-			rewards: [{
-				command: "/gamephrase add @p nether"
-				icon: "minecraft:wither_skeleton_skull"
-				id: "6338E2FBDB865859"
-				silent: true
-				title: "获得许可"
-				type: "command"
-			}]
+			shape: "hexagon"
+			size: 1.5d
 			subtitle: "这或许是进入下界唯一的方法？"
 			tasks: [{
 				id: "6F2A4284327D5FAE"
@@ -170,19 +168,32 @@
 				type: "item"
 			}]
 			title: "解开封印"
-			x: 4.0d
-			y: 2.0d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6118B567A7C2DD75"]
 			id: "2DB0104F708C96EA"
+			shape: "circle"
 			tasks: [{
 				dimension: "minecraft:the_nether"
 				id: "4A4533C1318B6D0D"
 				type: "dimension"
 			}]
 			title: "前往第十八层"
-			x: 6.0d
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["761EAF5602DC40B3"]
+			id: "5B912E50BB131B4C"
+			tasks: [{
+				id: "3AE8866541DD5032"
+				item: "kubejs:nether_mechanism"
+				type: "item"
+			}]
+			title: "用血铸成的构件"
+			x: 0.0d
 			y: 2.0d
 		}
 	]

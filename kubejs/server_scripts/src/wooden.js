@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
 
     // 定义一个函数来生成对应的木板ID
     function getPlankId(logId) {
-    // 获取物品的名称部分，例如 "oak_log" -> "oak_planks"
+        // 获取物品的名称部分，例如 "oak_log" -> "oak_planks"
         let plankName = logId.split(':')[1].replace('_log', '').replace('_stem', '') + '_planks';
         return logId.split(':')[0] + ':' + plankName;
     }

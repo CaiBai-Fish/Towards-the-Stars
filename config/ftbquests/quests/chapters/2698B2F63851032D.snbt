@@ -287,8 +287,8 @@
 				type: "item"
 			}]
 			title: "可爱的列车长"
-			x: 9.0d
-			y: 5.0d
+			x: 17.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["43B746460C04089D"]
@@ -298,8 +298,8 @@
 				item: "create:track_station"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 3.0d
+			x: 11.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["149DDD5429846CD2"]
@@ -309,8 +309,8 @@
 				item: "create:controls"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 5.0d
+			x: 15.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["68C61BC586BD34EC"]
@@ -320,8 +320,8 @@
 				item: "create:railway_casing"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 3.0d
+			x: 13.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -348,6 +348,47 @@
 			}]
 			x: 5.0d
 			y: 6.0d
+		}
+		{
+			dependencies: [
+				"78946C5DE5593F95"
+				"10A20A7BC92AC705"
+			]
+			hide_until_deps_complete: true
+			id: "7D0E8806376B5AF5"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "5F62673DFAF59350"
+				item: "ad_astra:solar_panel"
+				type: "item"
+			}]
+			title: "清洁能源"
+			x: 7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["32A0A731FBA7314E"]
+			id: "158E4C5E212B9485"
+			tasks: [{
+				id: "3F84DCAF42AC8932"
+				item: "ae2:quartz_fiber"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["158E4C5E212B9485"]
+			id: "3C144D604488F92C"
+			tasks: [{
+				id: "244BADE30153BC4B"
+				item: "ae2:fluix_glass_cable"
+				type: "item"
+			}]
+			title: "构建网络"
+			x: 13.0d
+			y: -2.0d
 		}
 	]
 	title: "电气时代"

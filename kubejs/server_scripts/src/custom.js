@@ -32,42 +32,42 @@ ServerEvents.recipes(event => {
     })
     event.custom({
         "type": "ad_astra:alloying",
-	    "cookingtime": 100,
-	    "energy": 40,
-	    "ingredients": [
-		{
-			"item": "minecraft:copper_ingot"
-		},
-		{
-			"item": "create:zinc_ingot"
-		}
-	    ],
-	    "result": {
-		    "count": 2,
-		    "id": "create:brass_ingot"
-	    }
+        "cookingtime": 100,
+        "energy": 40,
+        "ingredients": [
+            {
+                "item": "minecraft:copper_ingot"
+            },
+            {
+                "item": "create:zinc_ingot"
+            }
+        ],
+        "result": {
+            "count": 2,
+            "id": "create:brass_ingot"
+        }
     })
     event.custom({
         "type": "ad_astra:alloying",
-	    "cookingtime": 100,
-	    "energy": 40,
-	    "ingredients": [
-		{
-			"tag": "forge:coal"
-		},
-		{
-			"item": "minecraft:iron_ingot"
-		},
-        {
-            "item": "minecraft:quartz"
-        },
-        {
-            "item": "minecraft:quartz"
+        "cookingtime": 100,
+        "energy": 40,
+        "ingredients": [
+            {
+                "tag": "forge:coal"
+            },
+            {
+                "item": "minecraft:iron_ingot"
+            },
+            {
+                "item": "minecraft:quartz"
+            },
+            {
+                "item": "minecraft:quartz"
+            }
+        ],
+        "result": {
+            "count": 2,
+            "id": 'moreminecarts:silica_steel'
         }
-	    ],
-	    "result": {
-		    "count": 2,
-		    "id": 'moreminecarts:silica_steel'
-	    }
     })
 })
