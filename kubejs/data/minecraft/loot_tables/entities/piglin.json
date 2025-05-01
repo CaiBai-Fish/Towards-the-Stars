@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "source_type": {
+              "is": "hotFloorPro"
+            }
+          }
+        },
+        {
+          "chance": 0.2,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:piglin_head"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:entities/piglin"
+}

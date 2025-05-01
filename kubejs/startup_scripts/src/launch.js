@@ -84,7 +84,7 @@ StartupEvents.registry('item', event => {
 	event.create('end_cake').food(food => {   // 末地蛋糕
 		food.alwaysEdible(true)
 		food.eaten(fd => {
-			if(!GamePhase.hasPhase(fd.player, 'end')){
+			if (!GamePhase.hasPhase(fd.player, 'end')) {
 				GamePhase.addPhase(fd.player, 'end')
 			}
 		})
@@ -109,6 +109,17 @@ StartupEvents.registry('block', event => {
 			.hardness(hardness)
 	}
 	block('Control_Core', 50)
+
+	// 杂项
+	event.create('magma_block_pro')
+		.stoneSoundType()
+		.hardness(1.5)
+		.requiresTool(true)
+		.noValidSpawns(true)
+		.tagBlock('minecraft:mineable/pickaxe')
+		.tagBlock('minecraft:needs_iron_tool')
+		.lightLevel(3)
+		.jumpFactor(0.6)
 })
 
 StartupEvents.registry('fluid', event => {

@@ -273,6 +273,7 @@
 		{
 			dependencies: ["68A2435B7C70886A"]
 			description: ["用列车长帽右键安山机壳"]
+			icon: "railways:red_conductor_cap"
 			id: "00C25C878A2B7227"
 			tasks: [{
 				id: "370128E8AAB4ECCC"

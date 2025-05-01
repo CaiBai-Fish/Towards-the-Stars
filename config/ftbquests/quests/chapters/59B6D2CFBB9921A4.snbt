@@ -10,16 +10,34 @@
 	id: "59B6D2CFBB9921A4"
 	order_index: 1
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["1D9FAF5FA8AB61B2"]
-		id: "6298B9C4DAA26BF7"
-		tasks: [{
-			id: "3669C1820CB3EA4A"
-			item: "kubejs:end_mechanism"
-			type: "item"
-		}]
-		x: 0.0d
-		y: -1.0d
-	}]
+	quests: [
+		{
+			dependencies: ["1D9FAF5FA8AB61B2"]
+			id: "50AC5169DFEB7AFA"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "0D840CFDB06B3E59"
+				type: "dimension"
+			}]
+			title: "到达末地"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["50AC5169DFEB7AFA"]
+			id: "4A255290C3E2D637"
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				id: "3FA003D9A84DE07F"
+				type: "kill"
+				value: 1L
+			}]
+			title: "屠龙"
+			x: 0.0d
+			y: 2.0d
+		}
+	]
 	title: "旅途的终末"
 }

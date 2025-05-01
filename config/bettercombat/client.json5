@@ -1,11 +1,11 @@
 {
 	"isHoldToAttackEnabled": true,
-	"isMiningWithWeaponsEnabled": true,
+	"isMiningWithWeaponsEnabled": false,
 	"isSwingThruGrassEnabled": true,
 	"isAttackInsteadOfMineWhenEnemiesCloseEnabled": true,
 	"isHighlightCrosshairEnabled": true,
 	"hudHighlightColor": 16711680,
-	"isShowingArmsInFirstPerson": false,
+	"isShowingArmsInFirstPerson": true,
 	"isShowingOtherHandFirstPerson": true,
 	"isSweepingParticleEnabled": true,
 	"isTooltipAttackRangeEnabled": true,

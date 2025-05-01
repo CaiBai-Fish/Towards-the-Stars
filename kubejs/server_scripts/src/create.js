@@ -57,19 +57,20 @@ ServerEvents.recipes(event => {
             event.recipes.create.pressing('create:precision_mechanism', 'create:precision_mechanism')
         ]
     ).loops(3).transitionalItem('create:precision_mechanism')
-    event.recipes.create.mixing('kubejs:nether_mechanism', ['kubejs:incomplete_nether_mechanism', Fluid.of('butcher:blood_liquid', 1000)]).heated()
+    event.recipes.create.mixing('kubejs:nether_mechanism', ['kubejs:incomplete_nether_mechanism', Fluid.of('butcher:blood_liquid', 1000)]).superheated()
     event.recipes.create.mechanical_crafting('kubejs:incomplete_end_mechanism',
         [
             'DADAD',
-            'ADBDA',
+            'AEBEA',
             'DBCBD',
-            'ADBDA',
+            'AEBEA',
             'DADAD',
         ], {
         A: 'minecraft:ender_pearl',
         B: 'create:precision_mechanism',
         C: 'minecraft:warped_fungus',
-        D: 'minecraft:warped_wart_block'
+        D: 'minecraft:warped_wart_block',
+        E: 'minecraft:nether_star'
     })
     let t_end = 'kubejs:incomplete_end_mechanism'
     event.recipes.create.sequenced_assembly('kubejs:end_mechanism',

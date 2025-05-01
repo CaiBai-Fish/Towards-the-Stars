@@ -1,27 +1,29 @@
 {
   "type": "minecraft:entity",
-  "pools":[
+  "pools": [
     {
-      "rolls":1.0,
-      "entries":[
+      "rolls": 1.0,
+      "conditions": [
         {
-          "type":"minecraft:item",
-          "name":"minecraft:emerald",
-          "functions":[
+          "chance": 0.4,
+          "condition": "minecraft:random_chance_with_looting",
+          "looting_multiplier": 0.04
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
             {
-              "function":"set_count",
-              "count":{
-                "type":"uniform",
-                "min":1.0,
-                "max":3.0
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1.0,
+                "max": 3.0
               }
             }
-          ],
-          "weight":6
-        },
-        {
-          "type":"minecraft:empty",
-          "weight":4
+          ]
         }
       ]
     }

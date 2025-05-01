@@ -150,8 +150,8 @@
 				type: "item"
 			}]
 			title: "双倍没啦"
-			x: -4.0d
-			y: 0.0d
+			x: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -195,6 +195,74 @@
 			title: "用血铸成的构件"
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["2FC0E5C2F8F90989"]
+			id: "763E6FBF835C687C"
+			tasks: [{
+				id: "3A506E463345322E"
+				item: "kubejs:end_mechanism"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6351E4E5657244CE"]
+			id: "2FC0E5C2F8F90989"
+			tasks: [{
+				id: "08900FFF3E9ADB1B"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1DCAC8A6F8A4120B"]
+			id: "6351E4E5657244CE"
+			tasks: [{
+				id: "53BB4D31E96ECC9C"
+				item: "minecraft:wither_skeleton_skull"
+				type: "item"
+			}]
+			title: "量产头颅"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2DB0104F708C96EA"]
+			id: "1DCAC8A6F8A4120B"
+			tasks: [{
+				id: "713DC0ED775FB071"
+				item: "kubejs:magma_block_pro"
+				type: "item"
+			}]
+			title: "更高效获取头颅的方式"
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["763E6FBF835C687C"]
+			id: "0CD2976DCFFE7A0C"
+			tasks: [{
+				id: "7059591500494210"
+				item: "kubejs:end_cake"
+				type: "item"
+			}]
+			title: "末地蛋糕"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0CD2976DCFFE7A0C"]
+			icon: "minecraft:dragon_head"
+			id: "256B546750BE3E00"
+			shape: "hexagon"
+			size: 1.5d
+			title: "征战末地"
+			x: 26.0d
+			y: 0.0d
 		}
 	]
 	title: "空荡荡的下界"

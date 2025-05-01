@@ -69,13 +69,12 @@
 			subtitle: "想致富，先撸树！"
 			tasks: [{
 				consume_items: false
-				count: 128L
 				id: "6E751C9BDBDD426F"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
 					tag: {
-						value: "minecraft:logs"
+						value: "kubejs:logs"
 					}
 				}
 				title: "任意原木"

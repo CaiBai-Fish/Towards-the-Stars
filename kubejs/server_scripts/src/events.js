@@ -1,8 +1,3 @@
-// 世界加载完成时重载kjs
-/*LevelEvents.loaded(e => {
-    e.server.runCommand(`reload`)
-})*/
-
 BlockEvents.rightClicked('supplementaries:pedestal', e => {
     // 获取玩家、物品和方块信息
     let player = e.player
@@ -55,10 +50,11 @@ BlockEvents.rightClicked('supplementaries:pedestal', e => {
         }
 
         // 给予玩家阶段
-        //GamePhase.addPhase(player, "nether")
+        GamePhase.addPhase(player, "nether")
     }
 })
 
+// 回退刷线机修复
 BlockEvents.leftClicked(e => {
     if (e.item.id == 'minecraft:shears' && e.block.id == 'minecraft:tripwire') {
         let pos = e.block.pos
@@ -67,4 +63,57 @@ BlockEvents.leftClicked(e => {
             e.server.runCommandSilent(`setblock ${pos.x} ${pos.y} ${pos.z} minecraft:tripwire[disarmed=true]`)
         })
     }
+})
+
+// 特殊岩浆块伤害机制
+const cooldown = {
+    time: 0,
+    interval: 10
+}
+// 检测实体是否穿有冰霜行者靴子
+function detectboots(entity) {
+    // 获取实体的盔甲槽位
+    const boots = entity.getArmorSlots()[0]
+    // 返回冰霜行者靴子的附魔等级
+    return boots.getEnchantmentLevel('minecraft:frost_walker')
+}
+ServerEvents.tick(event => {
+    const server = event.server
+
+    // 冷却计数
+    if (cooldown.time > 0) {
+        cooldown.time--
+        return
+    }
+
+    // 冷却完毕，执行检测逻辑
+    cooldown.time = cooldown.interval // 重置冷却
+    // 遍历所有生物实体
+    server.entities.forEach(entity => {
+        if (!entity.isLiving()) return
+
+        const pos = entity.blockPosition().below()
+        const block = entity.level.getBlock(pos)
+
+        if (block.id === 'kubejs:magma_block_pro' && !detectboots(entity)) {
+            server.runCommandSilent(`damage ${entity.uuid} 3 minecraft:hot_floor_pro`)
+        }
+    })
+})
+
+// 注册流体的烫伤
+ServerEvents.tick(e => {
+    const server = e.server
+    // 冷却计数
+    if (cooldown.time > 0) {
+        cooldown.time--
+        return
+    }
+    // 遍历所有实体
+    server.entities.forEach(entity => {
+        let pos = entity.blockPosition()
+        const fluidid = entity.level.getBlock(pos).id
+        if (fluidid.includes('kubejs:melted_'))
+            entity.lavaHurt()
+    })
 })
