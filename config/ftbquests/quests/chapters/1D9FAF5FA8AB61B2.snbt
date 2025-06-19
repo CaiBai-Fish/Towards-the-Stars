@@ -231,7 +231,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["2DB0104F708C96EA"]
 			id: "1DCAC8A6F8A4120B"
 			tasks: [{
 				id: "713DC0ED775FB071"
@@ -262,6 +261,29 @@
 			size: 1.5d
 			title: "征战末地"
 			x: 26.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2DB0104F708C96EA"]
+			id: "4BF748A8D3709824"
+			tasks: [{
+				id: "1E83A84EE1266A31"
+				structure: "minecraft:mineshaft"
+				type: "structure"
+			}]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BF748A8D3709824"]
+			id: "7BA8F6F84387183E"
+			tasks: [{
+				entity: "kubejs:warped_golem"
+				id: "22F83F9363CCFBF2"
+				type: "kill"
+				value: 1L
+			}]
+			x: 11.0d
 			y: 0.0d
 		}
 	]

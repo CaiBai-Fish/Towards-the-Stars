@@ -51,7 +51,14 @@ StartupEvents.registry('item', event => {
 	frame('tier_3')
 	frame('tier_4')
 
-	//杂项
+	// 矿物
+	let ore = (oreId, rarity) => {
+		event.create(oreId)
+			.rarity(rarity)
+	}
+	ore('crimson_crystal', 'uncommon')
+
+	// 杂项
 	let items = (itemId, durability) => {
 		if (durability == null) {
 			durability = 0
@@ -89,48 +96,4 @@ StartupEvents.registry('item', event => {
 			}
 		})
 	})
-})
-
-StartupEvents.registry('block', event => {
-	//机壳
-	let casing = (casingId) => {
-		let id = casingId.toLowerCase() + '_casing'
-		event.create(id)
-			.material('metal')
-	}
-	casing('Steel')
-	casing('Desh')
-	casing('Ostrum')
-	casing('Calorite')
-
-	let block = (blockId, hardness) => {
-		let id = blockId.toLowerCase()
-		event.create(id)
-			.hardness(hardness)
-	}
-	block('Control_Core', 50)
-
-	// 杂项
-	event.create('magma_block_pro')
-		.stoneSoundType()
-		.hardness(1.5)
-		.requiresTool(true)
-		.noValidSpawns(true)
-		.tagBlock('minecraft:mineable/pickaxe')
-		.tagBlock('minecraft:needs_iron_tool')
-		.lightLevel(3)
-		.jumpFactor(0.6)
-})
-
-StartupEvents.registry('fluid', event => {
-	let melted = (meltedId, Color) => {
-		let id = 'melted_' + meltedId.toLowerCase()
-		event.create(id).thickTexture(Color).bucketColor(Color).temperature(2000)
-	}
-	melted('andesite', 0x88888C)
-	melted('calcite', 0xEDF2F1)
-	melted('diorite', 0xABACAD)
-	melted('granite', 0xA26D57)
-	melted('tuff', 0x696D6E)
-	event.create('end_mechanism_melt').thickTexture(0x60986e).noBucket().temperature(1500)
 })

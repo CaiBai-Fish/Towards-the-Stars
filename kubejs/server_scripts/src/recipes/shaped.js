@@ -1,6 +1,6 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(e => {
     //Saw 手锯
-    event.shaped(Item.of('kubejs:stone_saw', 1), [
+    e.shaped(Item.of('kubejs:stone_saw', 1), [
         'ACC',
         'ABC'
     ], {
@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
         B: 'minecraft:flint',
         C: 'kubejs:stone_rod'
     })
-    event.shaped(Item.of('kubejs:iron_saw', 1), [
+    e.shaped(Item.of('kubejs:iron_saw', 1), [
         'ACC',
         'ABC'
     ], {
@@ -16,14 +16,14 @@ ServerEvents.recipes(event => {
         B: 'minecraft:flint',
         C: 'createaddition:iron_rod'
     })
-    event.shaped(Item.of('kubejs:stone_rod', 1), [
+    e.shaped(Item.of('kubejs:stone_rod', 1), [
         'A',
         'A'
     ], {
         A: '#forge:cobblestone'
     })
     //模板
-    event.shaped(Item.of('kubejs:base_template', 1), [
+    e.shaped(Item.of('kubejs:base_template', 1), [
         'AAA',
         'ABA',
         'AAA'
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
         A: '#forge:stone',
         B: 'minecraft:diamond'
     })
-    event.shaped(Item.of('kubejs:base_template', 3), [
+    e.shaped(Item.of('kubejs:base_template', 3), [
         'ABA',
         'ACA',
         'AAA'
@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
         C: 'minecraft:diamond',
         B: 'kubejs:base_template'
     })
-    event.shaped(Item.of('enderitemod:enderite_upgrade_smithing_template', 2), [
+    e.shaped(Item.of('enderitemod:enderite_upgrade_smithing_template', 2), [
         'ABA',
         'ACA',
         'AAA'
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
         B: 'kubejs:base_template',
         C: 'minecraft:netherite_ingot'
     })
-    event.shaped(Item.of('kubejs:diamond_template', 1), [
+    e.shaped(Item.of('kubejs:diamond_template', 1), [
         'ABA',
         'ACA',
         'AAA'
@@ -58,48 +58,12 @@ ServerEvents.recipes(event => {
         B: 'kubejs:base_template',
         C: 'minecraft:diamond'
     })
-
-    //Others 杂项
-    //锻造台
-    event.smithing('kubejs:netherite_saw', 'kubejs:diamond_saw', 'minecraft:netherite_ingot')
-
-    //切石机
-    event.stonecutting('2x minecraft:oak_slab', 'minecraft:oak_planks')
-    event.stonecutting('2x minecraft:spruce_slab', 'minecraft:spruce_planks')
-    event.stonecutting('2x minecraft:birch_slab', 'minecraft:birch_planks')
-    event.stonecutting('2x minecraft:jungle_slab', 'minecraft:jungle_planks')
-    event.stonecutting('2x minecraft:acacia_slab', 'minecraft:acacia_planks')
-    event.stonecutting('2x minecraft:dark_oak_slab', 'minecraft:dark_oak_planks')
-    event.stonecutting('2x minecraft:mangrove_slab', 'minecraft:mangrove_planks')
-    event.stonecutting('2x minecraft:crimson_slab', 'minecraft:crimson_planks')
-    event.stonecutting('2x minecraft:warped_slab', 'minecraft:warped_planks')
-    event.stonecutting('2x ad_astra:glacian_slab', 'ad_astra:glacian_planks')
-    event.stonecutting('2x ad_astra:aeronos_slab', 'ad_astra:aeronos_planks')
-    event.stonecutting('2x ad_astra:strophar_slab', 'ad_astra:strophar_planks')
-    event.stonecutting('2x architects_palette:twisted_slab', 'architects_palette:twisted_planks')
-    event.stonecutting('2x deeperdarker:echo_slab', 'deeperdarker:echo_planks')
-    event.stonecutting('4x minecraft:pointed_dripstone', 'minecraft:dripstone_block')
-    event.stonecutting('2x minecraft:dragon_egg', 'minecraft:dragon_egg')
-
-    //烟熏
-    event.smoking('minecraft:coal_block', 'architects_palette:charcoal_block')
-    event.smoking('minecraft:coal', 'minecraft:charcoal')
-    event.smoking('minecraft:tuff', 'minecraft:calcite')
-
-    //熔炉
-    event.smelting('minecraft:iron_nugget', 'createaddition:iron_rod')
-
-
-    //高炉
-    //event.blasting()
-    event.blasting('minecraft:granite', 'minecraft:calcite')
-
-    //有序合成    
     let taa = (tem, mod) => {
         let inputid = mod + ':iron_' + tem
         let outputid = mod + ':diamond_' + tem
-        event.smithing(outputid, 'kubejs:diamond_template', 'minecraft:diamond', inputid)
+        e.smithing(outputid, 'kubejs:diamond_template', 'minecraft:diamond', inputid)
     }
+
     taa('sword', 'minecraft')
     taa('helmet', 'minecraft')
     taa('chestplate', 'minecraft')
@@ -112,23 +76,22 @@ ServerEvents.recipes(event => {
     taa('wand', 'constructionwand')
     taa('knife', 'farmersdelight')
     taa('saw', 'kubejs')
-    event.smithing('constructionwand:infinity_wand', 'constructionwand:diamond_wand', 'minecraft:nether_star')
 
-    event.shaped(Item.of('create:andesite_alloy', 4), [
+    e.shaped(Item.of('create:andesite_alloy', 4), [
         'AA',
         'BB'
     ], {
         A: 'minecraft:andesite',
         B: 'architects_palette:algal_brick'
     })
-    event.shaped(Item.of('create:andesite_alloy', 4), [
+    e.shaped(Item.of('create:andesite_alloy', 4), [
         'AA',
         'BB'
     ], {
         A: 'architects_palette:algal_brick',
         B: 'minecraft:andesite'
     })
-    event.shaped(Item.of('kubejs:screwdriver', 1), [
+    e.shaped(Item.of('kubejs:screwdriver', 1), [
         'B  ',
         ' AC',
         ' CA'
@@ -137,7 +100,7 @@ ServerEvents.recipes(event => {
         B: 'minecraft:iron_nugget',
         C: 'minecraft:blue_dye'
     })
-    event.shaped(Item.of('kubejs:drill_head', 1), [
+    e.shaped(Item.of('kubejs:drill_head', 1), [
         'AA ',
         'ABC',
         ' CB'
@@ -146,7 +109,7 @@ ServerEvents.recipes(event => {
         B: 'minecraft:iron_ingot',
         C: 'createaddition:zinc_sheet'
     })
-    event.shaped(Item.of('kubejs:saw_blade', 1), [
+    e.shaped(Item.of('kubejs:saw_blade', 1), [
         ' A ',
         'ABA',
         ' A '
@@ -154,7 +117,7 @@ ServerEvents.recipes(event => {
         A: 'create:iron_sheet',
         B: 'minecraft:iron_ingot'
     })
-    event.shaped(Item.of('kubejs:plough', 1), [
+    e.shaped(Item.of('kubejs:plough', 1), [
         'ABA',
         'CCC'
     ], {
@@ -162,7 +125,7 @@ ServerEvents.recipes(event => {
         B: 'createaddition:zinc_sheet',
         C: 'create:andesite_alloy'
     })
-    event.shaped(Item.of('create:flywheel', 1), [
+    e.shaped(Item.of('create:flywheel', 1), [
         'AAA',
         'ABA',
         'AAA'
@@ -170,7 +133,7 @@ ServerEvents.recipes(event => {
         A: 'create:brass_ingot',
         B: 'create:large_cogwheel'
     })
-    event.shaped('4x ad_astra:steel_cable', [
+    e.shaped('4x ad_astra:steel_cable', [
         ' A ',
         'BBB',
         ' A '
@@ -178,7 +141,7 @@ ServerEvents.recipes(event => {
         A: 'ad_astra:steel_plate',
         B: 'createaddition:copper_wire'
     })
-    event.shaped('4x ad_astra:desh_cable', [
+    e.shaped('4x ad_astra:desh_cable', [
         ' A ',
         'BBB',
         ' A '
@@ -186,7 +149,7 @@ ServerEvents.recipes(event => {
         A: 'ad_astra:desh_plate',
         B: 'createaddition:copper_wire'
     })
-    event.shaped('4x ad_astra:desh_fluid_pipe', [
+    e.shaped('4x ad_astra:desh_fluid_pipe', [
         'A',
         'B',
         'A'
@@ -194,7 +157,7 @@ ServerEvents.recipes(event => {
         A: 'ad_astra:desh_plate',
         B: 'minecraft:glass'
     })
-    event.shaped('4x ad_astra:ostrum_fluid_pipe', [
+    e.shaped('4x ad_astra:ostrum_fluid_pipe', [
         'A',
         'B',
         'A'
@@ -202,7 +165,7 @@ ServerEvents.recipes(event => {
         A: 'ad_astra:ostrum_plate',
         B: 'minecraft:glass'
     })
-    event.shaped('explorerscompass:explorerscompass', [
+    e.shaped('explorerscompass:explorerscompass', [
         'ABA',
         'DCD',
         'ADA'
@@ -212,7 +175,7 @@ ServerEvents.recipes(event => {
         C: 'minecraft:compass',
         D: 'create:iron_sheet'
     })
-    event.shaped('naturescompass:naturescompass', [
+    e.shaped('naturescompass:naturescompass', [
         'AFA',
         'CDC',
         'ABA'
@@ -224,13 +187,13 @@ ServerEvents.recipes(event => {
         F: 'create:precision_mechanism'
     })
 
-    event.shaped('createaddition:barbed_wire', [
+    e.shaped('createaddition:barbed_wire', [
         'ABA'
     ], {
         A: 'createaddition:iron_wire',
         B: 'minecraft:iron_bars'
     })
-    event.shaped('kubejs:rotor', [
+    e.shaped('kubejs:rotor', [
         ' A ',
         'ABA',
         ' A '
@@ -239,7 +202,7 @@ ServerEvents.recipes(event => {
         B: 'createaddition:iron_rod'
     })
 
-    event.shaped('deeperdarker:heart_of_the_deep', [
+    e.shaped('deeperdarker:heart_of_the_deep', [
         'AAA',
         'ABA',
         'AAA'
@@ -247,7 +210,7 @@ ServerEvents.recipes(event => {
         A: 'deeperdarker:reinforced_echo_shard',
         B: 'kubejs:incomplete_heart_of_the_deep'
     })
-    event.shaped('kubejs:incomplete_heart_of_the_deep', [
+    e.shaped('kubejs:incomplete_heart_of_the_deep', [
         'AAAAA',
         'AABAA',
         'ABBBA',
@@ -257,7 +220,7 @@ ServerEvents.recipes(event => {
         A: 'butcher:heart',
         B: 'minecraft:echo_shard'
     })
-    event.shaped('minecraft:elytra', [
+    e.shaped('minecraft:elytra', [
         ' AAA AAA ',
         'ACBBCBBCA',
         'ACBBCBBCA',
@@ -270,20 +233,20 @@ ServerEvents.recipes(event => {
         B: 'minecraft:phantom_membrane',
         C: 'enderitemod:enderite_ingot'
     })
-    event.shaped('minecraft:hopper', [
+    e.shaped('minecraft:hopper', [
         'A A',
         'A A',
         ' A '
     ], {
         A: 'create:iron_sheet'
     })
-    event.shaped('kubejs:extinguished_blaze_rod', [
+    e.shaped('kubejs:extinguished_blaze_rod', [
         'A',
         'A'
     ], {
         A: 'minecraft:soul_sand'
     })
-    event.shaped('minecraft:echo_shard', [
+    e.shaped('minecraft:echo_shard', [
         ' A ',
         'ABA',
         ' A '
@@ -292,7 +255,7 @@ ServerEvents.recipes(event => {
         B: 'minecraft:sculk'
     })
 
-    event.shaped('quark:pickarang', [
+    e.shaped('quark:pickarang', [
         'ABC',
         '  B',
         '  A'
@@ -301,7 +264,7 @@ ServerEvents.recipes(event => {
         B: '#minecraft:planks',
         C: 'quark:diamond_heart'
     })
-    event.shaped('ad_astra:wrench', [
+    e.shaped('ad_astra:wrench', [
         'AA',
         'AB',
         ' C'
@@ -310,14 +273,14 @@ ServerEvents.recipes(event => {
         B: 'create:cogwheel',
         C: 'createaddition:iron_rod'
     })
-    event.shaped('kubejs:harvester', [
+    e.shaped('kubejs:harvester', [
         'ABA',
         'ABA'
     ], {
         A: 'create:andesite_alloy',
         B: 'createaddition:zinc_sheet'
     })
-    event.shaped('minecraft:blaze_spawn_egg', [
+    e.shaped('minecraft:blaze_spawn_egg', [
         'AAA',
         'BCB',
         'AAA'
@@ -327,7 +290,7 @@ ServerEvents.recipes(event => {
         C: 'minecraft:netherrack'
     })
 
-    event.shaped('kubejs:twilight_key', [
+    e.shaped('kubejs:twilight_key', [
         ' A ',
         'ABA',
         ' A '
@@ -336,7 +299,7 @@ ServerEvents.recipes(event => {
         B: 'kubejs:twilight_mechanism'
     })
 
-    event.shaped('kubejs:nether_book', [
+    e.shaped('kubejs:nether_book', [
         'AAAAAAA',
         'ABCBCBA',
         'ACDGDCA',
@@ -352,14 +315,4 @@ ServerEvents.recipes(event => {
         F: 'minecraft:ender_pearl',
         G: 'kubejs:nether_mechanism'
     })
-
-    event.shapeless('createaddition:diamond_grit_sandpaper', ['minecraft:paper', 'createaddition:diamond_grit'])
-    event.shapeless('createaddition:portable_energy_interface', ['ad_astra:iron_cable', 'createaddition:connector'])
-    event.shapeless('architects_palette:charcoal_block', '9x minecraft:charcoal')
-    event.shapeless('minecraft:blaze_rod', ['kubejs:extinguished_blaze_rod', 'minecraft:flint_and_steel']).damageIngredient('minecraft:flint_and_steel', 1)
-    event.shapeless('minecraft:gunpowder', ['2x minecraft:charcoal', 'minecraft:blaze_powder'])
-    event.shapeless('2x minecraft:glowstone_dust', ['minecraft:redstone', 'minecraft:blaze_powder'])
-    event.shapeless('minecraft:diamond', '9x kubejs:diamond_nugget')
-    event.shapeless('kubejs:gun_book', ['3x minecraft:gunpowder', 'minecraft:netherite_ingot'])
-    event.shapeless('supplementaries:enderman_head', 'butcher:endermanhead')
 })

@@ -6,5 +6,5 @@
   "_comment3": "The minimum memory usage percentage (calculated over a 10-second average) to trigger cleaning; lower values enforce stricter cleanup.",
   "minMemoryUsage": 75,
   "_comment4": "Enable silent memory cleaning; no UI messages displayed, but logs remain.",
-  "silent": false
+  "silent": true
 }

@@ -44,3 +44,11 @@ Towards the Stars.json
 /tacz
 /mods
 /schematics
+kubejs/startup_scripts/src/entity_custom.js
+kubejs/server_scripts/src/test.js
+/wiki
+*.tmp
+/screenshots
+/natives-windows-x86_64
+/defaultconfigs
+emi.json

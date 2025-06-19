@@ -95,7 +95,7 @@ ServerEvents.tick(event => {
         const pos = entity.blockPosition().below()
         const block = entity.level.getBlock(pos)
 
-        if (block.id === 'kubejs:magma_block_pro' && !detectboots(entity)) {
+        if (block.id === 'kubejs:magma_block_pro' && !detectboots(entity) && ![entity.toString().toLowerCase().includes('warped golem') || entity.toString().toLowerCase().includes('绯红魔偶')]) {
             server.runCommandSilent(`damage ${entity.uuid} 3 minecraft:hot_floor_pro`)
         }
     })
@@ -113,7 +113,8 @@ ServerEvents.tick(e => {
     server.entities.forEach(entity => {
         let pos = entity.blockPosition()
         const fluidid = entity.level.getBlock(pos).id
-        if (fluidid.includes('kubejs:melted_'))
+        if (fluidid.includes('kubejs:melted_') && ![entity.toString().toLowerCase().includes('warped golem') || entity.toString().toLowerCase().includes('绯红魔偶')]) {
             entity.lavaHurt()
+        }
     })
 })
