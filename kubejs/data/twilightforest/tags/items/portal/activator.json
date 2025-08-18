@@ -1,6 +1,6 @@
 {
     "replace": true,
     "values": [
-        "kubejs:twilight_key"
+        "ctts:twilight_key"
     ]
 }

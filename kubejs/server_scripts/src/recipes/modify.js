@@ -1,18 +1,20 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(e => {
     //remove 配方删除
-    event.remove({ type: 'create:splashing', output: 'minecraft:quartz' })
-    event.remove({ type: 'ad_astra:nasa_workbench' })
-    event.remove({ type: 'create:compacting', input: 'minecraft:flint' })
-    event.remove({ type: 'create:crushing', output: 'minecraft:quartz' })
-    event.remove({ type: 'create:milling', output: 'minecraft:flint' })
-    event.remove({ output: ['minecraft:andesite', 'minecraft:granite', 'minecraft:diorite', 'minecraft:lead'], mod: 'minecraft' })
-    event.remove({ output: ['minecraft:redstone', 'minecraft:netherrack', 'minecraft:glowstone_dust', 'minecraft:gunpowder'], input: 'create:cinder_flour' })
-    event.remove({ output: ['#forge:tools', , '#forge:armors'], input: 'minecraft:diamond' })
-    event.remove({ output: 'minecraft:sugar', input: 'minecraft:honey_bottle' })
-    event.remove({ input: 'ae2:sky_stone_block', output: 'ae2:sky_dust' })
-    event.remove({ input: ['ad_astra:hammer'] })
-    event.remove({ not: { type: 'create:sequenced_assembly' }, output: 'create:andesite_alloy' })
-    event.remove({
+    e.remove({ id: 'create_things_and_misc:crushed_magma_crush' })
+    e.remove({ type: 'create:splashing', output: 'minecraft:quartz' })
+    e.remove({ type: 'ad_astra:nasa_workbench' })
+    e.remove({ type: 'create:compacting', input: 'minecraft:flint' })
+    e.remove({ type: 'create:crushing', output: 'minecraft:quartz' })
+    e.remove({ type: 'create:milling', output: 'minecraft:flint' })
+    e.remove({ output: ['minecraft:andesite', 'minecraft:granite', 'minecraft:diorite', 'minecraft:lead'], mod: 'minecraft' })
+    e.remove({ output: ['minecraft:redstone', 'minecraft:netherrack', 'minecraft:glowstone_dust', 'minecraft:gunpowder'], input: 'create:cinder_flour' })
+    e.remove({ output: ['#forge:tools', , '#forge:armors'], input: 'minecraft:diamond' })
+    e.remove({ output: 'minecraft:sugar', input: 'minecraft:honey_bottle' })
+    e.remove({ input: 'ae2:sky_stone_block', output: 'ae2:sky_dust' })
+    e.remove({ input: ['ad_astra:hammer'] })
+    e.remove({ not: { type: 'create:sequenced_assembly' }, output: 'create:andesite_alloy' })
+    e.remove({ output: 'minecraft:ender_pearl', mod: 'butcher' })
+    e.remove({
         output: ['ad_astra:iron_rod', 'ad_astra:tier_1_rover', 'ad_astra:nasa_workbench', 'ad_astra:wheel', 'ad_astra:engine_frame', 'ad_astra:engine_fan',
             'ad_astra:oxygen_gear', 'ad_astra:rocket_nose_cone', 'ad_astra:steel_tank', 'ad_astra:gravity_normalizer', 'ad_astra:desh_tank', 'ad_astra:ostrum_tank',
             'ad_astra:calorite_tank', 'ad_astra:rocket_fin', 'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:fuel_refinery', 'ad_astra:gas_tank',
@@ -22,7 +24,7 @@ ServerEvents.recipes(event => {
             'ad_astra:etrionic_capacitor'
         ]
     })
-    event.remove({
+    e.remove({
         output: ['create:adjustable_chain_gearshift', 'create:water_wheel', 'create:large_water_wheel', 'create:sequenced_gearshift',
             , 'create:encased_fan', 'create:mechanical_press', 'create:mechanical_mixer', 'create:contraption_controls', 'create:deployer', 'create:linear_chassis',
             'create:redstone_contact', 'create:mechanical_drill', 'create:mechanical_saw', 'create:cart_assembler', 'create:sticker', 'create:elevator_pulley',
@@ -37,29 +39,26 @@ ServerEvents.recipes(event => {
             'create:controls', 'ad_astra:ti_69'
         ]
     })
-    event.remove({
+    e.remove({
         output: ['architects_palette:charcoal_block', 'minecraft:hopper', 'enderitemod:enderite_upgrade_smithing_template', 'constructionwand:iron_wand',
             'constructionwand:diamond_wand', 'constructionwand:infinity_wand', 'tacz:gun_smith_table', 'ad_astra:wrench', 'explorerscompass:explorerscompass',
-            'naturescompass:naturescompass', 'create_mechanical_extruder:mechanical_extruder']
+            'naturescompass:naturescompass', 'create_mechanical_extruder:mechanical_extruder', 'twilightforest:magic_map_focus']
     })
     //配方修改
-    event.replaceInput({ output: 'deeperdarker:reinforced_echo_shard' }, 'minecraft:echo_shard', 'kubejs:echo_mechanism')
-    event.replaceInput({ output: 'minecraft:recovery_compass' }, 'minecraft:echo_shard', 'deeperdarker:reinforced_echo_shard')
-    event.replaceInput({ output: 'railways:track_switch_andesite' }, 'create:cogwheel', 'kubejs:andesite_mechanism')
-    event.replaceInput({ output: 'create:brass_hand' }, 'create:brass_sheet', 'create:copper_sheet')
-    event.replaceInput({ output: 'minecraft:netherite_upgrade_smithing_template' }, 'minecraft:netherite_upgrade_smithing_template', 'kubejs:base_template')
-    event.replaceInput({ output: 'deeperdarker:warden_upgrade_smithing_template' }, 'deeperdarker:warden_upgrade_smithing_template', 'kubejs:base_template')
-    event.replaceInput({ output: 'deeperdarker:warden_upgrade_smithing_template' }, 'minecraft:sculk', 'deeperdarker:sculk_stone')
-    event.replaceInput({ output: '#minecraft:trim_templates' }, '#minecraft:trim_templates', 'kubejs:base_template')
-    event.replaceInput({ output: 'minecraft:host_armor_trim_smithing_template' }, 'minecraft:terracotta', 'quark:shingles')
-    event.replaceInput({ output: 'minecraft:coast_armor_trim_smithing_template' }, 'minecraft:cobblestone', 'minecraft:sand')
-    event.replaceInput({ output: 'minecraft:vex_armor_trim_smithing_template' }, 'minecraft:cobblestone', 'minecraft:stone')
-    event.replaceInput({ output: 'minecraft:rib_armor_trim_smithing_template' }, 'minecraft:netherrack', 'minecraft:bone_block')
-    event.replaceInput({ output: 'minecraft:raiser_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:grass_block')
-    event.replaceInput({ output: 'minecraft:shaper_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:bricks')
-    event.replaceInput({ output: 'butcher:dragonsmithingtemplate' }, 'butcher:dragonsmithingtemplate', 'kubejs:base_template')
-    event.replaceInput({ output: 'quark:smithing_template_rune' }, 'quark:smithing_template_rune', 'kubejs:base_template')
-    event.replaceInput({ output: 'aquaculture:iron_fishing_rod' }, 'minecraft:iron_ingot', 'createaddition:iron_rod')
-    event.replaceInput({ input: 'ad_astra:iron_rod' }, 'ad_astra:iron_rod', 'createaddition:iron_rod')
-    //event.replaceOutput({input:'ae2:sky_stone_block', output:'ae2:sky_dust'}, 'ae2:sky_dust', Item.of('ae2:sky_dust', 3))
+    e.replaceInput({ output: 'minecraft:recovery_compass' }, 'minecraft:echo_shard', 'deeperdarker:reinforced_echo_shard')
+    e.replaceInput({ output: 'create:brass_hand' }, 'create:brass_sheet', 'create:copper_sheet')
+    e.replaceInput({ output: 'minecraft:netherite_upgrade_smithing_template' }, 'minecraft:netherite_upgrade_smithing_template', 'ctts:base_template')
+    e.replaceInput({ output: 'deeperdarker:warden_upgrade_smithing_template' }, 'deeperdarker:warden_upgrade_smithing_template', 'ctts:base_template')
+    e.replaceInput({ output: 'deeperdarker:warden_upgrade_smithing_template' }, 'minecraft:sculk', 'deeperdarker:sculk_stone')
+    e.replaceInput({ output: '#minecraft:trim_templates' }, '#minecraft:trim_templates', 'ctts:base_template')
+    e.replaceInput({ output: 'minecraft:host_armor_trim_smithing_template' }, 'minecraft:terracotta', 'quark:shingles')
+    e.replaceInput({ output: 'minecraft:coast_armor_trim_smithing_template' }, 'minecraft:cobblestone', 'minecraft:sand')
+    e.replaceInput({ output: 'minecraft:vex_armor_trim_smithing_template' }, 'minecraft:cobblestone', 'minecraft:stone')
+    e.replaceInput({ output: 'minecraft:rib_armor_trim_smithing_template' }, 'minecraft:netherrack', 'minecraft:bone_block')
+    e.replaceInput({ output: 'minecraft:raiser_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:grass_block')
+    e.replaceInput({ output: 'minecraft:shaper_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:bricks')
+    e.replaceInput({ output: 'butcher:dragonsmithingtemplate' }, 'butcher:dragonsmithingtemplate', 'ctts:base_template')
+    e.replaceInput({ output: 'quark:smithing_template_rune' }, 'quark:smithing_template_rune', 'ctts:base_template')
+    e.replaceInput({ output: 'aquaculture:iron_fishing_rod' }, 'minecraft:iron_ingot', 'createaddition:iron_rod')
+    e.replaceInput({ input: 'ad_astra:iron_rod' }, 'ad_astra:iron_rod', 'createaddition:iron_rod')
 })

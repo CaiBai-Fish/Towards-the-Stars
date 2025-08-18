@@ -44,7 +44,7 @@ Towards the Stars.json
 /tacz
 /mods
 /schematics
-kubejs/startup_scripts/src/entity_custom.js
+kubejs/startup_scripts/src/entity_custom.disabled
 kubejs/server_scripts/src/test.js
 /wiki
 *.tmp
@@ -52,3 +52,5 @@ kubejs/server_scripts/src/test.js
 /natives-windows-x86_64
 /defaultconfigs
 emi.json
+/icon-exports-x32
+kubejs/startup_scripts/src/registry/*.snbt

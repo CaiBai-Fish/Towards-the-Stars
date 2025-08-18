@@ -1,4 +1,30 @@
 
+#Debug options
+[debug]
+	#Enable debug log
+	debugLog = false
+
+#Extra options
+[extra]
+	#HUD color
+	hudColor = "f0f0f0"
+	#Reduced fps HUD color
+	hudReductionColor = "00f000"
+	#HUD color for FPS display in GUI screen(inventory and menu).
+	hudGuiModeColor = "b6ecff"
+	#HUD color for FPS display when the character is stationary.
+	hudNoActModeColor = "ceffd4"
+	#Allow player configuration mode.
+	allowPlayerConfig = true
+	#CPU usage type. (0:one processor basis, 1:all processors basis)
+	#Range: 0 ~ 1
+	cpuUsageType = 0
+	#Which thread's CPU usage should be calculated. (0:client thread only, 1:entire Minecraft process including server threads)
+	#Range: 0 ~ 1
+	cpuUsageThread = 0
+	#Permit to set IdleFPS=1.
+	allowOneFps = false
+
 #General options
 [general]
 	#Enable FPS Reducer features.
@@ -10,7 +36,7 @@
 	#Range: 1 ~ 60
 	idleFps = 10
 	#Max frame rate during GUI screen(Inventory/Menu) is opened. (0:OFF)
-	#Range: 0 ~ 60
+	#Range: 0 ~ 260
 	guiScreenFps = 0
 	#Max frame rate when the character is stationary. (0:OFF)
 	#Range: 0 ~ 260
@@ -33,7 +59,7 @@
 	hudEnabled = true
 	#Reference position of HUD.
 	#Range: 1 ~ 8
-	hudReferencePos = 1
+	hudReferencePos = 3
 	#HUD scale (default: 1.0)
 	#Range: 0.1 ~ 2.0
 	hudScale = 1.0
@@ -100,30 +126,4 @@
 	bottomLeft = 0
 	#Range: 0 ~ 2
 	centerLeft = 0
-
-#Extra options
-[extra]
-	#HUD color
-	hudColor = "f0f0f0"
-	#Reduced fps HUD color
-	hudReductionColor = "00f000"
-	#HUD color for FPS display in GUI screen(inventory and menu).
-	hudGuiModeColor = "b6ecff"
-	#HUD color for FPS display when the character is stationary.
-	hudNoActModeColor = "ceffd4"
-	#Allow player configuration mode.
-	allowPlayerConfig = true
-	#CPU usage type. (0:one processor basis, 1:all processors basis)
-	#Range: 0 ~ 1
-	cpuUsageType = 0
-	#Which thread's CPU usage should be calculated. (0:client thread only, 1:entire Minecraft process including server threads)
-	#Range: 0 ~ 1
-	cpuUsageThread = 0
-	#Permit to set IdleFPS=1.
-	allowOneFps = false
-
-#Debug options
-[debug]
-	#Enable debug log
-	debugLog = false
 

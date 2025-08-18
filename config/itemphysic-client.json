@@ -17,7 +17,8 @@
     "blockRequireOffset": {
       "blocks": [
         "minecraft:snow",
-        "minecraft:soul_sand"
+        "minecraft:soul_sand",
+        "minecraft:mud"
       ],
       "tags": []
     },

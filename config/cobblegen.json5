@@ -119,8 +119,16 @@
 		}
 	},
 	"advanced": {
-		"kubejs:melted_andesite": {
+		"ctts:melted_andesite": {
 			"minecraft:water": {
+				"resultsFromTop": {
+					"*": [
+						{
+							"id": "minecraft:andesite",
+							"weight": 100.0
+						}
+					]
+				},
 				"results": {
 					"*": [
 						{
@@ -131,8 +139,16 @@
 				}
 			}
 		},
-		"kubejs:melted_calcite": {
+		"ctts:melted_calcite": {
 			"minecraft:water": {
+				"resultsFromTop": {
+					"*": [
+						{
+							"id": "minecraft:calcite",
+							"weight": 100.0
+						}
+					]
+				},
 				"results": {
 					"*": [
 						{
@@ -143,8 +159,16 @@
 				}
 			}
 		},
-		"kubejs:melted_diorite": {
+		"ctts:melted_diorite": {
 			"minecraft:water": {
+				"resultsFromTop": {
+					"*": [
+						{
+							"id": "minecraft:diorite",
+							"weight": 100.0
+						}
+					]
+				},
 				"results": {
 					"*": [
 						{
@@ -155,8 +179,16 @@
 				}
 			}
 		},
-		"kubejs:melted_granite": {
+		"ctts:melted_granite": {
 			"minecraft:water": {
+				"resultsFromTop": {
+					"*": [
+						{
+							"id": "minecraft:granite",
+							"weight": 100.0
+						}
+					]
+				},
 				"results": {
 					"*": [
 						{
@@ -167,8 +199,16 @@
 				}
 			}
 		},
-		"kubejs:melted_tuff": {
+		"ctts:melted_tuff": {
 			"minecraft:water": {
+				"resultsFromTop": {
+					"*": [
+						{
+							"id": "minecraft:tuff",
+							"weight": 100.0
+						}
+					]
+				},
 				"results": {
 					"*": [
 						{

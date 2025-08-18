@@ -1,8 +1,8 @@
 ServerEvents.tags('item', event => {
-    event.add('kubejs:saws', ['kubejs:stone_saw', 'kubejs:iron_saw', 'kubejs:diamond_saw', 'kubejs:netherite_saw'])
-    event.add('kubejs:saws/iron', ['kubejs:iron_saw', 'kubejs:diamond_saw', 'kubejs:netherite_saw'])
-    event.add('kubejs:saws/diamond', ['kubejs:diamond_saw', 'kubejs:netherite_saw'])
-    event.add('kubejs:saws/netherite', 'kubejs:netherite_saw')
+    event.add('ctts:saws', ['ctts:stone_saw', 'ctts:iron_saw', 'ctts:diamond_saw', 'ctts:netherite_saw'])
+    event.add('ctts:saws/iron', ['ctts:iron_saw', 'ctts:diamond_saw', 'ctts:netherite_saw'])
+    event.add('ctts:saws/diamond', ['ctts:diamond_saw', 'ctts:netherite_saw'])
+    event.add('ctts:saws/netherite', 'ctts:netherite_saw')
     let tools = (tem, mod) => {
         let id = mod + ':diamond_' + tem
         event.add('forge:tools/diamond', id)
@@ -13,12 +13,12 @@ ServerEvents.tags('item', event => {
     tools('hoe', 'minecraft')
     tools('shovel', 'minecraft')
     tools('wand', 'constructionwand')
-    event.add('kubejs:stones', ['minecraft:granite', 'minecraft:diorite', 'minecraft:calcite', 'minecraft:tuff'])
-    event.add('kubejs:sheet/gold', ['create:golden_sheet', 'createaddition:electrum_sheet'])
-    event.add('kubejs:powder', ['create:wheat_flour', 'farmersdelight:rice'])
+    event.add('ctts:stones', ['minecraft:granite', 'minecraft:diorite', 'minecraft:calcite', 'minecraft:tuff'])
+    event.add('ctts:sheet/gold', ['create:golden_sheet', 'createaddition:electrum_sheet'])
+    event.add('ctts:powder', ['create:wheat_flour', 'farmersdelight:rice'])
 })
 ServerEvents.tags('item', event => {
-    event.add('kubejs:logs',[
+    event.add('ctts:logs',[
         "ad_astra:glacian_log",
         "architects_palette:twisted_log",
         "architects_palette:twisted_log",

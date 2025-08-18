@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing([Item.of('minecraft:iron_nugget').withChance(0.25)], 'ad_astra:mercury_stone')
 
     let core = 'create:precision_mechanism'
-    event.recipes.create.sequenced_assembly(Item.of('kubejs:control_core'),
+    event.recipes.create.sequenced_assembly(Item.of('ctts:control_core'),
         'minecraft:quartz_block',
         [
             event.recipes.create.deploying(core, [core, 'create:precision_mechanism']),
@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
         ]
     ).loops(5).transitionalItem('ad_astra:steel_block')
     let outerwalls = (tierId, materialId) => {
-        let id = 'kubejs:tier_' + tierId + '_rocket_outerwall'
+        let id = 'ctts:tier_' + tierId + '_rocket_outerwall'
         let material = 'ad_astra:' + materialId + '_plate'
         event.recipes.create.sequenced_assembly(Item.of(id),
             material,
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
     outerwalls('3', 'ostrum')
     outerwalls('4', 'calorite')
     let frames = (tierId, materialId) => {
-        let id = 'kubejs:tier_' + tierId + '_rocket_frame'
+        let id = 'ctts:tier_' + tierId + '_rocket_frame'
         let material = 'ad_astra:' + materialId + '_block'
         event.recipes.create.sequenced_assembly(Item.of(id),
             material,
@@ -91,9 +91,9 @@ ServerEvents.recipes(event => {
             'HGGGGGH'
         ], {
             A: 'ad_astra:rocket_nose_cone',
-            B: 'kubejs:' + tierId + '_rocket_outerwall',
-            C: 'kubejs:' + tierId + '_rocket_frame',
-            D: 'kubejs:control_core',
+            B: 'ctts:' + tierId + '_rocket_outerwall',
+            C: 'ctts:' + tierId + '_rocket_frame',
+            D: 'ctts:control_core',
             H: 'ad_astra:rocket_fin',
             F: 'ad_astra:' + materialId + '_tank',
             G: 'ad_astra:' + materialId + '_engine'
@@ -151,20 +151,20 @@ ServerEvents.recipes(event => {
             'AAAAA',
             'ACCCA'
         ], {
-        A: 'kubejs:desh_casing',
+        A: 'ctts:desh_casing',
         B: 'minecraft:dispenser',
         C: 'minecraft:hopper'
     }
     )
     // 序列组装
-    let casing1 = 'kubejs:steel_casing'
+    let casing1 = 'ctts:steel_casing'
     event.recipes.create.sequenced_assembly('ad_astra:etrionic_blast_furnace',
         casing1,
         [
             event.recipes.create.deploying(casing1, [casing1, 'minecraft:blast_furnace']),
             event.recipes.create.deploying(casing1, [casing1, 'createaddition:connector'])
         ]
-    ).loops(1).transitionalItem("kubejs:steel_casing")
+    ).loops(1).transitionalItem("ctts:steel_casing")
     event.recipes.create.sequenced_assembly('ad_astra:fuel_refinery',
         casing1,
         [
@@ -182,7 +182,7 @@ ServerEvents.recipes(event => {
         ]
     ).loops(1).transitionalItem(casing1)
 
-    let casing2 = 'kubejs:desh_casing'
+    let casing2 = 'ctts:desh_casing'
     event.recipes.create.sequenced_assembly('ad_astra:solar_panel',
         casing2,
         [
@@ -212,7 +212,7 @@ ServerEvents.recipes(event => {
         ]
     ).loops(1).transitionalItem(casing2)
 
-    let casing3 = 'kubejs:ostrum_casing'
+    let casing3 = 'ctts:ostrum_casing'
     event.recipes.create.sequenced_assembly('ad_astra:energizer',
         casing3,
         [
@@ -237,7 +237,7 @@ ServerEvents.recipes(event => {
         ]
     ).loops(1).transitionalItem(casing3)
 
-    let casing4 = 'kubejs:calorite_casing'
+    let casing4 = 'ctts:calorite_casing'
 
     // 杂项
     event.stonecutting('6x ad_astra:gas_tank', casing1)

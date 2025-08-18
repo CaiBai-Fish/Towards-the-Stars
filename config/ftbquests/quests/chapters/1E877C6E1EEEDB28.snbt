@@ -57,16 +57,16 @@
 				id: "74B4149E2FE12994"
 				type: "advancement"
 			}]
-			title: "在村庄中寻找一个安身之处"
+			title: "{ctts.chapter_1.quest_1.title}"
 			x: -13.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["1EDB7D2C62AD03D5"]
-			description: ["记得要种树！"]
+			description: ["{ctts.chapter_1.quest_2.description}"]
 			icon: "minecraft:oak_log"
 			id: "374F5C60B97AAC74"
-			subtitle: "想致富，先撸树！"
+			subtitle: "{ctts.chapter_1.quest_2.subtitle}"
 			tasks: [{
 				consume_items: false
 				id: "6E751C9BDBDD426F"
@@ -74,13 +74,13 @@
 					Count: 1
 					id: "itemfilters:tag"
 					tag: {
-						value: "kubejs:logs"
+						value: "ctts:logs"
 					}
 				}
-				title: "任意原木"
+				title: "{ctts.chapter_1.quest_2.item}"
 				type: "item"
 			}]
-			title: "先搞亿点木头"
+			title: "{ctts.chapter_1.quest_2.title}"
 			x: -11.5d
 			y: -4.0d
 		}
@@ -99,7 +99,7 @@
 					type: "item"
 				}
 			]
-			subtitle: "有连锁采集，问题不大"
+			subtitle: "{ctts.chapter_1.quest_3.subtitle}"
 			tasks: [{
 				consume_items: false
 				count: 128L
@@ -136,7 +136,7 @@
 					type: "item"
 				}
 			]
-			subtitle: "有备无患！"
+			subtitle: "{ctts.chapter_1.quest_4.subtitle}"
 			tasks: [
 				{
 					consume_items: false
@@ -167,7 +167,7 @@
 					type: "item"
 				}
 			]
-			title: "一点基础矿物"
+			title: "{ctts.chapter_1.quest_4.title}"
 			x: -11.5d
 			y: 0.0d
 		}
@@ -192,7 +192,7 @@
 					type: "item"
 				}
 			]
-			subtitle: "也许以后可以量产？"
+			subtitle: "{ctts.chapter_1.quest_9.subtitle}"
 			tasks: [{
 				consume_items: false
 				count: 64L
@@ -200,7 +200,7 @@
 				item: "minecraft:andesite"
 				type: "item"
 			}]
-			title: "最基础的材料"
+			title: "{ctts.chapter_1.quest_9.title}"
 			x: -7.5d
 			y: -2.0d
 		}
@@ -216,34 +216,28 @@
 				item: "create:millstone"
 				type: "item"
 			}]
-			subtitle: "来自深海的植物，也许有变成金属的潜力？"
-			tasks: [
-				{
-					consume_items: false
-					id: "62350D740D05FF15"
-					item: "minecraft:kelp"
-					type: "item"
-				}
-				{
-					id: "55F75112622F1FFE"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
-			title: "海带的多种用途"
+			subtitle: "{ctts.chapter_1.quest_5.subtitle}"
+			tasks: [{
+				consume_items: false
+				count: 64L
+				id: "62350D740D05FF15"
+				item: "minecraft:kelp"
+				type: "item"
+			}]
+			title: "{ctts.chapter_1.quest_5.title}"
 			x: -11.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["59F9B0C32AB3C76E"]
 			id: "7E09DDB050379601"
-			subtitle: "黏土可以烧制成好看的陶器，也可以……？"
+			subtitle: "{ctts.chapter_1.quest_7.subtitle}"
 			tasks: [{
 				id: "6D937C39C9CC04A3"
 				item: "minecraft:clay_ball"
 				type: "item"
 			}]
-			title: "沙中淘宝"
+			title: "{ctts.chapter_1.quest_7.title}"
 			x: -9.5d
 			y: 2.0d
 		}
@@ -261,14 +255,14 @@
 		{
 			dependencies: ["63CBE5F059FC59F8"]
 			id: "2F795E476E20564A"
-			subtitle: "用一点经验换一种批量烧炼方式，很划算吧！"
+			subtitle: "{ctts.chapter_1.quest_6.subtitle}"
 			tasks: [{
 				advancement: "create:fan_processing"
 				criterion: ""
 				id: "319C4A99938AA878"
 				type: "advancement"
 			}]
-			title: "露天熔炉！"
+			title: "{ctts.chapter_1.quest_6.title}"
 			x: -9.5d
 			y: 0.0d
 		}
@@ -278,14 +272,14 @@
 				"2F795E476E20564A"
 			]
 			id: "6BAE82E82CE64FFB"
-			subtitle: "明明是用海带做的，为什么有种金属的感觉？"
+			subtitle: "{ctts.chapter_1.quest_10.subtitle}"
 			tasks: [{
 				consume_items: false
 				id: "182D5F32DFB2306A"
 				item: "architects_palette:algal_brick"
 				type: "item"
 			}]
-			title: "海的颜色"
+			title: "{ctts.chapter_1.quest_10.title}"
 			x: -7.5d
 			y: 0.0d
 		}
@@ -317,13 +311,13 @@
 			id: "50C487F24C19563B"
 			shape: "hexagon"
 			size: 1.2d
-			subtitle: "用海带做的金属，当然算生物金属……吧"
+			subtitle: "{ctts.chapter_1.quest_12.subtitle}"
 			tasks: [{
 				id: "21BEA712B7F41219"
 				item: "create:andesite_alloy"
 				type: "item"
 			}]
-			title: "真正的生物金属！……？"
+			title: "{ctts.chapter_1.quest_12.title}"
 			x: -5.5d
 			y: 0.0d
 		}
@@ -372,7 +366,7 @@
 			}]
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "以后你用它的地方多着呢"
+			subtitle: "{ctts.chapter_1.quest_13.subtitle}"
 			tasks: [{
 				id: "5975B1DB798E08A9"
 				item: "create:andesite_casing"
@@ -382,5 +376,5 @@
 			y: 0.0d
 		}
 	]
-	title: "旅途开始的准备"
+	title: "{ctts.chapter_1.quarter_1.title}"
 }

@@ -54,9 +54,9 @@
 					type: "item"
 				}
 			]
-			title: "步入安山时代"
+			title: "{ctts.chapter_2.quarter_1.quest_1.title}"
 			x: 0.0d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["558504A255CB55BF"]
@@ -90,7 +90,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "黄金“石”代！"
+			title: "{ctts.chapter_2.quarter_1.quest_6.title}"
 			x: 3.0d
 			y: 2.0d
 		}
@@ -103,7 +103,7 @@
 				item: "minecraft:dripstone_block"
 				type: "item"
 			}]
-			title: "“浸出液”"
+			title: "{ctts.chapter_2.quarter_1.quest_7.title}"
 			x: 3.0d
 			y: 4.0d
 		}
@@ -186,19 +186,19 @@
 						Count: 1
 						id: "itemfilters:tag"
 						tag: {
-							value: "kubejs:logs"
+							value: "ctts:logs"
 						}
 					}
-					title: "Any #kubejs:logs"
+					title: "{ctts.chapter_3.quarter_1.quest_2.item}"
 					type: "item"
 				}
 				{
-					id: "60B582ABEA193A3F"
-					title: "自动生产"
+					id: "69063C56CC988141"
+					title: "{ctts.chapter_3.quarter_1.quest_2.check}"
 					type: "checkmark"
 				}
 			]
-			title: "“朋克”森林"
+			title: "{ctts.chapter_2.quarter_1.quest_2.title}"
 			x: -3.0d
 			y: 2.0d
 		}
@@ -222,16 +222,16 @@
 							value: "minecraft:planks"
 						}
 					}
-					title: "任意木板"
+					title: "{ctts.chapter_3.quarter_1.quest_4.item}"
 					type: "item"
 				}
 				{
 					id: "38F4FA4C27C36439"
-					title: "自动生产"
+					title: "{ctts.chapter_3.quarter_1.quest_4.check}"
 					type: "checkmark"
 				}
 			]
-			title: "切第一刀"
+			title: "{ctts.chapter_2.quarter_1.quest_4.title}"
 			x: -3.0d
 			y: 6.0d
 		}
@@ -255,7 +255,7 @@
 							value: "forge:stripped_logs"
 						}
 					}
-					title: "任意去皮原木"
+					title: "{ctts.chapter_3.quarter_1.quest_3.item}"
 					type: "item"
 				}
 				{
@@ -264,7 +264,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "刨去树皮"
+			title: "{ctts.chapter_2.quarter_1.quest_3.title}"
 			x: -3.0d
 			y: 4.0d
 		}
@@ -277,7 +277,7 @@
 				item: "minecraft:clay_ball"
 				type: "item"
 			}]
-			title: "磨一磨"
+			title: "{ctts.chapter_2.quarter_1.quest_8.title}"
 			x: 3.0d
 			y: 6.0d
 		}
@@ -296,7 +296,7 @@
 				item: "create:andesite_alloy"
 				type: "item"
 			}]
-			title: "安山合金的另种生产"
+			title: "{ctts.chapter_2.quarter_1.quest_9.title}"
 			x: 1.0d
 			y: 6.0d
 		}
@@ -329,7 +329,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "二次切割"
+			title: "{ctts.chapter_2.quarter_1.quest_5.title}"
 			x: -1.0d
 			y: 6.0d
 		}
@@ -356,11 +356,11 @@
 				}
 				{
 					id: "2E2EBC22F9C17A06"
-					title: "自动生产"
+					title: "{ctts.chapter_2.quarter_1.quest_30.check}"
 					type: "checkmark"
 				}
 			]
-			title: "第一条流水线"
+			title: "{ctts.chapter_2.quarter_1.quest_30.title}"
 			x: 0.0d
 			y: 8.0d
 		}
@@ -568,11 +568,11 @@
 				}
 				{
 					id: "43F78928FD0A2A01"
-					title: "自动收获"
+					title: "{ctts.chapter_2.quarter_1.quest_15.check}"
 					type: "checkmark"
 				}
 			]
-			title: "自给自足"
+			title: "{ctts.chapter_2.quarter_1.quest_15.title}"
 			x: -5.0d
 			y: 2.0d
 		}
@@ -601,11 +601,11 @@
 				}
 				{
 					id: "028D4EAF3EA7D157"
-					title: "自动收获"
+					title: "{ctts.chapter_2.quarter_1.quest_18.check}"
 					type: "checkmark"
 				}
 			]
-			title: "解放双手！"
+			title: "{ctts.chapter_2.quarter_1.quest_18.title}"
 			x: -5.0d
 			y: 4.0d
 		}
@@ -628,7 +628,7 @@
 				item: { Count: 128, id: "minecraft:white_wool" }
 				type: "item"
 			}]
-			title: "大丰收"
+			title: "{ctts.chapter_2.quarter_1.quest_19.title}"
 			x: -7.0d
 			y: 4.0d
 		}
@@ -643,13 +643,14 @@
 				xp_levels: 5
 			}]
 			shape: "hexagon"
-			subtitle: "组装最大应力的风车"
+			subtitle: "{ctts.chapter_2.quarter_1.quest_21.subtitle}"
 			tasks: [{
 				advancement: "create:windmill_maxed"
 				criterion: ""
 				id: "23C9893416BE47EB"
 				type: "advancement"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_21.title}"
 			x: -7.0d
 			y: 6.0d
 		}
@@ -661,6 +662,7 @@
 				item: "minecraft:netherrack"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_23.title}"
 			x: 5.0d
 			y: 2.0d
 		}
@@ -672,8 +674,9 @@
 				item: "create:goggles"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_10.title}"
 			x: 0.0d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -692,8 +695,9 @@
 				item: "create:schematicannon"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_11.title}"
 			x: 0.0d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			can_repeat: true
@@ -710,7 +714,7 @@
 				item: "minecraft:rose_bush"
 				type: "item"
 			}]
-			title: "量产玫瑰"
+			title: "{ctts.chapter_2.quarter_1.quest_13.title}"
 			x: -3.0d
 			y: 0.0d
 		}
@@ -726,7 +730,7 @@
 				table_id: 7945026105960278593L
 				type: "random"
 			}]
-			subtitle: "珊瑚块不够了来这里换"
+			subtitle: "{ctts.chapter_2.quarter_1.quest_26.subtitle}"
 			tasks: [
 				{
 					count: 16L
@@ -741,7 +745,7 @@
 					type: "item"
 				}
 			]
-			title: "量产海泡菜"
+			title: "{ctts.chapter_2.quarter_1.quest_26.title}"
 			x: 5.0d
 			y: 0.0d
 		}
@@ -753,7 +757,7 @@
 				item: "minecraft:slime_ball"
 				type: "item"
 			}]
-			title: "量产黏液球"
+			title: "{ctts.chapter_2.quarter_1.quest_28.title}"
 			x: 7.0d
 			y: 2.0d
 		}
@@ -771,20 +775,20 @@
 				}
 				type: "item"
 			}]
-			title: "连接万物"
+			title: "{ctts.chapter_2.quarter_1.quest_29.title}"
 			x: 7.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["1F332C02339D71B2"]
 			id: "706B04EC38F6B511"
-			subtitle: "太浪费食物了"
+			subtitle: "{ctts.chapter_2.quarter_1.quest_14.subtitle}"
 			tasks: [{
 				id: "0BA17BA37EA222C4"
 				item: "minecraft:redstone"
 				type: "item"
 			}]
-			title: "量产红石"
+			title: "{ctts.chapter_2.quarter_1.quest_14.title}"
 			x: -5.0d
 			y: -2.0d
 		}
@@ -798,10 +802,10 @@
 				item: "minecraft:emerald"
 				type: "item"
 			}]
-			subtitle: "说不定以后有大用呢？"
+			subtitle: "{ctts.chapter_2.quarter_1.quest_17.subtitle}"
 			tasks: [{
 				id: "046692A40D2A461F"
-				title: "繁殖村民"
+				title: "{ctts.chapter_2.quarter_1.quest_17.check}"
 				type: "checkmark"
 			}]
 			x: -7.0d
@@ -815,6 +819,7 @@
 				item: "minecraft:lime_dye"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_27.title}"
 			x: 7.0d
 			y: 0.0d
 		}
@@ -826,6 +831,7 @@
 				item: "create:cinder_flour"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_24.title}"
 			x: 5.0d
 			y: 4.0d
 		}
@@ -834,7 +840,7 @@
 			hide_dependency_lines: true
 			icon: "minecraft:string"
 			id: "306E6DDB48E3FF9F"
-			subtitle: "修复了1.20版本不能使用刷线机的bug"
+			subtitle: "{ctts.chapter_2.quarter_1.quest_20.subtitle}"
 			tasks: [
 				{
 					count: 64L
@@ -855,12 +861,13 @@
 					type: "item"
 				}
 			]
-			title: "刷线机"
+			title: "{ctts.chapter_2.quarter_1.quest_20.title}"
 			x: -9.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["2EC21040F21F57D5"]
+			hide_dependent_lines: true
 			icon: "minecraft:sugar"
 			id: "13557FCB000DE050"
 			tasks: [
@@ -871,11 +878,11 @@
 				}
 				{
 					id: "12C3FC33DF5BDCBB"
-					title: "量产"
+					title: "{ctts.chapter_2.quarter_1.quest_16.check}"
 					type: "checkmark"
 				}
 			]
-			title: "热量炸弹！"
+			title: "{ctts.chapter_2.quarter_1.quest_16.title}"
 			x: -5.0d
 			y: 0.0d
 		}
@@ -888,7 +895,7 @@
 				item: { Count: 16, id: "minecraft:egg" }
 				type: "item"
 			}]
-			title: "养鸡场"
+			title: "{ctts.chapter_2.quarter_1.quest_22.title}"
 			x: -5.0d
 			y: 6.0d
 		}
@@ -904,9 +911,22 @@
 				item: "create:blaze_cake_base"
 				type: "item"
 			}]
+			title: "{ctts.chapter_2.quarter_1.quest_25.title}"
 			x: 5.0d
 			y: 6.0d
 		}
+		{
+			dependencies: ["1FFCD1DB862F612F"]
+			id: "0FE22834B2962412"
+			tasks: [{
+				id: "464D46F6DECB7D68"
+				item: "minecraft:apple"
+				type: "item"
+			}]
+			title: "{ctts.chapter_2.quarter_1.quest_12.title}"
+			x: -2.0d
+			y: -1.0d
+		}
 	]
-	title: "机械改变生活！"
+	title: "{ctts.chapter_2.quarter_1.title}"
 }

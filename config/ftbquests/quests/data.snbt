@@ -20,6 +20,6 @@
 	pause_game: true
 	progression_mode: "linear"
 	show_lock_icons: true
-	title: "机械动力：无限"
+	title: "飞向星辰"
 	version: 13
 }

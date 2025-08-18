@@ -26,8 +26,13 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["50AC5169DFEB7AFA"]
+			dependencies: [
+				"50AC5169DFEB7AFA"
+				"0123640DFDC90F1A"
+			]
 			id: "4A255290C3E2D637"
+			shape: "octagon"
+			size: 1.6d
 			tasks: [{
 				entity: "minecraft:ender_dragon"
 				id: "3FA003D9A84DE07F"
@@ -35,9 +40,434 @@
 				value: 1L
 			}]
 			title: "屠龙"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A255290C3E2D637"]
+			id: "34AE1CD8EEB84BB5"
+			tasks: [{
+				id: "69D04375BB547306"
+				item: "ctts:key_fragments"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A255290C3E2D637"]
+			id: "65A7F5682E200CCD"
+			tasks: [{
+				id: "6DC6B751FAA8705D"
+				item: "butcher:dragonscale"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["69AF109D5926FE4D"]
+			id: "2229C7CB655E3044"
+			tasks: [{
+				id: "182B83A6BA7CBA0C"
+				item: "supplementaries:enderman_head"
+				type: "item"
+			}]
+			title: "小黑刷怪塔"
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2229C7CB655E3044"]
+			id: "51F6C44C1B9701BD"
+			tasks: [{
+				id: "0CCAE4851958DECD"
+				item: "ctts:ender_core"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"51F6C44C1B9701BD"
+				"65A7F5682E200CCD"
+			]
+			id: "2099D111139217E0"
+			tasks: [{
+				id: "1F5E005DE60C5EB2"
+				item: "ctts:twilight_mechanism"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2099D111139217E0"
+				"34AE1CD8EEB84BB5"
+			]
+			id: "718704E5BC0FCEE3"
+			tasks: [{
+				id: "5D3DE838CF73C4D6"
+				item: "ctts:twilight_key"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["718704E5BC0FCEE3"]
+			id: "73C68614ED516F57"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "twilightforest:root"
+				criterion: ""
+				id: "3DABC689DF2A2254"
+				type: "advancement"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A255290C3E2D637"]
+			id: "1D0E54D5C99A1FC4"
+			tasks: [{
+				advancement: "minecraft:end/enter_end_gateway"
+				criterion: ""
+				id: "3DBF0F1E84B20423"
+				type: "advancement"
+			}]
 			x: 0.0d
 			y: 2.0d
 		}
+		{
+			dependencies: [
+				"1D0E54D5C99A1FC4"
+				"54A9771073547199"
+			]
+			id: "014C3DFB559FA9BF"
+			tasks: [{
+				id: "5FB777C2277C901E"
+				item: "minecraft:shulker_shell"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A255290C3E2D637"]
+			id: "52CD035C893C4F36"
+			tasks: [{
+				id: "594221797BAF041B"
+				item: "minecraft:phantom_membrane"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6CAB99A791329C9C"]
+			id: "6CE6FE50658C3715"
+			tasks: [{
+				id: "5243CFB6A626739E"
+				item: "enderitemod:enderite_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"014C3DFB559FA9BF"
+				"52CD035C893C4F36"
+				"6CE6FE50658C3715"
+			]
+			id: "0E1BDD1A372EAF46"
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "12B6C33B827D56D2"
+				item: {
+					Count: 1
+					id: "minecraft:elytra"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1D0E54D5C99A1FC4"]
+			id: "54A9771073547199"
+			tasks: [{
+				id: "0636C7CC4E13331F"
+				item: "minecraft:chorus_fruit"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["02D616F96EFEC4AA"]
+			id: "69AF109D5926FE4D"
+			tasks: [{
+				id: "2CD16ED4C1FA88BA"
+				item: "ctts:magma_block_pro"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A255290C3E2D637"]
+			id: "02D616F96EFEC4AA"
+			tasks: [{
+				id: "65ED4F4B43E436B5"
+				item: "minecraft:magma_block"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"73C68614ED516F57"
+				"25996DD194273BD2"
+			]
+			id: "4DB7592E1AB9F791"
+			tasks: [{
+				id: "0147FCD99105E424"
+				item: "twilightforest:magic_map_focus"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4DB7592E1AB9F791"]
+			id: "6BCDDBB21F8AB268"
+			tasks: [{
+				id: "201B1D7425CAEE16"
+				item: "twilightforest:magic_map"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6BCDDBB21F8AB268"
+				"1D5BBA0FAB9B633C"
+			]
+			icon: "twilightforest:naga_trophy"
+			id: "4B64EFCB30F24995"
+			tasks: [{
+				entity: "twilightforest:naga"
+				id: "35B3EEFD062308A2"
+				type: "kill"
+				value: 1L
+			}]
+			x: 17.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B64EFCB30F24995"]
+			icon: "twilightforest:lich_trophy"
+			id: "6FAF4D2378A8B839"
+			tasks: [{
+				entity: "twilightforest:lich"
+				id: "0DFAAF6504BDADE8"
+				type: "kill"
+				value: 1L
+			}]
+			x: 19.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6FAF4D2378A8B839"]
+			icon: "twilightforest:minoshroom_trophy"
+			id: "52F584D38A8D7DE5"
+			tasks: [{
+				entity: "twilightforest:minoshroom"
+				id: "1549EDB6286B20A5"
+				type: "kill"
+				value: 1L
+			}]
+			x: 21.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["52F584D38A8D7DE5"]
+			icon: "twilightforest:hydra_trophy"
+			id: "11A78DB110B0570A"
+			tasks: [{
+				entity: "twilightforest:hydra"
+				id: "3B213409FDE3B9A9"
+				type: "kill"
+				value: 1L
+			}]
+			x: 23.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6FAF4D2378A8B839"]
+			icon: "twilightforest:knight_phantom_trophy"
+			id: "7D5DA3BB4B40DCD1"
+			tasks: [{
+				entity: "twilightforest:knight_phantom"
+				id: "70ADF8E8753E9DAC"
+				type: "kill"
+				value: 1L
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D5DA3BB4B40DCD1"]
+			icon: "twilightforest:ur_ghast_trophy"
+			id: "784FC691A3721E4F"
+			tasks: [{
+				entity: "twilightforest:ur_ghast"
+				id: "54A5503BD4253A8E"
+				type: "kill"
+				value: 1L
+			}]
+			x: 23.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6FAF4D2378A8B839"]
+			icon: "twilightforest:alpha_yeti_trophy"
+			id: "272EC12C656CE533"
+			tasks: [{
+				entity: "twilightforest:alpha_yeti"
+				id: "181369101FF52B47"
+				type: "kill"
+				value: 1L
+			}]
+			x: 21.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["272EC12C656CE533"]
+			icon: "twilightforest:snow_queen_trophy"
+			id: "6582091C8F33B79E"
+			tasks: [{
+				entity: "twilightforest:snow_queen"
+				id: "474B19F1DA0DAB8D"
+				type: "kill"
+				value: 1L
+			}]
+			x: 23.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"784FC691A3721E4F"
+				"6582091C8F33B79E"
+				"11A78DB110B0570A"
+			]
+			icon: {
+				Count: 1
+				id: "twilightforest:giant_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "2D435970635EEE0C"
+			tasks: [{
+				entity: "twilightforest:giant_miner"
+				id: "7BF61308D1E55325"
+				type: "kill"
+				value: 1L
+			}]
+			x: 25.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D435970635EEE0C"]
+			id: "4542AC718FC8B0B9"
+			tasks: [{
+				id: "19E5F7F5E27FBEA7"
+				item: {
+					Count: 1
+					id: "twilightforest:lamp_of_cinders"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4542AC718FC8B0B9"]
+			id: "3DF0E829AE4BE423"
+			x: 29.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73C68614ED516F57"]
+			icon: "minecraft:glowstone_dust"
+			id: "25996DD194273BD2"
+			tasks: [
+				{
+					id: "3A90FABFF81FDCA7"
+					item: "twilightforest:torchberries"
+					type: "item"
+				}
+				{
+					id: "515A72BE1385BAE2"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					id: "5B71EE465A00747B"
+					item: "twilightforest:raven_feather"
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["11159939F2E8D308"]
+			id: "1D5BBA0FAB9B633C"
+			tasks: [{
+				id: "3AF69087E354F80E"
+				item: {
+					Count: 1
+					id: "ctts:bottle"
+					tag: {
+						CustomModelData: 1.0d
+						display: {
+							Name: "{\"translate\":\"item.ctts.bottle.naga\",\"italic\":false}"
+						}
+						tier: "naga"
+					}
+				}
+				type: "item"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["73C68614ED516F57"]
+			id: "11159939F2E8D308"
+			tasks: [{
+				id: "1BB3C0100C8EDDBF"
+				item: "ctts:bottle"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 2.0d
+		}
 	]
-	title: "旅途的终末"
+	title: "{ctts.chapter_4.quarter_2.title}"
 }

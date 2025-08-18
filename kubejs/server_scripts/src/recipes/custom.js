@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
             "count": 1
         },
         "result": {
-            "item": "kubejs:magnet",
+            "item": "ctts:magnet",
             "count": 1
         },
         "energy": 6000,

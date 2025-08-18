@@ -22,7 +22,7 @@ ServerEvents.recipes(e => {
     let diamond = (temp) => {
         let inputid = 'simplyswords:iron_' + temp
         let outputid = 'simplyswords:diamond_' + temp
-        e.smithing(outputid, 'kubejs:diamond_template', inputid, 'minecraft:diamond')
+        e.smithing(outputid, 'ctts:diamond_template', inputid, 'minecraft:diamond')
     }
     diamond('longsword')
     diamond('twinblade')

@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
         let plankId = getPlankId(logId);
 
         if (Item.exists(plankId)) {
-            event.shapeless('6x ' + plankId, [logId, '#kubejs:saws']).damageIngredient('#kubejs:saws', 1);
+            event.shapeless('6x ' + plankId, [logId, '#ctts:saws']).damageIngredient('#ctts:saws', 1);
         } else {
         }
     });

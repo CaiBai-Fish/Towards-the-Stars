@@ -113,7 +113,7 @@
 				item: "create:copper_casing"
 				type: "item"
 			}]
-			title: "流体力学"
+			title: "{ctts.chapter_2.quarter_2.quest_1.title}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -126,8 +126,8 @@
 				item: "minecraft:nether_wart"
 				type: "item"
 			}]
-			subtitle: "之前的机器是不是可以改成自动化了呢"
-			title: "流体运输"
+			subtitle: "{ctts.chapter_2.quarter_2.quest_2.subtitle}"
+			title: "{ctts.chapter_2.quarter_2.quest_2.title}"
 			x: 4.0d
 			y: 0.0d
 		}
@@ -143,10 +143,11 @@
 				}
 				{
 					id: "552554F364B8DDC6"
-					title: "自动生产"
+					title: "{ctts.chapter_2.quarter_2.quest_4.item}"
 					type: "checkmark"
 				}
 			]
+			title: "{ctts.chapter_2.quarter_2.quest_4.title}"
 			x: 4.0d
 			y: -2.0d
 		}
@@ -178,36 +179,9 @@
 					type: "item"
 				}
 			]
-			title: "无中生“草”"
+			title: "{ctts.chapter_2.quarter_2.quest_3.title}"
 			x: 2.0d
 			y: -2.0d
-		}
-		{
-			dependencies: ["4A4F79BBB1663A8A"]
-			icon: "create:basin"
-			id: "1A9C09A42F1DBD9B"
-			tasks: [
-				{
-					id: "2738A67E587885C7"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "c:potions"
-						}
-					}
-					title: "任意药水"
-					type: "item"
-				}
-				{
-					id: "1B774F3A186A0882"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
-			title: "自动化炼药！"
-			x: 2.0d
-			y: 2.0d
 		}
 		{
 			dependencies: ["67D3D35A4F94DF3B"]
@@ -636,7 +610,7 @@
 			id: "02435F4339651531"
 			tasks: [{
 				id: "6410DCA424138A24"
-				item: "kubejs:base_template"
+				item: "ctts:base_template"
 				type: "item"
 			}]
 			title: "量产模板"
@@ -653,7 +627,7 @@
 			subtitle: "“石墨在高温高压下结晶生长成钻石”"
 			tasks: [{
 				id: "250436C483ECD82B"
-				item: "kubejs:diamond_nugget"
+				item: "ctts:diamond_nugget"
 				type: "item"
 			}]
 			title: "合成钻石"
@@ -991,6 +965,49 @@
 			x: 4.0d
 			y: -6.0d
 		}
+		{
+			dependencies: [
+				"6B178B615CE2E135"
+				"0FE22834B2962412"
+			]
+			id: "4FD135DCA9F3ED61"
+			tasks: [{
+				id: "061B4BD52F0E971B"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			x: 22.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4FD135DCA9F3ED61"]
+			id: "0123640DFDC90F1A"
+			tasks: [{
+				id: "5E4A4AD47DDD0EA6"
+				item: {
+					Count: 1
+					id: "minecraft:potion"
+					tag: {
+						Potion: "ctts:dragon_breath_resistance"
+					}
+				}
+				type: "item"
+			}]
+			x: 24.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4A4F79BBB1663A8A"]
+			icon: "minecraft:cauldron"
+			id: "1A5C953F1BE0F600"
+			tasks: [{
+				id: "49817E06857877EC"
+				title: "自动化炼药"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
 	]
-	title: "黄铜时代"
+	title: "{ctts.chapter_2.quarter_2.title}"
 }

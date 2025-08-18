@@ -5,8 +5,8 @@ BlockEvents.rightClicked('supplementaries:pedestal', e => {
     let block = e.block
     let level = e.level
     let server = e.server
-    // 检查展示台上是否有kubejs:nether_book
-    if (item.id == 'kubejs:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether")) {
+    // 检查展示台上是否有ctts:nether_book
+    if (item.id == 'ctts:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether")) {
         let pos = e.block.pos
 
         // 触发粒子效果
@@ -65,56 +65,107 @@ BlockEvents.leftClicked(e => {
     }
 })
 
-// 特殊岩浆块伤害机制
-const cooldown = {
-    time: 0,
-    interval: 10
-}
-// 检测实体是否穿有冰霜行者靴子
+const whitelist_entity = [
+    'ctts:warped_golem',
+    'minecraft:magma_cube'
+]
 function detectboots(entity) {
     // 获取实体的盔甲槽位
     const boots = entity.getArmorSlots()[0]
     // 返回冰霜行者靴子的附魔等级
     return boots.getEnchantmentLevel('minecraft:frost_walker')
 }
-ServerEvents.tick(event => {
-    const server = event.server
 
-    // 冷却计数
-    if (cooldown.time > 0) {
-        cooldown.time--
-        return
-    }
-
-    // 冷却完毕，执行检测逻辑
-    cooldown.time = cooldown.interval // 重置冷却
-    // 遍历所有生物实体
+ServerEvents.tick(e => {
+    const server = e.server
     server.entities.forEach(entity => {
-        if (!entity.isLiving()) return
+        if (!entity.isLiving() && entity.age % 20 != 0) return
+        let pos = entity.blockPosition()
 
-        const pos = entity.blockPosition().below()
-        const block = entity.level.getBlock(pos)
+        // 注册流体的烫伤
+        const fluid_id = 'ctts:melted_'
+        const fluidid = entity.level.getBlock(pos).id
+        if (fluidid.includes(fluid_id) && !whitelist_entity.includes(entity.type)) {
+            entity.lavaHurt()
+        }
 
-        if (block.id === 'kubejs:magma_block_pro' && !detectboots(entity) && ![entity.toString().toLowerCase().includes('warped golem') || entity.toString().toLowerCase().includes('绯红魔偶')]) {
+        // 强化岩浆块烫伤
+        const posb = entity.blockPosition().below()
+        const block = entity.level.getBlock(posb)
+        if (block.id === 'ctts:magma_block_pro' && !detectboots(entity) && !whitelist_entity.includes(entity.type)) {
             server.runCommandSilent(`damage ${entity.uuid} 3 minecraft:hot_floor_pro`)
         }
     })
 })
+EntityEvents.hurt(e => {
+    const { entity, player, server, level, source } = e
+    if (!entity.isLiving()) return
+    if (player && player.isCreative()) return
 
-// 注册流体的烫伤
-ServerEvents.tick(e => {
-    const server = e.server
-    // 冷却计数
-    if (cooldown.time > 0) {
-        cooldown.time--
-        return
+    // 抗龙息药水效果
+    if (source.type().msgId() !== 'indirectMagic') return
+    let srcpos = source.sourcePosition
+    if (!srcpos) return
+    const cloud = level.getEntitiesWithin(AABB.of(srcpos.x() - 1, srcpos.y() - 1, srcpos.z() - 1, srcpos.x() + 1, srcpos.y() + 1, srcpos.z() + 1))
+    cloud.forEach(ent => {
+        if (ent.type == "minecraft:area_effect_cloud" && entity.hasEffect("ctts:dragon_breath_resistance")) {
+            e.cancel()
+        }
+    })
+})
+// Boss破防机制
+EntityEvents.hurt([
+    "twilightforest:naga",
+    "twilightforest:lich",
+    "twilightforest:minoshroom",
+    "twilightforest:knight_phantom",
+    "twilightforest:alpha_yeti",
+    "twilightforest:ur_ghast",
+    "twilightforest:snow_queen",
+    "minecraft:warden",
+    "minecraft:wither"
+], e => {
+    const { entity, player, server, level, source } = e
+    // Boss抗性
+    const entity_type = source.getActual().entityJs$getTypeId()
+    if (entity.tags !== '[UnProtected]') {
+        e.cancel(0)
+    } else {
+        if (entity_type !== 'minecraft:player') {
+            e.cancel()
+        }
     }
-    // 遍历所有实体
-    server.entities.forEach(entity => {
-        let pos = entity.blockPosition()
-        const fluidid = entity.level.getBlock(pos).id
-        if (fluidid.includes('kubejs:melted_') && ![entity.toString().toLowerCase().includes('warped golem') || entity.toString().toLowerCase().includes('绯红魔偶')]) {
-            entity.lavaHurt()
+})
+// 破防标签转移
+ServerEvents.tick(e => {
+    e.server.entities.forEach(entity => {
+        if (entity.type !== 'ctts:bottle') return
+        const tag = entity.nbt.get('Item').get('tag')
+        const tier = tag.get('tier').toString()
+        entity.addTag(tier)
+        tag.remove('tier')
+    })
+})
+
+// 暮色最终BOSS生成
+const final = [
+    '{"text":"Final Castle WIP."}',
+    '{"text":"Join our Discord server to"}',
+    '{"text":"follow development of the mod:"}',
+    '{"text":"discord.experiment115.com"}'
+]
+ServerEvents.tick(e => {
+    e.server.entities.forEach(f => {
+        if (f.type == "minecraft:armor_stand") {
+            const name = f.nbt.get('CustomName')
+            if (name && final.indexOf(name)) {
+                //f.discard()
+                let pos = f.blockPosition()
+                if (final.indexOf(name) == 3) {
+                    //e.server.runCommandSilent(`summon ctts:final_boss ${pos.x} ${pos.y} ${pos.z}`)
+                    console.log(true)
+                }
+            }
         }
     })
 })

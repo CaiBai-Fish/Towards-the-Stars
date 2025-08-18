@@ -175,17 +175,21 @@
 		}
 		{
 			dependencies: ["3CBC605287B5661B"]
-			icon: "kubejs:tier_2_rocket_frame"
+			icon: {
+				Count: 1
+				id: "ad_astra:tier_2_rocket"
+				tag: { }
+			}
 			id: "278AF7CAEF5E53B5"
 			tasks: [
 				{
 					id: "2CED39DDDF063C54"
-					item: "kubejs:tier_2_rocket_frame"
+					item: "ctts:tier_2_rocket_outerwall"
 					type: "item"
 				}
 				{
 					id: "348C2D5F2107A807"
-					item: "kubejs:tier_2_rocket_outerwall"
+					item: "ctts:tier_2_rocket_frame"
 					type: "item"
 				}
 			]
@@ -563,5 +567,5 @@
 			y: 1.0d
 		}
 	]
-	title: "星际探索"
+	title: "{ctts.chapter_3.quarter_2.title}"
 }

@@ -77,7 +77,7 @@
 			id: "04FBDB42E9A3682C"
 			tasks: [{
 				id: "2BA36C80EE535C5B"
-				item: "kubejs:magnet"
+				item: "ctts:magnet"
 				type: "item"
 			}]
 			x: 5.0d
@@ -188,7 +188,13 @@
 		}
 		{
 			dependencies: ["221ECC2B55846C93"]
+			hide_dependent_lines: true
 			id: "3717104CF352784A"
+			rewards: [{
+				id: "019E71EAA25D808C"
+				item: "ae2:certus_quartz_dust"
+				type: "item"
+			}]
 			tasks: [{
 				id: "737E453CE66D2741"
 				item: "createaddition:modular_accumulator"
@@ -211,10 +217,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"4E96A7E174D15AD3"
-				"1A9C09A42F1DBD9B"
-			]
+			dependencies: ["4E96A7E174D15AD3"]
 			hide_until_deps_visible: true
 			icon: "createaddition:chocolate_cake"
 			id: "3F4B0E12C1A5FC4B"
@@ -250,7 +253,7 @@
 		{
 			dependencies: ["4E96A7E174D15AD3"]
 			hide_until_deps_visible: true
-			icon: "railways:track_oak"
+			icon: "create:track"
 			id: "43B746460C04089D"
 			shape: "hexagon"
 			size: 1.5d
@@ -272,9 +275,10 @@
 		}
 		{
 			dependencies: ["68A2435B7C70886A"]
-			description: ["用列车长帽右键安山机壳"]
+			description: [""]
 			icon: "railways:red_conductor_cap"
 			id: "00C25C878A2B7227"
+			subtitle: "用列车长帽右键安山机壳"
 			tasks: [{
 				id: "370128E8AAB4ECCC"
 				item: {
@@ -288,8 +292,8 @@
 				type: "item"
 			}]
 			title: "可爱的列车长"
-			x: 17.0d
-			y: 1.0d
+			x: 11.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["43B746460C04089D"]
@@ -310,8 +314,8 @@
 				item: "create:controls"
 				type: "item"
 			}]
-			x: 15.0d
-			y: 1.0d
+			x: 11.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["68C61BC586BD34EC"]
@@ -321,8 +325,8 @@
 				item: "create:railway_casing"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 1.0d
+			x: 11.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -377,7 +381,7 @@
 				type: "item"
 			}]
 			x: 11.0d
-			y: -2.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["158E4C5E212B9485"]
@@ -389,8 +393,41 @@
 			}]
 			title: "构建网络"
 			x: 13.0d
-			y: -2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"32A0A731FBA7314E"
+				"3717104CF352784A"
+			]
+			id: "63D941C48F926A76"
+			tasks: [{
+				id: "1BC0BD49E3FC6AAF"
+				item: "ae2:certus_quartz_crystal"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["68C61BC586BD34EC"]
+			icon: "create_things_and_misc:card_press"
+			id: "2EBD786EFB43D8A9"
+			tasks: [
+				{
+					id: "10DA56F53BE1D699"
+					item: "create_things_and_misc:card_press"
+					type: "item"
+				}
+				{
+					id: "3880D003BF69C5C9"
+					item: "create_things_and_misc:card_reader"
+					type: "item"
+				}
+			]
+			x: 13.0d
+			y: 1.0d
 		}
 	]
-	title: "电气时代"
+	title: "{ctts.chapter_2.quarter_3.title}"
 }

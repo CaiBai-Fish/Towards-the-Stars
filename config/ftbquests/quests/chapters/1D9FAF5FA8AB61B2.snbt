@@ -76,10 +76,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"761EAF5602DC40B3"
-				"2E11FCD05CC78C5A"
-			]
+			dependencies: ["761EAF5602DC40B3"]
 			id: "04CEAE1896673E76"
 			subtitle: "希望这么久了你屯够了足够的村民哦"
 			tasks: [{
@@ -164,7 +161,7 @@
 			subtitle: "这或许是进入下界唯一的方法？"
 			tasks: [{
 				id: "6F2A4284327D5FAE"
-				item: "kubejs:nether_book"
+				item: "ctts:nether_book"
 				type: "item"
 			}]
 			title: "解开封印"
@@ -189,7 +186,7 @@
 			id: "5B912E50BB131B4C"
 			tasks: [{
 				id: "3AE8866541DD5032"
-				item: "kubejs:nether_mechanism"
+				item: "ctts:nether_mechanism"
 				type: "item"
 			}]
 			title: "用血铸成的构件"
@@ -197,25 +194,30 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["2FC0E5C2F8F90989"]
+			dependencies: [
+				"2FC0E5C2F8F90989"
+				"01C272C4DBB17C1D"
+			]
 			id: "763E6FBF835C687C"
 			tasks: [{
 				id: "3A506E463345322E"
-				item: "kubejs:end_mechanism"
+				item: "ctts:end_mechanism"
 				type: "item"
 			}]
-			x: 22.0d
+			x: 17.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["6351E4E5657244CE"]
 			id: "2FC0E5C2F8F90989"
+			shape: "hexagon"
+			size: 1.0d
 			tasks: [{
 				id: "08900FFF3E9ADB1B"
 				item: "minecraft:nether_star"
 				type: "item"
 			}]
-			x: 20.0d
+			x: 15.0d
 			y: 0.0d
 		}
 		{
@@ -227,30 +229,37 @@
 				type: "item"
 			}]
 			title: "量产头颅"
-			x: 18.0d
-			y: 0.0d
+			x: 15.0d
+			y: 2.0d
 		}
 		{
+			dependencies: [
+				"0E0ABA2F019D3887"
+				"6E538380650189FE"
+			]
 			id: "1DCAC8A6F8A4120B"
 			tasks: [{
 				id: "713DC0ED775FB071"
-				item: "kubejs:magma_block_pro"
+				item: "ctts:magma_block_pro"
 				type: "item"
 			}]
 			title: "更高效获取头颅的方式"
-			x: 16.0d
+			x: 13.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["763E6FBF835C687C"]
+			dependencies: [
+				"51116F89BF9A7A02"
+				"763E6FBF835C687C"
+			]
 			id: "0CD2976DCFFE7A0C"
 			tasks: [{
 				id: "7059591500494210"
-				item: "kubejs:end_cake"
+				item: "ctts:end_cake"
 				type: "item"
 			}]
 			title: "末地蛋糕"
-			x: 24.0d
+			x: 19.0d
 			y: 0.0d
 		}
 		{
@@ -260,7 +269,7 @@
 			shape: "hexagon"
 			size: 1.5d
 			title: "征战末地"
-			x: 26.0d
+			x: 21.0d
 			y: 0.0d
 		}
 		{
@@ -278,14 +287,106 @@
 			dependencies: ["4BF748A8D3709824"]
 			id: "7BA8F6F84387183E"
 			tasks: [{
-				entity: "kubejs:warped_golem"
+				entity: "ctts:warped_golem"
 				id: "22F83F9363CCFBF2"
 				type: "kill"
 				value: 1L
 			}]
 			x: 11.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7BA8F6F84387183E"]
+			id: "0E0ABA2F019D3887"
+			tasks: [{
+				id: "29F655FF18D001D3"
+				item: "ctts:blazing_shard"
+				type: "item"
+			}]
+			x: 11.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["2DB0104F708C96EA"]
+			id: "5BFB1176311AFDF4"
+			tasks: [{
+				id: "57EF2468E0B2A252"
+				item: "ctts:crimson_crystal_girt"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"5BFB1176311AFDF4"
+				"63D941C48F926A76"
+				"543FCC7EF291D5CE"
+			]
+			id: "6E538380650189FE"
+			tasks: [{
+				id: "7EE104EA2F9FAE9B"
+				item: "ctts:crimson_crystal"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2DB0104F708C96EA"]
+			id: "740CFAA9CF6CC795"
+			tasks: [{
+				id: "2630A919021DC016"
+				item: "minecraft:warped_wart_block"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["77B5BB701F9E8E48"]
+			id: "6CAB99A791329C9C"
+			tasks: [{
+				id: "7FF80AC869C7F20B"
+				item: "minecraft:ender_pearl"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6CAB99A791329C9C"]
+			id: "01C272C4DBB17C1D"
+			tasks: [{
+				id: "2513927081CA4387"
+				item: "minecraft:ender_eye"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["740CFAA9CF6CC795"]
+			id: "77B5BB701F9E8E48"
+			tasks: [{
+				id: "3596E55C089ED856"
+				item: "ae2:ender_dust"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["5BFB1176311AFDF4"]
+			id: "2A26AD888F5565CF"
+			tasks: [{
+				id: "3A21571E800E6821"
+				item: "ctts:crimson_crystal_girt"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 4.0d
+		}
 	]
-	title: "空荡荡的下界"
+	title: "{ctts.chapter_4.quarter_1.title}"
 }

@@ -46,7 +46,7 @@
 			id: "71E1504B4B4DBA1D"
 			tasks: [{
 				id: "0EA8DF801010AA12"
-				item: "kubejs:steel_casing"
+				item: "ctts:steel_casing"
 				type: "item"
 			}]
 			x: 4.0d
@@ -147,7 +147,7 @@
 				}
 				{
 					id: "1D69D2DB00964EC2"
-					item: "ad_astra:engine_fan"
+					item: "ad_astra:fan"
 					type: "item"
 				}
 			]
@@ -256,17 +256,17 @@
 		}
 		{
 			dependencies: ["35A2B9D89801949E"]
-			icon: "kubejs:tier_1_rocket_frame"
+			icon: "ctts:tier_1_rocket_frame"
 			id: "0B6B24F5F2242DC3"
 			tasks: [
 				{
 					id: "6951ABF0C164734E"
-					item: "kubejs:tier_1_rocket_outerwall"
+					item: "ctts:tier_1_rocket_outerwall"
 					type: "item"
 				}
 				{
 					id: "55308275ED3237FA"
-					item: "kubejs:tier_1_rocket_frame"
+					item: "ctts:tier_1_rocket_frame"
 					type: "item"
 				}
 			]
@@ -303,7 +303,7 @@
 			id: "45A3F96B510BEDF5"
 			tasks: [{
 				id: "5A1B638C952582E6"
-				item: "kubejs:control_core"
+				item: "ctts:control_core"
 				type: "item"
 			}]
 			x: 6.0d
@@ -324,5 +324,5 @@
 			y: 0.0d
 		}
 	]
-	title: "第一台火箭"
+	title: "{ctts.chapter_3.quarter_1.title}"
 }

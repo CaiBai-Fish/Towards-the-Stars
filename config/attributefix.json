@@ -33,17 +33,6 @@
         "value": 64
       }
     },
-    "protection_pixel:floatshieldattribute": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 30,
-        "value": 30
-      }
-    },
     "forge:entity_gravity": {
       "enabled": false,
       "min": {

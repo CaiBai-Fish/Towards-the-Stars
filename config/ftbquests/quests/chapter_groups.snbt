@@ -1,8 +1,8 @@
 {
 	chapter_groups: [
-		{ id: "660400AB14D22AD6", title: "序章" }
-		{ id: "47C31061524D9D17", title: "齿轮的魅力" }
-		{ id: "4557159B183F2AE3", title: "迈向太空的旅程" }
-		{ id: "57BAD24D35A67E3B", title: "终末之诗" }
+		{ id: "660400AB14D22AD6", title: "{ctts.chapter_1.title.title}" }
+		{ id: "47C31061524D9D17", title: "{ctts.chapter_2.title}" }
+		{ id: "4557159B183F2AE3", title: "{ctts.chapter_3.title}" }
+		{ id: "57BAD24D35A67E3B", title: "{ctts.chapter_4.title}" }
 	]
 }
