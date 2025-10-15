@@ -54,3 +54,9 @@ kubejs/server_scripts/src/test.js
 emi.json
 /icon-exports-x32
 kubejs/startup_scripts/src/registry/*.snbt
+/essential
+ops.json
+servers.essential.dat
+whitelist.json
+/xaero/minimap/test
+/Distant_Horizons_server_data

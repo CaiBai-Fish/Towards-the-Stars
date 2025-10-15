@@ -18,7 +18,7 @@ displayRedstone:true
 deathpoints:true
 oldDeathpoints:true
 distance:1
-lockNorth:false
+lockNorth:true
 zoom:0
 minimapSize:0
 chunkGrid:-1
@@ -33,7 +33,7 @@ antiAliasing:true
 blockColours:0
 lighting:true
 dotsStyle:0
-dotNameScale:1.0
+dotNameScale:1.5
 compassOverEverything:true
 showFlowers:true
 keepWaypointNames:true
@@ -75,7 +75,7 @@ lightOverlayType:0
 lightOverlayMaxLight:7
 lightOverlayMinLight:0
 lightOverlayColor:13
-uiScale:0
+uiScale:2
 bossHealthPushBox:1
 potionEffectPushBox:1
 minimapFrame:0

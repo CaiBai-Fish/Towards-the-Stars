@@ -37,7 +37,7 @@ ServerEvents.recipes(e => {
     //安山机壳
     let casing1 = 'create:andesite_casing'
     e.recipes.create.deploying('create:encased_fan', [casing1, 'create:propeller'])
-    e.recipes.create.deploying('create:mechanical_press', [casing1, 'minecraft:iron_block'])
+    e.recipes.create.item_application('create:mechanical_press', [casing1, 'minecraft:iron_block'])
     e.recipes.create.deploying('create:weighted_ejector', ['create:depot', 'create:cogwheel'])
     e.recipes.create.deploying('create:speedometer', [casing1, 'minecraft:compass'])
     e.recipes.create.deploying('create:windmill_bearing', ['#forge:stone', 'create:shaft'])

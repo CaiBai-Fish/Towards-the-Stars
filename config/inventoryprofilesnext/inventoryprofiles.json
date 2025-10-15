@@ -15,7 +15,8 @@
     },
     "AutoRefillSettings": {
         "autorefill_blacklist": "'@butchercraft'",
-        "tool_damage_threshold": 0
+        "tool_damage_threshold": 0,
+        "number_of_notifications": 1
     },
     "Tweaks": {
         "prevent_close_gui_drop_item": {

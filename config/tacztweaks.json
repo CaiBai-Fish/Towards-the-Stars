@@ -3,7 +3,14 @@
     "shootWhileSprinting": true,
     "sprintWhileReloading": true,
     "reloadWhileShooting": true,
+    "reloadDiscardsMagazine": false,
+    "reloadDiscardsMagazineExclusions": [
+      "tacz:m870",
+      "tacz:db_short",
+      "tacz:db_long"
+    ],
     "allowUnload": true,
+    "cancelInspection": false,
     "disableBulletCulling": false
   },
   "modifiers": {
@@ -18,6 +25,11 @@
       "function": ""
     },
     "headshot": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "playerHeadshot": {
       "addend": 0.0,
       "multiplier": 1.0,
       "function": ""
@@ -52,6 +64,16 @@
       "multiplier": 1.0,
       "function": ""
     },
+    "sneakInaccuracy": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "crawlInaccuracy": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
     "rpm": {
       "addend": 0.0,
       "multiplier": 1.0,
@@ -63,6 +85,26 @@
       "function": ""
     },
     "horizontalRecoil": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "aimVerticalRecoil": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "aimHorizontalRecoil": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "crawlVerticalRecoil": {
+      "addend": 0.0,
+      "multiplier": 1.0,
+      "function": ""
+    },
+    "crawlHorizontalRecoil": {
       "addend": 0.0,
       "multiplier": 1.0,
       "function": ""
@@ -83,11 +125,19 @@
     "mtsFix": true
   },
   "tweaks": {
+    "forceFirstPersonShootingSound": false,
+    "betterMonoConversion": false,
     "endermenEvadeBullets": false,
     "alwaysFilterByHand": true,
     "suppressHeadHitSounds": false,
     "suppressFleshHitSounds": false,
     "suppressKillSounds": false,
     "hideHitMarkers": false
+  },
+  "debug": {
+    "bulletInteractions": false,
+    "bulletParticles": false,
+    "bulletSounds": false,
+    "meleeInteractions": false
   }
 }
