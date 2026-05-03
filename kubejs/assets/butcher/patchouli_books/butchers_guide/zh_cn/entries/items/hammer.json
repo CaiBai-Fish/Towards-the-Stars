@@ -1,0 +1,20 @@
+{
+    "name": "锤子",
+    "icon": "butcher:hammer",
+    "category": "butcher:items",
+    "read_by_default": true,
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:hammer",
+            "link_recipe": true,
+            "title" : "锤子",
+            "text": "锤子用来敲开海龟壳以获取它们的器官和肉。敲碎的壳片可以用来制作海龟壳头盔。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:hammerrecipe"
+        }
+    ]
+}

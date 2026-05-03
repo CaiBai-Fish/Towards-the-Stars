@@ -1,0 +1,18 @@
+let $MobEffectInstance = Java.loadClass('net.minecraft.world.effect.MobEffectInstance')
+StartupEvents.registry('potion', e => {
+    let effect = 'ctts:dragon_breath_resistance'
+    e.create('ctts:dragon_breath_resistance')
+        .effect(effect, 3600, 0)
+        .addEffect(new $MobEffectInstance('regeneration', 100, 1))
+        .addEffect(new $MobEffectInstance('absorption', 2400))
+    e.create('ctts:long_dragon_breath_resistance')
+        .effect(effect, 4800, 0)
+        .addEffect(new $MobEffectInstance('regeneration', 160, 1))
+        .addEffect(new $MobEffectInstance('absorption', 3000, 1))
+    e.create('ctts:strong_dragon_breath_resistance')
+        .effect(effect, 7200, 0)
+        .addEffect(new $MobEffectInstance('regeneration', 400, 1))
+        .addEffect(new $MobEffectInstance('absorption', 2400, 3))
+        .addEffect(new $MobEffectInstance('fire_resistance', 6000))
+        .addEffect(new $MobEffectInstance('resistance', 6000))
+})

@@ -1,0 +1,87 @@
+{
+	id: "72363F444E4FE052"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{
+			count: 16
+			id: "07E16FC19F6ABD47"
+			item: {
+				count: 1
+				id: "minecraft:wheat_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "6CF137DB30679E3E"
+			item: {
+				count: 1
+				id: "minecraft:pumpkin_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "661AFF1389195671"
+			item: {
+				count: 1
+				id: "minecraft:melon_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "7EB59FCF13D293CF"
+			item: {
+				count: 1
+				id: "minecraft:beetroot_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "4160FE1E2FC748E9"
+			item: {
+				count: 1
+				id: "farmersdelight:cabbage_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "2B43143FD43CE0FF"
+			item: {
+				count: 1
+				id: "farmersdelight:tomato_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "76545886516E0026"
+			item: {
+				count: 1
+				id: "supplementaries:flax_seeds"
+			}
+		}
+		{
+			count: 16
+			id: "354EC61FB9063AE2"
+			item: {
+				count: 1
+				id: "farmersdelight:onion"
+			}
+		}
+		{
+			count: 16
+			id: "484C0ED0B1495599"
+			item: {
+				count: 1
+				id: "minecraft:carrot"
+			}
+		}
+		{
+			count: 16
+			id: "2171C9256F2390BC"
+			item: {
+				count: 1
+				id: "minecraft:potato"
+			}
+		}
+	]
+}

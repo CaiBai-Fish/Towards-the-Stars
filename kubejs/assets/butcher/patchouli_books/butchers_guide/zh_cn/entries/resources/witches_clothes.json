@@ -1,0 +1,16 @@
+{
+    "name": "女巫服",
+    "icon": "butcher:witcharmor_helmet",
+    "category": "butcher:resources",
+    "read_by_default": true,
+    "sortnum": 8,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:witcharmor_helmet",
+            "link_recipe": true,
+            "title" : "女巫服",
+            "text": "想要成为女巫吗？现在你可以了。要屠宰女巫，你需要先移除她的帽子和斗篷，最棒的是你现在可以自己保留并穿戴它们！"
+        }
+    ]
+}

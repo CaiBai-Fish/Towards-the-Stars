@@ -1,0 +1,11 @@
+[general]
+	#Should Ender Eye Destroy Event Only Belongs to Specific Player?
+	INDIVIDUAL_MODE = false
+	#Scanning Radius for nearby End Portal Frame.
+	# Default: 30
+	# Range: 1 ~ 160
+	SCANNING_RATE = 30
+	#The Probability of broken ender eye warping
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	WARPING_PROBABILITY = 1.0

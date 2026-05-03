@@ -1,0 +1,20 @@
+{
+      "name": "金属托盘",
+    "icon": "butcher:metal_tray",
+    "category": "butcher:blocks",
+    "read_by_default": true,
+    "sortnum": 8,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:metal_tray",
+            "link_recipe": true,
+            "title" : "金属托盘",
+            "text": "金属托盘是解剖青蛙所需的方块。一旦你有了青蛙尸体，只需将它们放置在金属托盘上。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:metal_tray_crafting_2"
+        }
+    ]
+}

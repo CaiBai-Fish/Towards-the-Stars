@@ -1,0 +1,32 @@
+{
+      "name": "晾皮架",
+    "icon": "butcher:emptyskinrack",
+    "category": "butcher:blocks",
+    "read_by_default": true,
+    "sortnum": 6,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:emptyskinrack",
+            "link_recipe": true,
+            "title" : "晾皮架",
+            "text": "晾皮架用于从动物皮毛中获取皮革。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:skinrackrecipe",
+            "text": "使用晾皮架非常简单，只需要一些其他的资源。包括：$(li)一块湿布或海绵$(li)盐"
+        },
+        {
+            "type": "patchouli:spotlight",
+           "item": "butcher:cow_skin,butcher:pig_skin,butcher:sheep_skin,butcher:creamyllamaskin,butcher:brown_llama_skin,butcher:gray_llama_skin,butcher:white_llama_skin",
+            "title": "如何使用",
+            "text": "要将皮毛转化为皮革，你只需：$(br)$(br)1.将兼容的皮毛放置在晾皮架上。$(li)2.使用湿海绵或湿布湿润皮毛。$(li)3.在持有盐的情况下右键点击湿润的皮毛，以将盐涂抹上去。$(li)4.等待60秒，皮毛就会鞣制成皮革。"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "兼容的动物皮",
+            "text": "$(li)牛皮$(li)猪皮$(li)羊皮$(li)羊驼皮(所有变体)"
+        }
+    ]
+}

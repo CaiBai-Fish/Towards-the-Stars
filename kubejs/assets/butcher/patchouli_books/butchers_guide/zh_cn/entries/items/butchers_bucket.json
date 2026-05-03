@@ -1,0 +1,20 @@
+{
+    "name": "屠夫桶",
+    "icon": "butcher:butchers_bucket",
+    "category": "butcher:items",
+    "read_by_default": true,
+    "sortnum": 9,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:butchers_bucket",
+            "link_recipe": true,
+            "title" : "屠夫桶",
+            "text": "这个桶的唯一用途是从海洋群系收集盐水，除此之外它没有其他用处。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:butcherysbucket"
+        }
+    ]
+}

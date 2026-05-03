@@ -1,0 +1,172 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "7D850CAD3CD8908C"
+	group: ""
+	id: "7D850CAD3CD8908C"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3F34F46C8EB118B1"
+			rewards: [
+				{
+					id: "6E4FA154586B8BF7"
+					item: {
+						count: 1
+						id: "minecraft:poppy"
+					}
+					type: "item"
+				}
+				{
+					id: "4C5B104C892969B2"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:backpack"
+					}
+					only_one: true
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 3.0d
+			tasks: [{
+				id: "560F4624AE341D24"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			id: "312CBCC9B712DDB9"
+			rewards: [{
+				count: 8
+				id: "19A04D74015D5466"
+				item: {
+					count: 1
+					id: "create:builders_tea"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "5F52B001EB0B8E6A"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			id: "30C227281C5C5FFF"
+			rewards: [{
+				count: 16
+				id: "7918B17BE68AB364"
+				item: {
+					count: 1
+					id: "farmersdelight:cake_slice"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "1A1FDDA2A16DBDFA"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			icon: {
+				id: "constructionstick:wooden_stick"
+			}
+			id: "46665BCF42311216"
+			rewards: [{
+				count: 32
+				id: "73AA4FD7662E4AE8"
+				item: {
+					count: 1
+					id: "minecraft:bone_meal"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "753DFCD437B6D7AD"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			icon: {
+				id: "simplyswords:awakened_lichblade"
+			}
+			id: "6AE1D2210E6B9FE9"
+			rewards: [{
+				id: "7F0AF5300FFBE40F"
+				item: {
+					count: 1
+					id: "minecraft:experience_bottle"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "707D31210665985D"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 3.46d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			id: "39D6763634C9EDDE"
+			rewards: [{
+				count: 8
+				id: "5F8BE6B3EA9BCF69"
+				item: {
+					count: 1
+					id: "minecraft:emerald"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3EEB0C970C08FBA6"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F34F46C8EB118B1"]
+			id: "05B80C32DEE4E681"
+			rewards: [{
+				count: 16
+				id: "592DBE348C00438E"
+				item: {
+					count: 1
+					id: "minecraft:egg"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "54484F8AA58AF384"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -3.46d
+		}
+	]
+}

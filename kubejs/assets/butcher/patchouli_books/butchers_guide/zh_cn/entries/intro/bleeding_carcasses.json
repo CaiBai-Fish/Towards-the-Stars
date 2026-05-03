@@ -1,0 +1,24 @@
+{
+    "name": "放血",
+    "icon": "butcher:bloodsplatter_1",
+    "category": "butcher:intro",
+    "read_by_default": true,
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:bloodsplatter_1",
+            "link_recipe": true,
+            "title" : "放血",
+            "text": "要开始屠宰过程，你首先需要挂起一个尸体并放血。你需要三件物品。$(li)锁链$(li)钩子$(li)尸体$(br)现在你有了这三样东西，将锁链水平放置，然后将钩子放在锁链上（手持钩子右键链条）。现在将尸体放在钩子上，然后使用切肉刀或厨刀右键点击尸体以开始放血。"
+        },
+        {
+          "type": "patchouli:image",
+          "images": [
+            "butcher:images/entries/intro/bleeding_carcass.png"
+          ],
+          "border": true,
+          "text": "确保在尸体下方放置一个排血渠来接住血液。如果不这样做，血液会流得满地都是。"
+        }
+    ]
+}

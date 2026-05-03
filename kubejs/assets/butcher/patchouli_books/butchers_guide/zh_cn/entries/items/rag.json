@@ -1,0 +1,21 @@
+{
+    "name": "抹布",
+    "icon": "butcher:rag",
+    "category": "butcher:items",
+    "read_by_default": true,
+    "sortnum": 6,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:rag",
+            "link_recipe": true,
+            "title" : "抹布",
+            "text": "由于海绵可能比较难获得，有一个更便宜的替代品，那就是抹布。这个物品可以用于与海绵相同的目的，但它的耐用性要低得多。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:ragrecipe",
+            "text": "要湿润一块抹布，你需要在水源方块或者装满水的坩埚上右键点击它。"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "硫酸",
+    "icon": "butcher:sulfuricacid",
+    "category": "butcher:intro",
+    "read_by_default": true,
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:sulfuricacid",
+            "link_recipe": true,
+            "title" : "硫酸",
+            "text": "硫酸可以用来处理尸体和尸体，它可以融化掉所有的皮肤和器官，只留下骨骼，这些骨骼可以被拾起并作为装饰块放置。只需用装有硫酸的小瓶右键点击尸体即可。"
+        },
+        {
+          "type": "patchouli:image",
+          "images": [
+            "butcher:images/entries/intro/carcass_acid.png",
+            "butcher:images/entries/intro/carcass_acid_2.png"
+          ],
+          "border": true
+        }
+    ]
+}

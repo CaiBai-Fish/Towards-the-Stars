@@ -1,0 +1,21 @@
+{
+    "name": "盐",
+    "icon": "butcher:salt",
+    "category": "butcher:resources",
+    "read_by_default": true,
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:salt",
+            "link_recipe": true,
+            "title" : "盐",
+            "text": "盐被用来腌制皮毛以制成皮革。它也可以在需要盐的其他模组的配方中使用。盐可以通过在海洋生态区的水下找到，另一种获得盐的方法是从海洋生态区收集盐水，然后通过熔炼得到装满盐的桶。"
+        },
+        {
+            "type": "patchouli:smelting",
+            "recipe": "butcher:saltwatersmelt",
+            "text": "一旦你获得了一桶盐，手持桶右键就可以放置一个盐块。"
+        }
+    ]
+}

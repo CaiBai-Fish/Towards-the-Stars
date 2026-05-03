@@ -1,0 +1,243 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "43DD9FC4F5904FAC"
+	group: "47C31061524D9D17"
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
+	icon: {
+		id: "createbigcannons:flak_autocannon_round"
+	}
+	id: "43DD9FC4F5904FAC"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"2698B2F63851032D"
+				"281FD409ACB9AE8A"
+			]
+			id: "24AFC723B8B6230A"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "0351B866A6D1F98A"
+				item: { count: 1, id: "createbigcannons:cannon_mount" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "56D30F5937D163D9"
+			tasks: [{
+				id: "1BFF4D3699AB3D73"
+				item: { count: 1, id: "createbigcannons:yaw_controller" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["39BD1FF4778B6C63"]
+			id: "0E312B16F86DBC01"
+			tasks: [
+				{
+					id: "4B3D3353F87015D4"
+					item: { count: 1, id: "createbigcannons:cast_iron_cannon_chamber" }
+					type: "item"
+				}
+				{
+					id: "394C451B2A5AAB4C"
+					item: { count: 1, id: "createbigcannons:cast_iron_cannon_barrel" }
+					type: "item"
+				}
+				{
+					id: "5D3437CD7D0460DB"
+					item: { count: 1, id: "createbigcannons:cast_iron_cannon_end" }
+					type: "item"
+				}
+				{
+					id: "2D6D8A04041A8177"
+					item: { count: 1, id: "createbigcannons:cast_iron_sliding_breech" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "39BD1FF4778B6C63"
+			tasks: [{
+				id: "1B3321614EF9A5B7"
+				item: { count: 1, id: "createbigcannons:cannon_drill" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "143341A434DA8DA9"
+			tasks: [{
+				id: "5494E23935EE9E22"
+				item: { count: 1, id: "createbigcannons:cannon_builder" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["269F3B658D2973C5"]
+			id: "41969F0485065172"
+			tasks: [{
+				id: "0B965CE134F9527C"
+				item: { count: 1, id: "createbigcannons:cannon_loader" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["143341A434DA8DA9"]
+			id: "51ED63AE2322EC7C"
+			tasks: [{
+				id: "094511C112BD599F"
+				item: { count: 1, id: "createbigcannons:built_up_steel_cannon_chamber" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["56D30F5937D163D9"]
+			id: "0592DC88A428649D"
+			tasks: [{
+				id: "0D71DB2DA9785EBA"
+				item: { count: 1, id: "create:linked_controller" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "269F3B658D2973C5"
+			tasks: [{
+				id: "30D6C6B38CF09CF9"
+				item: { count: 1, id: "createbigcannons:powder_charge" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0E312B16F86DBC01"]
+			id: "5503BBFDDD93B2F5"
+			tasks: [{
+				id: "64B82E45DFB35389"
+				item: { count: 1, id: "createbigcannons:cast_iron_autocannon_barrel" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["62BC33B81C8B5B07"]
+			icon: {
+				id: "createbigcannons:big_cartridge"
+			}
+			id: "310B7C162A9C5C54"
+			tasks: [{
+				id: "344BF215009BF0BA"
+				item: { components: { "ftbquests:missing_item": "itemfilters:tag" }, count: 1, id: "ftbquests:missing_item" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["310B7C162A9C5C54"]
+			icon: {
+				id: "createbigcannons:big_cartridge"
+			}
+			id: "4C2EEA62634A2DC4"
+			tasks: [{
+				count: 1000L
+				id: "148C33A5455DC801"
+				item: { count: 1, id: "createbigcannons:big_cartridge" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "53E3F6AE692D46C0"
+			tasks: [{
+				id: "26A6CFF0A85FEE97"
+				item: { count: 1, id: "createbigcannons:congealed_nitro" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["53E3F6AE692D46C0"]
+			id: "62BC33B81C8B5B07"
+			tasks: [{
+				id: "2013DFD64C6E3451"
+				item: { count: 1, id: "createbigcannons:nitropowder" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["24AFC723B8B6230A"]
+			id: "062CFCF3ECCA69EB"
+			tasks: [{
+				id: "58D8A37759E336EE"
+				item: { count: 1, id: "minecraft:gunpowder" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["062CFCF3ECCA69EB"]
+			id: "3934C6C77F3A02E1"
+			tasks: [{
+				id: "4FE6EF997FAB83FB"
+				item: { count: 1, id: "createbigcannons:empty_autocannon_cartridge" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3934C6C77F3A02E1"]
+			id: "07C6E0BD79712E8D"
+			tasks: [{
+				id: "1F6FBD14386409FE"
+				item: { count: 1, id: "createbigcannons:filled_autocannon_cartridge" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["07C6E0BD79712E8D"]
+			id: "0209D221EFAA5CF7"
+			tasks: [{
+				id: "22C5E58483D743D9"
+				item: { count: 1, id: "createbigcannons:machine_gun_round" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+	]
+}

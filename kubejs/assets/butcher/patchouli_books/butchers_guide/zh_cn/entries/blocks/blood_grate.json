@@ -1,0 +1,21 @@
+{
+      "name": "排血渠",
+    "icon": "butcher:bloodgratetank",
+    "category": "butcher:blocks",
+    "read_by_default": true,
+    "sortnum": 4,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:bloodgratetank",
+            "link_recipe": true,
+            "title" : "排血渠",
+            "text": "排血渠是能收集血液的重要方块。在你放血之前，将这个方块放置在悬挂的尸体下方，它将收集所有的血液并储存起来以备后用。如果没有这个方块，血液将会流得满地都是。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:bloodgrate_recipe",
+            "text": "排血渠可以转换为收集和储存来自不同模组的血液，目前支持的模组有：$(li)$(#f92020)Blood Magic$().$(li)$(#f92020)Hexerei$().$(li)$(#f92020)Vampirism$().$(li)要改变血槽的类型，你需要在持有$(#f92020)散装屠夫指南$()的同时右键点击它。"
+        }
+    ]
+}

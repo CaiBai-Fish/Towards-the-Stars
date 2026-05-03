@@ -1,0 +1,20 @@
+{
+      "name": "屠宰桌",
+    "icon": "butcher:butcherstable",
+    "category": "butcher:blocks",
+    "read_by_default": true,
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "butcher:butcherstable",
+            "link_recipe": true,
+            "title" : "屠宰桌",
+            "text": "屠宰桌可以用来放置尸体进行屠宰。当在桌子上屠宰尸体时，它会被血液覆盖。要清洁血液，使用湿海绵右键点击桌子。在完成一个尸体的屠宰过程后，如果不清洁就放置另一个尸体并再次屠宰，将会产生腐肉。请清洁你的工作台面！"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "butcher:butchers_table_recipe"
+        }
+    ]
+}

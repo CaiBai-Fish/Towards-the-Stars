@@ -1,0 +1,132 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6A5AF40E0259A5E6"
+	group: "47C31061524D9D17"
+	id: "6A5AF40E0259A5E6"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["09B9CAFEED675973"]
+			id: "62FE12DF528BFED6"
+			shape: "hexagon"
+			size: 1.5d
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "5A295A0D25745B54"
+			tasks: [
+				{
+					id: "0F790213BBC36603"
+					item: { count: 1, id: "create:brass_funnel" }
+					type: "item"
+				}
+				{
+					id: "797B03114037C8C8"
+					item: { count: 1, id: "create:brass_tunnel" }
+					type: "item"
+				}
+				{
+					id: "795BE9059231175C"
+					item: { count: 1, id: "create:smart_chute" }
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "109215CD1493106A"
+			tasks: [
+				{
+					id: "076A3728CCE3708D"
+					item: { count: 1, id: "create:andesite_funnel" }
+					type: "item"
+				}
+				{
+					id: "2C6052FA25E8A935"
+					item: { count: 1, id: "create:andesite_tunnel" }
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "410112B0652724CC"
+			tasks: [{
+				id: "1F8D9381F7031CF1"
+				item: { count: 1, id: "create:belt_connector" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "44DD6E6D92CD701B"
+			tasks: [
+				{
+					id: "019F541834FFA12C"
+					item: { count: 1, id: "create:package_frogport" }
+					type: "item"
+				}
+				{
+					id: "1172EB940CB08AEC"
+					item: { count: 1, id: "create:stock_link" }
+					type: "item"
+				}
+				{
+					id: "23CA9ED2BC81B763"
+					item: { count: 1, id: "create:stock_ticker" }
+					type: "item"
+				}
+				{
+					id: "6B283C3225E4AD46"
+					item: { count: 1, id: "create:packager" }
+					type: "item"
+				}
+				{
+					id: "3DC9BA0FEE77D89D"
+					item: { count: 1, id: "create:chain_conveyor" }
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "6D7B3072D3F6AEB1"
+			tasks: [{
+				id: "10BBBE1A411E016B"
+				item: { count: 1, id: "create:item_vault" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5A295A0D25745B54"
+				"109215CD1493106A"
+				"44DD6E6D92CD701B"
+				"410112B0652724CC"
+				"6D7B3072D3F6AEB1"
+			]
+			id: "0F9C11532DC1E778"
+			tasks: [{
+				id: "218131C341C3435E"
+				item: { count: 1, id: "create:factory_gauge" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.0d
+		}
+	]
+}

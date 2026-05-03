@@ -1,0 +1,14 @@
+{
+	"parent":"ctts:item/bottle_base",
+	"overrides": [
+		{"predicate": {"custom_model_data": 1},"model": "ctts:item/bottle/naga"},
+		{"predicate": {"custom_model_data": 2},"model": "ctts:item/bottle/lich"},
+		{"predicate": {"custom_model_data": 3},"model": "ctts:item/bottle/minoshroom"},
+		{"predicate": {"custom_model_data": 4},"model": "ctts:item/bottle/knight_phantom"},
+		{"predicate": {"custom_model_data": 5},"model": "ctts:item/bottle/alpha_yeti"},
+		{"predicate": {"custom_model_data": 6},"model": "ctts:item/bottle/ur_ghast"},
+		{"predicate": {"custom_model_data": 7},"model": "ctts:item/bottle/snow_queen"},
+		{"predicate": {"custom_model_data": 8},"model": "ctts:item/bottle/warden"},
+		{"predicate": {"custom_model_data": 9},"model": "ctts:item/bottle/wither"}
+	]
+}
