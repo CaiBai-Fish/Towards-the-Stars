@@ -98,10 +98,10 @@
 	armValign = "BOTTOM"
 	#Armor HUD horizontal align
 	#Allowed Values: LEFT, MIDDLE, RIGHT
-	armHalign = "MIDDLE"
+	armHalign = "LEFT"
 	#Armor HUD position (X)
 	#Range: -9999 ~ 9999
-	xArmPos = 0
+	xArmPos = 124
 	#Armor HUD position (Y)
 	#Range: -9999 ~ 9999
 	yArmPos = 70
@@ -110,13 +110,13 @@
 	potValign = "BOTTOM"
 	#Potion HUD horizontal align
 	#Allowed Values: LEFT, MIDDLE, RIGHT
-	potHalign = "LEFT"
+	potHalign = "MIDDLE"
 	#Potion HUD position (X)
 	#Range: -9999 ~ 9999
-	xPotionPos = 6
+	xPotionPos = 61
 	#Potion HUD position (Y)
 	#Range: -9999 ~ 9999
-	yPotionPos = 142
+	yPotionPos = 77
 	#Helmet position (X)
 	#Range: -9999 ~ 9999
 	helmPosX = 103

@@ -49,6 +49,13 @@
 			"dimensions": [
 				"ad_astra:mars"
 			]
+		},
+		{
+			"id": "deeperdarker:cobbled_sculk_stone",
+			"weight": 100.0,
+			"dimensions": [
+				"deeperdarker:otherside"
+			]
 		}
 	],
 	"stoneGen": [
@@ -113,6 +120,12 @@
 			"uc:double_compressed_calcite": [
 				{
 					"id": "minecraft:calcite",
+					"weight": 100.0
+				}
+			],
+			"deeperdarker:sculk_stone":[
+				{
+					"id": "deeperdarker:cobbled_sculk_stone",
 					"weight": 100.0
 				}
 			]

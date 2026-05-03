@@ -10,6 +10,128 @@
 	id: "1770747D259D642F"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["1D9FAF5FA8AB61B2"]
+			id: "26C73D091CF8B879"
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5134632D7672AD21"
+				structure: "minecraft:ancient_city"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26C73D091CF8B879"]
+			id: "012B7A27C63765CD"
+			tasks: [{
+				id: "21D31FFBF4DCA386"
+				item: "butchery:heart"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["26C73D091CF8B879"]
+			id: "0DC7F8252981A5D5"
+			tasks: [{
+				id: "47EE9D33128DCB53"
+				item: "minecraft:sculk"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["26C73D091CF8B879"]
+			id: "58864C0837AE88D9"
+			tasks: [{
+				id: "4D09E645C1A9C470"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0DC7F8252981A5D5"
+				"58864C0837AE88D9"
+			]
+			id: "6EFCF1DC8BD3B6F4"
+			tasks: [{
+				id: "4CE076643CF262E2"
+				item: "minecraft:echo_shard"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["26C73D091CF8B879"]
+			id: "6ED3FAA59498E05E"
+			tasks: [{
+				entity: "minecraft:warden"
+				id: "4D072B5B0BAD4068"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6ED3FAA59498E05E"]
+			id: "6BAED79D8FCF985F"
+			tasks: [{
+				id: "0E49E74FDD184165"
+				item: "butchery:warden_head"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6BAED79D8FCF985F"]
+			id: "05A7E77B0D0ED480"
+			tasks: [{
+				id: "4C07AE4E1D06D4AA"
+				item: "deeperdarker:reinforced_echo_shard"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"05A7E77B0D0ED480"
+				"012B7A27C63765CD"
+			]
+			id: "27500ABDD11D51AA"
+			tasks: [{
+				id: "400430FB0F2EA0D0"
+				item: "deeperdarker:heart_of_the_deep"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27500ABDD11D51AA"]
+			id: "17146D2A1523AF0D"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				dimension: "deeperdarker:otherside"
+				id: "2F85428795B9C361"
+				type: "dimension"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+	]
 	title: "{ctts.chapter_4.quarter_3.title}"
 }

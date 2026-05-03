@@ -7,7 +7,7 @@
 	hide_quest_until_deps_complete: true
 	icon: "createaddition:electric_motor"
 	id: "2698B2F63851032D"
-	order_index: 2
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -361,6 +361,28 @@
 			]
 			hide_until_deps_complete: true
 			id: "7D0E8806376B5AF5"
+			rewards: [{
+				id: "051BA36F0B70DDF0"
+				item: {
+					Count: 1
+					id: "ftbquests:screen_1"
+					tag: {
+						BlockEntityTag: {
+							ForgeCaps: { }
+							ForgeData: { }
+							TaskID: 155112809102094609L
+							TeamID: [I;
+								35372355
+								400248469
+								-1353857097
+								1638900054
+							]
+							id: "ftbquests:core_task_screen"
+						}
+					}
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -424,9 +446,88 @@
 					item: "create_things_and_misc:card_reader"
 					type: "item"
 				}
+				{
+					id: "74BBF133620B51B3"
+					item: "create:display_board"
+					type: "item"
+				}
 			]
 			x: 13.0d
 			y: 1.0d
+		}
+		{
+			dependencies: ["149DDD5429846CD2"]
+			icon: "create:track_signal"
+			id: "1A64BA5BD06FFF52"
+			tasks: [
+				{
+					id: "0880156D14675B90"
+					item: "railways:track_coupler"
+					type: "item"
+				}
+				{
+					id: "07BEDFB2461B57C9"
+					item: "create:track_signal"
+					type: "item"
+				}
+				{
+					id: "6A16702850DD78C6"
+					item: "create:track_observer"
+					type: "item"
+				}
+			]
+			title: "列车调度"
+			x: 13.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2EBD786EFB43D8A9"]
+			icon: "createrailwaysnavigator:advanced_display_block"
+			id: "7684691B3A96648C"
+			tasks: [
+				{
+					id: "2AF5423F4B90CB09"
+					item: "createrailwaysnavigator:advanced_display_block"
+					type: "item"
+				}
+				{
+					id: "642F55CC3B6DC3CF"
+					item: "createrailwaysnavigator:advanced_display_slab"
+					type: "item"
+				}
+				{
+					id: "629A80FF7BE76187"
+					item: "createrailwaysnavigator:advanced_display"
+					type: "item"
+				}
+				{
+					id: "5595F0809FB31FE4"
+					item: "createrailwaysnavigator:advanced_display_small"
+					type: "item"
+				}
+				{
+					id: "5610C2762477DE95"
+					item: "createrailwaysnavigator:advanced_display_sloped"
+					type: "item"
+				}
+			]
+			title: "现代化车站"
+			x: 15.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7D0E8806376B5AF5"]
+			id: "1C3A12D5CF8C841E"
+			subtitle: "完成任务后请销毁任务提交屏"
+			tasks: [{
+				id: "022712472EA4B111"
+				max_input: 1000L
+				type: "forge_energy"
+				value: 10000L
+			}]
+			title: "无尽能源"
+			x: 7.0d
+			y: 4.0d
 		}
 	]
 	title: "{ctts.chapter_2.quarter_3.title}"

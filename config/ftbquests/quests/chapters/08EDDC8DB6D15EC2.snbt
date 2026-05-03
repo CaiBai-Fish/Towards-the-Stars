@@ -212,25 +212,18 @@
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
-			tasks: [
-				{
-					id: "7D044E0BFC367925"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "minecraft:planks"
-						}
+			tasks: [{
+				id: "7D044E0BFC367925"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:planks"
 					}
-					title: "{ctts.chapter_3.quarter_1.quest_4.item}"
-					type: "item"
 				}
-				{
-					id: "38F4FA4C27C36439"
-					title: "{ctts.chapter_3.quarter_1.quest_4.check}"
-					type: "checkmark"
-				}
-			]
+				title: "{ctts.chapter_3.quarter_1.quest_4.item}"
+				type: "item"
+			}]
 			title: "{ctts.chapter_2.quarter_1.quest_4.title}"
 			x: -3.0d
 			y: 6.0d
@@ -245,25 +238,18 @@
 				item: "create:zinc_ingot"
 				type: "item"
 			}]
-			tasks: [
-				{
-					id: "559EEAB6C5E30744"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:stripped_logs"
-						}
+			tasks: [{
+				id: "559EEAB6C5E30744"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:stripped_logs"
 					}
-					title: "{ctts.chapter_3.quarter_1.quest_3.item}"
-					type: "item"
 				}
-				{
-					id: "7DA9CDE136062FEC"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+				title: "{ctts.chapter_3.quarter_1.quest_3.item}"
+				type: "item"
+			}]
 			title: "{ctts.chapter_2.quarter_1.quest_3.title}"
 			x: -3.0d
 			y: 4.0d
@@ -310,25 +296,18 @@
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
-			tasks: [
-				{
-					id: "74AA9745CE2D427B"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "minecraft:wooden_slabs"
-						}
+			tasks: [{
+				id: "74AA9745CE2D427B"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:wooden_slabs"
 					}
-					title: "任意木台阶"
-					type: "item"
 				}
-				{
-					id: "0374A0651D49F1B9"
-					title: "自动生产"
-					type: "checkmark"
-				}
-			]
+				title: "任意木台阶"
+				type: "item"
+			}]
 			title: "{ctts.chapter_2.quarter_1.quest_5.title}"
 			x: -1.0d
 			y: 6.0d
@@ -348,18 +327,11 @@
 			}]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{
-					id: "7028A88D2743369D"
-					item: "create:andesite_casing"
-					type: "item"
-				}
-				{
-					id: "2E2EBC22F9C17A06"
-					title: "{ctts.chapter_2.quarter_1.quest_30.check}"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "7028A88D2743369D"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
 			title: "{ctts.chapter_2.quarter_1.quest_30.title}"
 			x: 0.0d
 			y: 8.0d
@@ -889,6 +861,12 @@
 		{
 			dependencies: ["1977DB3C871020A5"]
 			id: "3A67F9545838E7E2"
+			rewards: [{
+				count: 5
+				id: "25DE6AF90603AC79"
+				item: "create:copper_casing"
+				type: "item"
+			}]
 			tasks: [{
 				count: 16L
 				id: "7C32726434EF6740"

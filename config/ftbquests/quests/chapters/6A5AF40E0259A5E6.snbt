@@ -1,0 +1,147 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6A5AF40E0259A5E6"
+	group: "47C31061524D9D17"
+	icon: "create:white_postbox"
+	id: "6A5AF40E0259A5E6"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["09B9CAFEED675973"]
+			icon: "create:package_frogport"
+			id: "62FE12DF528BFED6"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "机械动力在6.0更新了新的物流系统"
+			title: "物流系统"
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			icon: "create:brass_funnel"
+			id: "5A295A0D25745B54"
+			subtitle: "更智能的传送带物流"
+			tasks: [
+				{
+					id: "0F790213BBC36603"
+					item: "create:brass_funnel"
+					type: "item"
+				}
+				{
+					id: "797B03114037C8C8"
+					item: "create:brass_tunnel"
+					type: "item"
+				}
+				{
+					id: "795BE9059231175C"
+					item: "create:smart_chute"
+					type: "item"
+				}
+			]
+			title: "黄铜物流"
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			icon: "create:andesite_funnel"
+			id: "109215CD1493106A"
+			subtitle: "基础的传送带物流"
+			tasks: [
+				{
+					id: "076A3728CCE3708D"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+				{
+					id: "2C6052FA25E8A935"
+					item: "create:andesite_tunnel"
+					type: "item"
+				}
+			]
+			title: "安山物流"
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "410112B0652724CC"
+			tasks: [{
+				id: "1F8D9381F7031CF1"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			icon: "create:stock_ticker"
+			id: "44DD6E6D92CD701B"
+			tasks: [
+				{
+					id: "019F541834FFA12C"
+					item: "create:package_frogport"
+					type: "item"
+				}
+				{
+					id: "1172EB940CB08AEC"
+					item: "create:stock_link"
+					type: "item"
+				}
+				{
+					id: "23CA9ED2BC81B763"
+					item: "create:stock_ticker"
+					type: "item"
+				}
+				{
+					id: "6B283C3225E4AD46"
+					item: "create:packager"
+					type: "item"
+				}
+				{
+					id: "3DC9BA0FEE77D89D"
+					item: "create:chain_conveyor"
+					type: "item"
+				}
+			]
+			title: "基于打包机的物流系统"
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["62FE12DF528BFED6"]
+			id: "6D7B3072D3F6AEB1"
+			subtitle: "大容量存储的不二选择"
+			tasks: [{
+				id: "10BBBE1A411E016B"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5A295A0D25745B54"
+				"109215CD1493106A"
+				"44DD6E6D92CD701B"
+				"410112B0652724CC"
+				"6D7B3072D3F6AEB1"
+			]
+			id: "0F9C11532DC1E778"
+			tasks: [{
+				id: "218131C341C3435E"
+				item: "create:factory_gauge"
+				type: "item"
+			}]
+			title: "使用工厂仪表建立全自动合成线"
+			x: -3.0d
+			y: 5.0d
+		}
+	]
+	title: "物流！"
+}

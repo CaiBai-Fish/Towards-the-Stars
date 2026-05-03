@@ -1,67 +1,64 @@
 BlockEvents.rightClicked('supplementaries:pedestal', e => {
     // 获取玩家、物品和方块信息
-    let player = e.player
-    let item = e.item
-    let block = e.block
-    let level = e.level
-    let server = e.server
-    // 检查展示台上是否有ctts:nether_book
-    if (item.id == 'ctts:nether_book' && block.id == 'supplementaries:pedestal' && !GamePhase.hasPhase(player, "nether")) {
-        let pos = e.block.pos
+    const { player, block, level, server } = e
+    const item = player.mainHandItem
+    let pos = block.pos
+    // 触发粒子效果
+    const radius = 5
+    const particle = 'reverse_portal'//"minecraft:dust 1 0 0 1"
+    function circle1(start, stop) {
+        let i = start
+        server.scheduleRepeatingInTicks(1, () => {
+            if (i >= stop)
+                return
+            for (let n = 8; n > 0; n--) {
+                let j = -i
+                let innerRadians = (j + n * 2) * (3.14 / 180)
+                let innerRadius = radius * (i / 3600) ** 2
+                if (innerRadius >= 3)
+                    innerRadius = 3
+                let innerX = Math.cos(innerRadians) * innerRadius
+                let innerZ = Math.sin(innerRadians) * innerRadius
 
-        // 触发粒子效果
-        let duration = 100 // 5秒
-        let interval = 3 // 每 2 tick 刷新一次
-        let radius = 3 // 法阵固定半径
-
-        for (let t = 0; t < duration; t += interval) {
-            server.scheduleInTicks(t, () => {
-                for (let i = 0; i < 360; i += 3) {
-                    for (let j = 0; j < 3; j++) {
-                        let radians = i * (3.14 / 180);
-                        let xOffset = Math.cos(radians) * radius
-                        let zOffset = Math.sin(radians) * radius
-
-                        // 血红色粒子
-                        level.spawnParticles("minecraft:dust 1 0 0 0.5",
-                            true,
-                            pos.x + 0.5 + xOffset, pos.y + 1, pos.z + 0.5 + zOffset,
-                            0, 0, 0,
-                            5, 0.01
-                        )
-                    }
-                    let innerRadians = (i + 8) * (3.14 / 180)
-                    let innerX = Math.cos(innerRadians) * radius * 0.4
-                    let innerZ = Math.sin(innerRadians) * radius * 0.4
-
-                    // 小环
-                    level.spawnParticles('minecraft:dust 1 0 0 0.3',
-                        true,
-                        pos.x + 0.5 + innerX, pos.y + 1, pos.z + 0.5 + innerZ,
-                        0, 0, 0,
-                        5, 0.01
-                    )
-                }
-
-            })
-            server.scheduleInTicks(duration, () => {
-                level.destroyBlock(pos, false)
-            })
-        }
-
-        // 给予玩家阶段
-        GamePhase.addPhase(player, "nether")
-    }
-})
-
-// 回退刷线机修复
-BlockEvents.leftClicked(e => {
-    if (e.item.id == 'minecraft:shears' && e.block.id == 'minecraft:tripwire') {
-        let pos = e.block.pos
-        e.cancel()
-        e.server.scheduleInTicks(2, () => {
-            e.server.runCommandSilent(`setblock ${pos.x} ${pos.y} ${pos.z} minecraft:tripwire[disarmed=true]`)
+                // 小环
+                level.spawnParticles(particle,
+                    true,
+                    pos.x + 0.5 + innerX, pos.y + 1.5, pos.z + 0.5 + innerZ,
+                    0, 0, 0,
+                    4, 0.01
+                )
+            }
+            i += 8
         })
+    }
+    function circle2(up, start, stop) {
+        let i = start
+        server.scheduleRepeatingInTicks(1, () => {
+            if (i >= stop)
+                return
+            for (let n = 0; n < 10; n++) { // 每tick生成5个粒子
+                let radians = (i + n * 2) * (3.14 / 180)
+                let xOffset = Math.cos(radians) * radius
+                let zOffset = Math.sin(radians) * radius
+                let rise = i / up
+                if (rise > 1.5)
+                    rise = 1.5
+
+                level.spawnParticles(particle,
+                    true,
+                    pos.x + 0.5 + xOffset, pos.y + rise, pos.z + 0.5 + zOffset,
+                    0, 0, 0,
+                    5, 0.06
+                )
+            }
+            i += 10
+        })
+    }
+    if (item.id == 'ctts:nether_book' && !GamePhase.hasPhase(player, 'nether')) {
+        circle1(240, 1680)
+        server.scheduleInTicks(30, () => { circle2(680, 60, 1500) })
+        server.scheduleInTicks(80, () => { server.runCommandSilent(`setblock ${pos.x} ${pos.y} ${pos.z} supplementaries:pedestal`) })
+        server.scheduleInTicks(360, () => { GamePhase.addPhase(player, 'nether'); player.tell('你现在可以去下界了！') })
     }
 })
 
@@ -103,15 +100,11 @@ EntityEvents.hurt(e => {
     if (player && player.isCreative()) return
 
     // 抗龙息药水效果
-    if (source.type().msgId() !== 'indirectMagic') return
-    let srcpos = source.sourcePosition
-    if (!srcpos) return
-    const cloud = level.getEntitiesWithin(AABB.of(srcpos.x() - 1, srcpos.y() - 1, srcpos.z() - 1, srcpos.x() + 1, srcpos.y() + 1, srcpos.z() + 1))
-    cloud.forEach(ent => {
-        if (ent.type == "minecraft:area_effect_cloud" && entity.hasEffect("ctts:dragon_breath_resistance")) {
-            e.cancel()
-        }
-    })
+    if ((source.getType() == 'indirectMagic')
+        && (source.getImmediate().type == 'minecraft:area_effect_cloud')
+        && entity.hasEffect("ctts:dragon_breath_resistance")
+    ) e.cancel()
+    return
 })
 // Boss破防机制
 EntityEvents.hurt([
@@ -128,6 +121,7 @@ EntityEvents.hurt([
     const { entity, player, server, level, source } = e
     // Boss抗性
     const entity_type = source.getActual().entityJs$getTypeId()
+    if (player.isCreative()) return
     if (entity.tags !== '[UnProtected]') {
         e.cancel(0)
     } else {
@@ -137,18 +131,17 @@ EntityEvents.hurt([
     }
 })
 // 破防标签转移
-ServerEvents.tick(e => {
-    e.server.entities.forEach(entity => {
-        if (entity.type !== 'ctts:bottle') return
-        const tag = entity.nbt.get('Item').get('tag')
-        const tier = tag.get('tier').toString()
-        entity.addTag(tier)
-        tag.remove('tier')
-    })
-})
+EntityEvents.spawned('ctts:bottle', e => {
+    const entity = e.entity
+    const tag = entity.nbt.get('Item').get('tag')
+    if (!tag || !tag.contains('tier')) return
 
+    const tier = tag.get('tier').toString()
+    entity.addTag(tier)
+    tag.remove('tier')
+})
 // 暮色最终BOSS生成
-const final = [
+/*const final = [
     '{"text":"Final Castle WIP."}',
     '{"text":"Join our Discord server to"}',
     '{"text":"follow development of the mod:"}',
@@ -168,4 +161,4 @@ ServerEvents.tick(e => {
             }
         }
     })
-})
+})*/

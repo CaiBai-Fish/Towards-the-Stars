@@ -68,7 +68,7 @@
     "customSchematicBaseDirectory": "G:\\整合包\\versions\\Towards the Stars\\schematics",
     "easyPlaceSwapInterval": 0,
     "pickBlockableSlots": "1,2,3,4,5",
-    "toolItem": "minecraft:stick"
+    "toolItem": "ctts:projection_tool"
   },
   "Hotkeys": {
     "addSelectionBox": {

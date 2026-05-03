@@ -8,9 +8,10 @@ ServerEvents.recipes(e => {
     e.remove({ type: 'create:milling', output: 'minecraft:flint' })
     e.remove({ output: ['minecraft:andesite', 'minecraft:granite', 'minecraft:diorite', 'minecraft:lead'], mod: 'minecraft' })
     e.remove({ output: ['minecraft:redstone', 'minecraft:netherrack', 'minecraft:glowstone_dust', 'minecraft:gunpowder'], input: 'create:cinder_flour' })
-    e.remove({ output: ['#forge:tools', , '#forge:armors'], input: 'minecraft:diamond' })
+    e.remove({ output: ['#forge:tools', '#forge:armors'], input: 'diamond' })
     e.remove({ output: 'minecraft:sugar', input: 'minecraft:honey_bottle' })
     e.remove({ input: 'ae2:sky_stone_block', output: 'ae2:sky_dust' })
+    e.remove({ output: 'ae2:certus_quartz_dust' })
     e.remove({ input: ['ad_astra:hammer'] })
     e.remove({ not: { type: 'create:sequenced_assembly' }, output: 'create:andesite_alloy' })
     e.remove({ output: 'minecraft:ender_pearl', mod: 'butcher' })
@@ -30,21 +31,25 @@ ServerEvents.recipes(e => {
             'create:redstone_contact', 'create:mechanical_drill', 'create:mechanical_saw', 'create:cart_assembler', 'create:sticker', 'create:elevator_pulley',
             'create:millstone', 'create:schematicannon', 'create:depot', 'create:weighted_ejector', 'create:speedometer', 'create:stressomter',
             'create:mechanical_piston', 'create:windmill_bearing', 'create:mechanical_bearing', 'create:gantry_carriage', 'create:portable_storage_interface',
-            'create:mechanical_harvester', 'create:mechanical_plough', 'create:mechanical_roller', 'create:fluid_pipe', 'create:mechanical_pump', 'create:fluid_valve', 'create:fluid_tank', 'create:hose_pulley', 'create:smart_fluid_pipe',
-            'create:portable_fluid_interface', 'create:steam_engine', 'create:spout', 'create:item_drain', 'create:flywheel', 'create:clockwork_bearing',
-            'create:mechanical_crafter', 'create:rotation_speed_controller', 'create:mechanical_arm', 'create:content_observer', 'create:rope_pulley',
-            'create:stockpile_switch', 'create:display_link', 'create:pulse_repeater', 'create:pulse_extender', 'create:powered_latch', 'create:powered_toggle_latch',
-            'createaddition:diamond_grit_sandpaper', 'createaddition:rolling_mill', 'createaddition:portable_energy_interface', 'createaddition:electric_motor',
-            'createaddition:alternator', 'create:andesite_casing', 'create:copper_casing', 'create:brass_casing', 'create:copper_backtank', 'create:radial_chassis',
-            'create:controls', 'ad_astra:ti_69'
+            'create:mechanical_harvester', 'create:mechanical_plough', 'create:mechanical_roller', 'create:fluid_pipe', 'create:mechanical_pump', 'create:fluid_valve',
+            'create:fluid_tank', 'create:hose_pulley', 'create:smart_fluid_pipe', 'create:portable_fluid_interface', 'create:steam_engine', 'create:spout',
+            'create:item_drain', 'create:flywheel', 'create:clockwork_bearing', 'create:mechanical_crafter', 'create:rotation_speed_controller', 'create:mechanical_arm',
+            'create:content_observer', 'create:rope_pulley', 'create:stockpile_switch', 'create:display_link', 'create:pulse_repeater', 'create:pulse_extender',
+            'create:powered_latch', 'create:powered_toggle_latch', 'createaddition:diamond_grit_sandpaper', 'createaddition:rolling_mill',
+            'createaddition:portable_energy_interface', 'createaddition:electric_motor', 'createaddition:alternator', 'create:andesite_casing',
+            'create:copper_casing', 'create:brass_casing', 'create:copper_backtank', 'create:radial_chassis', 'create:controls', 'ad_astra:ti_69'
         ]
     })
     e.remove({
-        output: ['architects_palette:charcoal_block', 'minecraft:hopper', 'enderitemod:enderite_upgrade_smithing_template', 'constructionwand:iron_wand',
-            'constructionwand:diamond_wand', 'constructionwand:infinity_wand', 'tacz:gun_smith_table', 'ad_astra:wrench', 'explorerscompass:explorerscompass',
-            'naturescompass:naturescompass', 'create_mechanical_extruder:mechanical_extruder', 'twilightforest:magic_map_focus']
+        output: ['architects_palette:charcoal_block', 'minecraft:hopper', 'enderitemod:enderite_upgrade_smithing_template', 'create:smart_chute', 'create:packager',
+            'constructionwand:infinity_wand', 'tacz:gun_smith_table', 'ad_astra:wrench', 'explorerscompass:explorerscompass', 'naturescompass:naturescompass',
+            'create_mechanical_extruder:mechanical_extruder', 'twilightforest:magic_map_focus', 'create:chain_conveyor', 'create:andesite_casing', 'create:transmitter',
+            'minecraft:lightning_rod', 'netherite_ingot', 'enderitemod:enderite_ingot'
+        ]
     })
     //配方修改
+    e.replaceInput({ output: 'minecraft:clay_ball', input: 'minecraft:sand' }, 'minecraft:sand', '#forge:sand')
+    e.replaceInput({ output: 'aquaculture:gold_fishing_rod', input: 'gold_ingot' }, 'gold_ingot', 'createaddition:gold_rod')
     e.replaceInput({ output: 'minecraft:recovery_compass' }, 'minecraft:echo_shard', 'deeperdarker:reinforced_echo_shard')
     e.replaceInput({ output: 'create:brass_hand' }, 'create:brass_sheet', 'create:copper_sheet')
     e.replaceInput({ output: 'minecraft:netherite_upgrade_smithing_template' }, 'minecraft:netherite_upgrade_smithing_template', 'ctts:base_template')
@@ -57,8 +62,9 @@ ServerEvents.recipes(e => {
     e.replaceInput({ output: 'minecraft:rib_armor_trim_smithing_template' }, 'minecraft:netherrack', 'minecraft:bone_block')
     e.replaceInput({ output: 'minecraft:raiser_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:grass_block')
     e.replaceInput({ output: 'minecraft:shaper_armor_trim_smithing_template' }, 'minecraft:terracotta', 'minecraft:bricks')
-    e.replaceInput({ output: 'butcher:dragonsmithingtemplate' }, 'butcher:dragonsmithingtemplate', 'ctts:base_template')
     e.replaceInput({ output: 'quark:smithing_template_rune' }, 'quark:smithing_template_rune', 'ctts:base_template')
     e.replaceInput({ output: 'aquaculture:iron_fishing_rod' }, 'minecraft:iron_ingot', 'createaddition:iron_rod')
+    e.replaceInput({ output: 'ad_astra:photovoltaic_etrium_cell' }, 'ad_astra:desh_plate', 'ad_astra:etrium_plate')
+    e.replaceInput({ output: 'butchery:dragon_smithing_template' }, 'butchery:dragon_smithing_template', 'ctts:base_template')
     e.replaceInput({ input: 'ad_astra:iron_rod' }, 'ad_astra:iron_rod', 'createaddition:iron_rod')
 })

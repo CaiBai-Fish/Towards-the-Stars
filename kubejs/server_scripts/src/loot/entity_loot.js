@@ -29,6 +29,15 @@ ServerEvents.entityLootTables(e => {
                 }
             })
         })
+        table.addPool(pool => {
+            pool.rolls = 1
+            pool.randomChance(0.67)
+            pool.addItem('create:experience_nugget')
+            pool.addFunction({
+                function: 'minecraft:set_count',
+                count: 1
+            })
+        })
     })
     // 监守者
     e.addEntity('minecraft:warden', table => {
@@ -156,6 +165,12 @@ ServerEvents.entityLootTables(e => {
                 }
             })
         })
+        table.addPool(pool => {
+            pool.rolls = 1
+            pool.addItem('soul_sand')
+            pool.randomChanceWithLooting(0.12, 0.025)
+            pool.killedByPlayer()
+        })
     })
     // 凋零骷髅
     e.modifyEntity('wither_skeleton', table => {
@@ -178,7 +193,7 @@ ServerEvents.entityLootTables(e => {
         table.addPool(pool => {
             pool.rolls = 1
             pool.addItem('soul_sand')
-            pool.randomChanceWithLooting(0.03, 0.025)
+            pool.randomChanceWithLooting(0.12, 0.025)
             pool.killedByPlayer()
         })
     })
@@ -187,7 +202,7 @@ ServerEvents.entityLootTables(e => {
         table.addPool(pool => {
             pool.rolls = 1
             pool.addItem('soul_sand')
-            pool.randomChanceWithLooting(0.03, 0.025)
+            pool.randomChanceWithLooting(0.12, 0.025)
             pool.killedByPlayer()
         })
     })
@@ -196,7 +211,7 @@ ServerEvents.entityLootTables(e => {
         table.addPool(pool => {
             pool.rolls = 1
             pool.addItem('soul_sand')
-            pool.randomChanceWithLooting(0.03, 0.025)
+            pool.randomChanceWithLooting(0.12, 0.025)
             pool.killedByPlayer()
         })
     })

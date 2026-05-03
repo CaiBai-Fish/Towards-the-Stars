@@ -127,6 +127,11 @@
 				type: "item"
 			}]
 			subtitle: "{ctts.chapter_2.quarter_2.quest_2.subtitle}"
+			tasks: [{
+				id: "2B69172AF2182C67"
+				title: "{ctts.chapter_2.quarter_2.quest_2.check}"
+				type: "checkmark"
+			}]
 			title: "{ctts.chapter_2.quarter_2.quest_2.title}"
 			x: 4.0d
 			y: 0.0d
@@ -167,18 +172,11 @@
 			hide_dependent_lines: true
 			icon: "minecraft:grass_block"
 			id: "222CBED553CB44D9"
-			tasks: [
-				{
-					id: "5BE6670A10098F2C"
-					item: "minecraft:grass_block"
-					type: "item"
-				}
-				{
-					id: "7019122131255307"
-					item: "create:spout"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "5BE6670A10098F2C"
+				item: "minecraft:grass_block"
+				type: "item"
+			}]
 			title: "{ctts.chapter_2.quarter_2.quest_3.title}"
 			x: 2.0d
 			y: -2.0d
@@ -363,31 +361,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["62FE12DF528BFED6"]
-			icon: "create:brass_funnel"
-			id: "5A295A0D25745B54"
-			tasks: [
-				{
-					id: "0F790213BBC36603"
-					item: "create:brass_funnel"
-					type: "item"
-				}
-				{
-					id: "797B03114037C8C8"
-					item: "create:brass_tunnel"
-					type: "item"
-				}
-				{
-					id: "795BE9059231175C"
-					item: "create:smart_chute"
-					type: "item"
-				}
-			]
-			title: "黄铜物流"
-			x: 12.0d
-			y: -4.0d
-		}
-		{
 			dependencies: ["09B9CAFEED675973"]
 			icon: "create:mechanical_crafter"
 			id: "3C1CE1F5C6EF6BE4"
@@ -456,31 +429,6 @@
 			]
 			x: 8.0d
 			y: 0.0d
-		}
-		{
-			dependencies: ["09B9CAFEED675973"]
-			icon: "create:andesite_funnel"
-			id: "62FE12DF528BFED6"
-			tasks: [
-				{
-					id: "30C18795FBA85C7E"
-					item: "create:andesite_funnel"
-					type: "item"
-				}
-				{
-					id: "244F4347FF414C8E"
-					item: "create:andesite_tunnel"
-					type: "item"
-				}
-				{
-					id: "2725C29C32E428D3"
-					item: "create:belt_connector"
-					type: "item"
-				}
-			]
-			title: "安山物流"
-			x: 12.0d
-			y: -2.0d
 		}
 		{
 			dependencies: ["5CE9547FA232B3AE"]

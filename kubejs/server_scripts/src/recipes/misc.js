@@ -53,8 +53,8 @@ ServerEvents.recipes(e => {
     e.stonecutting('quark:azalea_planks_stairs', 'quark:azalea_planks')
     e.stonecutting('2x quark:blossom_planks_slab', 'quark:blossom_planks')
     e.stonecutting('quark:blossom_planks_stairs', 'quark:blossom_planks')
-
     e.stonecutting('4x minecraft:pointed_dripstone', 'minecraft:dripstone_block')
+    e.stonecutting('create:depot', 'create:andesite_casing')
 
     //烟熏
     e.smoking('minecraft:coal_block', 'architects_palette:charcoal_block')
@@ -63,6 +63,7 @@ ServerEvents.recipes(e => {
 
     //熔炉
     e.smelting('minecraft:iron_nugget', 'createaddition:iron_rod')
+    e.smelting('3x aquaculture:neptunium_ingot', 'aquaculture:neptunes_bounty')
 
     //高炉
     e.blasting('minecraft:granite', 'minecraft:calcite')
@@ -77,6 +78,14 @@ ServerEvents.recipes(e => {
     e.shapeless('2x minecraft:glowstone_dust', ['minecraft:redstone', 'minecraft:blaze_powder'])
     e.shapeless('minecraft:diamond', '9x ctts:diamond_nugget')
     e.shapeless('ctts:gun_book', ['3x minecraft:gunpowder', 'minecraft:netherite_ingot'])
-    e.shapeless('supplementaries:enderman_head', 'butcher:endermanhead')
-    e.shapeless('minecraft:ender_pearl', ['#butcher:butcher_enchantable', 'butcher:endermanheart']).damageIngredient('#butcher:butcher_enchantable', 1)
+    e.shapeless('supplementaries:enderman_head', 'butchery:enderman_head')
+    e.shapeless('create:controller_rail', ['minecraft:powered_rail', 'create:electron_tube'])
+    e.shapeless('create:stockpile_switch', 'create:content_observer')
+    e.shapeless('create:content_observer', 'create:stockpile_switch')
+    e.shapeless('create:pulse_repeater', ['create:brass_sheet', 'minecraft:repeater'])
+    e.shapeless('create:pulse_extender', ['create:pulse_repeater', 'minecraft:redstone_torch'])
+    e.shapeless('create:powered_latch', ['minecraft:repeater', 'minecraft:lever'])
+    e.shapeless('create:powered_toggle_latch', 'create:powered_latch')
+    e.shapeless('create:powered_latch', 'create:powered_toggle_latch')
+    e.shapeless('minecraft:redstone', ['#ctts:powder', 'minecraft:red_dye'])
 })

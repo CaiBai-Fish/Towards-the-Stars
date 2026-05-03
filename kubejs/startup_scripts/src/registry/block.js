@@ -29,6 +29,8 @@ StartupEvents.registry('block', e => {
 			.resistance(resistance)
 			.tagBlock('minecraft:mineable/pickaxe')
 			.tagBlock('minecraft:needs_diamond_tool')
+			.tag('forge:ores')
+			.tag('c:ores')
 	}
 	ore('crimson_crystal', 20, 1400)
 	e.create('ctts:crimson_crystal_block')

@@ -64,10 +64,10 @@
 			id: "202BDA95031289A1"
 			tasks: [{
 				hasCustomPicture: false
-				id: "78C6E243B8924F15"
+				id: "7E400336AB880952"
 				ignoreState: false
 				layer: true
-				name: "altars"
+				name: "下界祭坛"
 				rightclick: false
 				type: "questsadditions:structure"
 			}]
@@ -102,6 +102,7 @@
 			}]
 			subtitle: "首充送双倍！"
 			tasks: [{
+				consume_items: true
 				id: "663714AC34764A3F"
 				item: {
 					Count: 1
@@ -133,6 +134,7 @@
 			}]
 			subtitle: "双倍当然只有首充才有咯~~"
 			tasks: [{
+				consume_items: true
 				id: "63A4DF0AEF60E0D0"
 				item: {
 					Count: 1
@@ -190,7 +192,7 @@
 				type: "item"
 			}]
 			title: "用血铸成的构件"
-			x: 0.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -274,17 +276,6 @@
 		}
 		{
 			dependencies: ["2DB0104F708C96EA"]
-			id: "4BF748A8D3709824"
-			tasks: [{
-				id: "1E83A84EE1266A31"
-				structure: "minecraft:mineshaft"
-				type: "structure"
-			}]
-			x: 9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["4BF748A8D3709824"]
 			id: "7BA8F6F84387183E"
 			tasks: [{
 				entity: "ctts:warped_golem"
@@ -292,8 +283,8 @@
 				type: "kill"
 				value: 1L
 			}]
-			x: 11.0d
-			y: -2.0d
+			x: 9.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7BA8F6F84387183E"]
@@ -374,18 +365,19 @@
 				type: "item"
 			}]
 			x: 11.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
-			dependencies: ["5BFB1176311AFDF4"]
-			id: "2A26AD888F5565CF"
+			dependencies: ["04CEAE1896673E76"]
+			id: "006A2FB11B47E282"
 			tasks: [{
-				id: "3A21571E800E6821"
-				item: "ctts:crimson_crystal_girt"
+				id: "21FB10C6482ACB62"
+				item: "create:experience_nugget"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 4.0d
+			title: "副产物"
+			x: -2.0d
+			y: -2.0d
 		}
 	]
 	title: "{ctts.chapter_4.quarter_1.title}"

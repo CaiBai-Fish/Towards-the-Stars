@@ -81,6 +81,9 @@
     "registry_name": "ADVANCED_TOOLTIPS",
     "mod_name": true
   },
+  "astages": {
+    "block_component_provider": true
+  },
   "corpse": {
     "corpse": true
   },

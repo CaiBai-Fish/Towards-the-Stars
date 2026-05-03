@@ -1,3 +1,4 @@
+Platform.mods.kubejs.name = 'Ctts'
 // 维度阶段
 StartupEvents.postInit(e => {
     GamePhase.addDimensionRestriction("nether", "minecraft:the_nether");

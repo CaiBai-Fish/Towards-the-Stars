@@ -2,25 +2,33 @@
 enhancedInfo = true
 hideStaticKineticInfo = false
 betterStoreInfo = true
-renderExtraItems = true
 enableKineticEffect = true
 preciseNumber = true
 disableScreenGoggles = true
 canRenderOnValueBox = false
-betterLine = true
-overlayOffsetX = 0
-overlayOffsetY = 0
+extraItemTooltip = true
 [gameMode]
-enableGoggle = true
+enableGoggles = true
 enableInSurvival = false
 enableInCreative = true
 enableInSpectator = true
-enableInAdventure = true
-[outlineRenderer]
+enableInAdventure = false
+[overlay]
+renderItemOverlay = true
+overlayOffsetX = 0
+overlayOffsetY = 0
+tooltipFlagType = "Default"
+tooltipTheme = "Default"
+useCustomColor = false
+backgroundColor = 0
+borderTopColor = 0
+borderBottomColor = 0
+[outliner]
 renderAnalogBox = true
+betterLine = true
 delayRenderDuration = 60
-windPushColor = 14532966
-windPullColor = 8375776
+outColor = 14532966
+inColor = 8375776
 rainbowDebug = false
 [chainConveyor]
 alwaysAllowRiding = false
@@ -38,6 +46,8 @@ leftClickFastDismantle = true
 removeCooldown = true
 enchancedRotationMenu = false
 [misc]
+removeMechanicalArmLimit = false
+preventSelectionDiscard = true
 infEditBoxLength = false
 removeCardboardOverlay = true
 removeNetheriteFirstPerson = false

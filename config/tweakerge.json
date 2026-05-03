@@ -874,7 +874,7 @@
       "keys": ""
     },
     "tweakFreeCamera": {
-      "keys": "LEFT_SHIFT,GRAVE_ACCENT"
+      "keys": "LEFT_CONTROL,GRAVE_ACCENT"
     },
     "tweakGammaOverride": {
       "keys": ""

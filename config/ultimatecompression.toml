@@ -5,8 +5,8 @@
 	generation = false
 	#Option to disable or enable compressed ore generation in the nether.
 	# Default: true
-	nethergeneration = true
+	nethergeneration = false
 	#Option to disable or enable compressed ore generation in the overworld.
 	# Default: true
-	overworldgeneration = true
+	overworldgeneration = false
 

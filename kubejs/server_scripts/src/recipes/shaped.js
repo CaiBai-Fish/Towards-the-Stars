@@ -58,12 +58,12 @@ ServerEvents.recipes(e => {
         B: 'ctts:base_template',
         C: 'minecraft:diamond'
     })
+
     let taa = (tem, mod) => {
         let inputid = mod + ':iron_' + tem
         let outputid = mod + ':diamond_' + tem
         e.smithing(outputid, 'ctts:diamond_template', 'minecraft:diamond', inputid)
     }
-
     taa('sword', 'minecraft')
     taa('helmet', 'minecraft')
     taa('chestplate', 'minecraft')
@@ -76,6 +76,12 @@ ServerEvents.recipes(e => {
     taa('wand', 'constructionwand')
     taa('knife', 'farmersdelight')
     taa('saw', 'ctts')
+    taa('skinning_knife', 'butchery')
+    taa('cleaver', 'butchery')
+    taa('hammer', 'butchery')
+    taa('hacksaw', 'butchery')
+    taa('fishing_rod', 'aquaculture')
+    taa('fillet_knife', 'aquaculture')
 
     e.shaped(Item.of('create:andesite_alloy', 4), [
         'AA',
@@ -208,7 +214,7 @@ ServerEvents.recipes(e => {
         'AABAA',
         'AAAAA'
     ], {
-        A: 'butcher:heart',
+        A: 'butchery:heart',
         B: 'minecraft:echo_shard'
     })
     e.shaped('minecraft:elytra', [
@@ -236,6 +242,12 @@ ServerEvents.recipes(e => {
         'A'
     ], {
         A: 'minecraft:soul_sand'
+    })
+    e.shaped('ctts:extinguished_blaze_rod', [
+        'A',
+        'A'
+    ], {
+        A: 'minecraft:soul_soil'
     })
     e.shaped('minecraft:echo_shard', [
         ' A ',
@@ -280,6 +292,21 @@ ServerEvents.recipes(e => {
         B: 'minecraft:blaze_rod',
         C: 'minecraft:netherrack'
     })
+    e.shaped('create:transmitter', [
+        'A',
+        'B',
+        'C'
+    ], {
+        A: 'minecraft:lightning_rod',
+        B: 'createaddition:copper_spool',
+        C: 'minecraft:redstone'
+    })
+    e.shaped('minecraft:lightning_rod', [
+        'A',
+        'A'
+    ], {
+        A: 'createaddition:copper_rod'
+    })
 
     e.shaped('ctts:twilight_key', [
         'AA AA',
@@ -316,5 +343,31 @@ ServerEvents.recipes(e => {
         'AA'
     ], {
         A: 'ctts:crimson_crystal'
+    })
+
+    e.shaped('create:water_wheel', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: '#minecraft:wooden_slabs',
+        B: 'create:large_cogwheel'
+    })
+    e.shaped('create:large_water_wheel', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: '#minecraft:wooden_slabs',
+        B: 'create:water_wheel'
+    })
+
+    e.shaped('ctts:projection_tool', [
+        ' BB',
+        ' AB',
+        'A  '
+    ], {
+        A: 'minecraft:stick',
+        B: 'create:iron_sheet'
     })
 })

@@ -30,6 +30,7 @@
 				"50AC5169DFEB7AFA"
 				"0123640DFDC90F1A"
 			]
+			icon: "butchery:ender_dragon_carcass"
 			id: "4A255290C3E2D637"
 			shape: "octagon"
 			size: 1.6d
@@ -59,7 +60,7 @@
 			id: "65A7F5682E200CCD"
 			tasks: [{
 				id: "6DC6B751FAA8705D"
-				item: "butcher:dragonscale"
+				item: "butchery:dragon_scale"
 				type: "item"
 			}]
 			x: 4.0d
@@ -409,6 +410,9 @@
 		{
 			dependencies: ["4542AC718FC8B0B9"]
 			id: "3DF0E829AE4BE423"
+			shape: "hexagon"
+			size: 1.5d
+			title: "结束了？"
 			x: 29.0d
 			y: 0.0d
 		}
